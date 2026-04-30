@@ -1,0 +1,280 @@
+{
+  "main": {
+    "id": "a3ee1ac4226dda1b",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3c1900dce7fdde6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34f05d336c22f042",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "web前端开发文档.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "web前端开发文档"
+            }
+          },
+          {
+            "id": "fc27baabebdc6a05",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "web前端开发文档.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "web前端开发文档"
+            }
+          },
+          {
+            "id": "f9251e4f930a7c6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "web前端开发文档.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "web前端开发文档"
+            }
+          },
+          {
+            "id": "80cd6b3554d8475c",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-03-17 19.03.45.excalidraw"
+            }
+          },
+          {
+            "id": "5191bbb204754f3c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "660fe568112a3aab",
+    "type": "split",
+    "children": [
+      {
+        "id": "4bbcfa6423e4fe9a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "471971ee1dae6833",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "9219700608631bdd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "cf1bb7cde69da780",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "11061a1d35e8f07c",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c8acfb7dacc3e78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "949f7bd205f1f555",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "埋点列表.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "埋点列表 的反向链接列表"
+            }
+          },
+          {
+            "id": "f122094e84cc7676",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "埋点列表.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "埋点列表 的出链列表"
+            }
+          },
+          {
+            "id": "94b2785895bf69a5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "079914cdff3cfa43",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "4b912d5cc05fac6f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "埋点列表.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "埋点列表 的大纲"
+            }
+          },
+          {
+            "id": "04fd0a69a45a55ea",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "7540932d456a8283",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {},
+              "icon": "clock",
+              "title": "Reminders"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 773.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "04fd0a69a45a55ea",
+  "lastOpenFiles": [
+    "未命名.canvas",
+    "未命名 1.canvas",
+    "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md",
+    "未命名.base",
+    "未命名 1.base",
+    "ribao.md",
+    "题库.md",
+    "s.canvas",
+    "04-15-使用figma文件导入到pencil中，在通过pencil的mcp进行页面的还原.md",
+    "每日任务/4月.md",
+    "每日任务",
+    "Pasted image 20260415142050.png",
+    "web前端开发文档.md",
+    "项目自主学习能力.md",
+    "开发前准备工作.md",
+    "开发中记录文档.md",
+    "Excalidraw",
+    "埋点列表.md"
+  ]
+}
