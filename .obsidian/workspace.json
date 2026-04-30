@@ -65,10 +65,12 @@
             "id": "5191bbb204754f3c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-03-17 19.03.45.excalidraw"
             }
           }
         ],
@@ -241,7 +243,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 773.5
+    "width": 579.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -256,8 +258,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04fd0a69a45a55ea",
+  "active": "5191bbb204754f3c",
   "lastOpenFiles": [
+    "test.txt",
     "未命名.canvas",
     "未命名 1.canvas",
     "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md",
