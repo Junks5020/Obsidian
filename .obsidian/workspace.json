@@ -112,14 +112,12 @@
                 "id": "3c21ad0a80e07258",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
+                  "type": "excalidraw",
                   "state": {
-                    "file": "google广告接入流程.md",
-                    "mode": "source",
-                    "source": false
+                    "file": "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md"
                   },
-                  "icon": "lucide-file",
-                  "title": "google广告接入流程"
+                  "icon": "excalidraw-icon",
+                  "title": "Drawing 2026-03-17 19.03.45.excalidraw"
                 }
               }
             ],
@@ -396,9 +394,9 @@
   },
   "active": "3c21ad0a80e07258",
   "lastOpenFiles": [
-    "NotePadQuestionBankFE-项目亮点.md",
     "google广告接入流程.md",
     "NotePadTemplateMarketFE-项目亮点.md",
+    "NotePadQuestionBankFE-项目亮点.md",
     "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md",
     "test.txt",
     "未命名.canvas",
