@@ -10,7 +10,7 @@
           {
             "id": "d3c1900dce7fdde6",
             "type": "tabs",
-            "dimension": 84.83699772554965,
+            "dimension": 51.59313725490197,
             "children": [
               {
                 "id": "34f05d336c22f042",
@@ -46,7 +46,7 @@
           {
             "id": "82445945440666e1",
             "type": "tabs",
-            "dimension": 15.163002274450344,
+            "dimension": 48.40686274509804,
             "children": [
               {
                 "id": "98934983c4d0e9e5",
@@ -296,7 +296,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 579.5
+    "width": 579.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -312,11 +313,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "471971ee1dae6833",
+  "active": "6425f6889086cc5d",
   "lastOpenFiles": [
-    "未命名",
-    "NotePadTemplateMarketFE-项目亮点.md",
     "未命名.md",
+    "xzd",
+    "NotePadTemplateMarketFE-项目亮点.md",
     "NotePadQuestionBankFE-项目亮点.md",
     "GSD手册.md",
     "Excalidraw/Drawing 2026-03-17 19.03.45.excalidraw.md",
