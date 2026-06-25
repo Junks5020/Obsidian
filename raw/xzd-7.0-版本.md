@@ -9,5 +9,9 @@
 
 # 2、报表预览和打印字体的需求
 
-```yml	URL:http://ngwiki.newgrand.com/mediawiki/index.php/%E6%8A%A5%E8%A1%A8/%E6%89%93%E5%8D%B0%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE
+```json
+{"URL":"http://ngwiki.newgrand.com/mediawiki/index.php/%E6%8A%A5%E8%A1%A8/%E6%89%93%E5%8D%B0%E5%AD%97%E4%BD%93%E9%85%8D%E7%BD%AE",
+
+"rowNotes":"- 这个文档主要是进行打印的字体的需求等。"
+	  }
 ```
