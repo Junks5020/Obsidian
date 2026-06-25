@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "xzd-7.0-版本"
             }
+          },
+          {
+            "id": "0dbcb831ac33263b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ai-workflow/如何使用各个等级的模型.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "如何使用各个等级的模型"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -236,10 +250,12 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "cffb382f9c610389",
+  "active": "0dbcb831ac33263b",
   "lastOpenFiles": [
-    "AGENTS.md.md",
     "raw/xzd-7.0-版本.md",
+    "ai-workflow/如何使用各个等级的模型.md",
+    "ai-workflow",
+    "AGENTS.md.md",
     "raw/google广告接入流程.md",
     "raw/GSD手册.md",
     "raw/NotePadTemplateMarketFE-项目亮点.md",
