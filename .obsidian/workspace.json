@@ -53,13 +53,14 @@
             "id": "0dbcb831ac33263b",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "未命名.base",
-                "viewName": "表格"
+                "file": "xzd/环境.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "未命名"
+              "icon": "lucide-file",
+              "title": "环境"
             }
           }
         ],
@@ -249,11 +250,12 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "471971ee1dae6833",
+  "active": "0dbcb831ac33263b",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-07-01 09.33.51.excalidraw.md",
     "未命名.base",
     "xzd/每日任务/0701- 计划.md",
+    "xzd/环境.md",
+    "Excalidraw/Drawing 2026-07-01 09.33.51.excalidraw.md",
     "Pasted image 20260701093209.png",
     "Pasted image 20260701093053.png",
     "todolist.md",
@@ -266,7 +268,6 @@
     "raw/google广告接入流程.md",
     "raw/GSD手册.md",
     "raw/NotePadTemplateMarketFE-项目亮点.md",
-    "xzd/未命名.md",
     "wiki",
     "raw",
     "xzd",
