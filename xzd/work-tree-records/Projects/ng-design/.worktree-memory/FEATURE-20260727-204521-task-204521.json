@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "FEATURE-20260727-204521-task-204521",
+  "repoName": "ng-design",
+  "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\ng-design",
+  "type": "feature",
+  "title": "增加一个条形码的功能",
+  "baseBranch": "ljx-7.0",
+  "baseCommit": "5e2db88605e53304264fa3faaaa762f696cf65d7",
+  "taskBranch": "feature/20260727-204521-task-204521",
+  "worktreePath": "C:\\Users\\jinxu\\workspace\\xzd\\ng-design.worktrees\\feature-20260727-204521-task-204521",
+  "status": "doing",
+  "createdAt": "2026-07-27T12:45:22.804Z",
+  "updatedAt": "2026-07-27T12:47:18.007Z",
+  "modelProfile": "auto",
+  "syncTargetsConfirmed": true,
+  "sync": [],
+  "modelRuns": [
+    {
+      "stage": "scout",
+      "profile": "light",
+      "model": "fucheers/gpt-5.6-luna",
+      "startedAt": "2026-07-27T12:47:18.007Z",
+      "runId": "83847e0a-dd06-4a21-bf44-3ab22e58b0df"
+    }
+  ],
+  "timeline": [
+    {
+      "at": "2026-07-27T12:45:22.804Z",
+      "event": "created",
+      "detail": "Created from ljx-7.0"
+    },
+    {
+      "at": "2026-07-27T12:47:18.007Z",
+      "event": "model-run",
+      "detail": "scout → fucheers/gpt-5.6-luna (83847e0a-dd06-4a21-bf44-3ab22e58b0df)"
+    }
+  ]
+}

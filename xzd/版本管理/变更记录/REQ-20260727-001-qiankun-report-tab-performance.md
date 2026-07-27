@@ -1,8 +1,8 @@
 ---
 id: REQ-20260727-001
 type: requirement
-status: implemented-uncommitted
-commit: 待关联
+status: completed
+commit: 65c37de4f975c87b9c6dc2654a1ae0fbe5baf8b2
 source_branch: 6.5.1-dev
 created: 2026-07-27
 target_versions: [6.5.1-dev, 6.5.1]
@@ -80,18 +80,18 @@ tags: [version-change, requirement, report-web, performance, qiankun]
 
 ## Git 信息
 
-- 当前 Commit：`待关联`
-- 原因：本次优化仍在 `6.5.1-dev` 工作区中，尚未形成可确认的 Git 提交；当前 `HEAD` 与本次改动无关，不能作为来源提交。
+- 来源 Commit：`65c37de4f975c87b9c6dc2654a1ae0fbe5baf8b2`
+- `6.5.1` 回溯 Commit：`ac333dd8410338a9855fc8ebc6b3edd731556c1f`
 - 来源分支：`6.5.1-dev`
 - 前置优化提交：`3a9b35a9ee1a34617cf49cbb66a38b9290510f68`
-- 合并方式：提交后补充。
+- 合并方式：从来源提交提取 18 个优化代码及测试文件，在 `6.5.1` 形成等价回溯提交；排除来源提交中无关的 mock 和本地调试记录。
 
 ## 版本同步
 
 | 版本名称 | 是否需要同步 | 当前状态 | 合入 Commit | 验证结果 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| 6.5.1-dev | 是 | 待同步 | 待关联 | 子应用单测、构建和独立预览验证通过 | 工作区已实现，尚未提交，不能标记为已同步 |
-| 6.5.1 | 是 | 待同步 | - | 未验证 | 待来源提交形成后评估 cherry-pick |
+| 6.5.1-dev | 是 | 已同步 | `65c37de4f975c87b9c6dc2654a1ae0fbe5baf8b2` | 子应用单测、构建和独立预览验证通过 | 来源提交 |
+| 6.5.1 | 是 | 已同步 | `ac333dd8410338a9855fc8ebc6b3edd731556c1f` | 四项相关回归测试及 `npm run build` 通过 | 等价回溯，未带入无关 mock、references 或本地配置 |
 
 ## 验证结果
 
@@ -114,6 +114,5 @@ tags: [version-change, requirement, report-web, performance, qiankun]
 ## 后续动作
 
 - [ ] 在 qiankun 主应用中完成标签切换性能验收。
-- [ ] 形成 Git 提交后，将本记录和版本矩阵中的 `待关联` 替换为完整提交哈希。
-- [ ] 合入 `6.5.1` 后补充目标分支实际提交哈希和验证结论。
-
+- [x] 形成 Git 提交，并关联完整来源提交哈希。
+- [x] 合入 `6.5.1`，补充目标分支实际提交哈希和验证结论。

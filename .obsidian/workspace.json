@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
+                "file": "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "REQ-20260727-001-qiankun-report-tab-performance"
+              "title": "02-6.5.1-dev至6.5.1修复同步审计-20260727"
             }
           }
         ],
@@ -229,8 +229,8 @@
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
     "xzd/版本管理/01-版本覆盖矩阵.md",
-    "xzd/版本管理/00-版本总览.md",
     "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
+    "xzd/版本管理/00-版本总览.md",
     "xzd/环境.md",
     "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
     "xzd/版本管理/变更记录/BUG-20260629-001-decimal-places.md",
