@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
+                "file": "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-6.5.2-dev至6.5.2及master同步审计-20260727"
+              "title": "REQ-20260727-001-qiankun-report-tab-performance"
             }
           }
         ],
@@ -228,23 +228,25 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
-    "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
     "xzd/版本管理/01-版本覆盖矩阵.md",
+    "xzd/版本管理/00-版本总览.md",
+    "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
+    "xzd/环境.md",
+    "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
+    "xzd/版本管理/变更记录/BUG-20260629-001-decimal-places.md",
+    "Pasted image 20260701093053.png",
+    "Pasted image 20260701093209.png",
     "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
     "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
-    "xzd/版本管理/00-版本总览.md",
     "plan/R-260601-000015-报表优化需求与开发计划.md",
     "plan/刘金旭-7.0需求项目规划.md",
     "raw/xzd-7.0-版本.md",
     "plan/示例项目计划.md",
     "plan/测试.md",
-    "xzd/环境.md",
     "plan",
     "未命名.base",
     "xzd/每日任务/0701- 计划.md",
     "Excalidraw/Drawing 2026-07-01 09.33.51.excalidraw.md",
-    "Pasted image 20260701093209.png",
-    "Pasted image 20260701093053.png",
     "todolist.md",
     "xzd/每日任务",
     "Excalidraw/Drawing 2026-06-30 17.06.15.excalidraw.md",
@@ -266,8 +268,6 @@
     "ribao.md",
     "题库.md",
     "s.canvas",
-    "04-15-使用figma文件导入到pencil中，在通过pencil的mcp进行页面的还原.md",
-    "每日任务/4月.md",
     "xzd/每日任务",
     "Pasted image 20260415142050.png"
   ]
