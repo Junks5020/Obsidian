@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "BUG-20260728-141339-task-141339",
+  "repoName": "report-web",
+  "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
+  "type": "bug",
+  "title": "增加预览页面树状全部展开和全部收起的按钮",
+  "baseBranch": "6.5.1-dev",
+  "baseCommit": "817141b09c88f92f92b11ef05b5043ab6a46d8ff",
+  "taskBranch": "bug/20260728-141339-task-141339",
+  "worktreePath": "C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-141339-task-141339",
+  "status": "review",
+  "createdAt": "2026-07-28T06:13:40.781Z",
+  "updatedAt": "2026-07-28T06:35:46.478Z",
+  "modelProfile": "auto",
+  "syncTargetsConfirmed": true,
+  "sync": [
+    {
+      "branch": "6.5.2-dev",
+      "status": "pending",
+      "updatedAt": "2026-07-28T06:13:40.781Z"
+    }
+  ],
+  "modelRuns": [
+    {
+      "stage": "scout",
+      "profile": "light",
+      "model": "openai-codex/gpt-5.6-luna",
+      "queuedAt": "2026-07-28T06:13:59.902Z",
+      "finishedAt": "2026-07-28T06:35:46.478Z",
+      "status": "completed",
+      "runId": "cacb7f0a-1a59-4d2a-a803-1e883df7cd62"
+    },
+    {
+      "stage": "plan",
+      "profile": "standard",
+      "model": "openai-codex/gpt-5.6-terra",
+      "queuedAt": "2026-07-28T06:13:59.902Z",
+      "finishedAt": "2026-07-28T06:35:46.478Z",
+      "status": "completed",
+      "runId": "cacb7f0a-1a59-4d2a-a803-1e883df7cd62"
+    },
+    {
+      "stage": "implement",
+      "profile": "standard",
+      "model": "openai-codex/gpt-5.6-terra",
+      "queuedAt": "2026-07-28T06:13:59.902Z",
+      "finishedAt": "2026-07-28T06:35:46.478Z",
+      "status": "completed",
+      "runId": "cacb7f0a-1a59-4d2a-a803-1e883df7cd62"
+    },
+    {
+      "stage": "review",
+      "profile": "strong",
+      "model": "openai-codex/gpt-5.6-sol",
+      "queuedAt": "2026-07-28T06:13:59.902Z",
+      "finishedAt": "2026-07-28T06:35:46.478Z",
+      "status": "completed",
+      "runId": "cacb7f0a-1a59-4d2a-a803-1e883df7cd62"
+    }
+  ],
+  "timeline": [
+    {
+      "at": "2026-07-28T06:13:40.781Z",
+      "event": "created",
+      "detail": "Created from 6.5.1-dev"
+    },
+    {
+      "at": "2026-07-28T06:13:54.751Z",
+      "event": "planning-context-confirmed",
+      "detail": "base=6.5.1-dev; sync=6.5.2-dev"
+    },
+    {
+      "at": "2026-07-28T06:13:59.902Z",
+      "event": "lifecycle-run",
+      "detail": "scout → plan → implement → review (cacb7f0a-1a59-4d2a-a803-1e883df7cd62)"
+    },
+    {
+      "at": "2026-07-28T06:35:46.478Z",
+      "event": "model-run-completed",
+      "detail": "lifecycle cacb7f0a-1a59-4d2a-a803-1e883df7cd62"
+    }
+  ],
+  "planningContextConfirmedAt": "2026-07-28T06:13:54.751Z"
+}

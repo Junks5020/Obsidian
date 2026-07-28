@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "BUG-20260728-115043-ea10defc-6-5-2-dev",
+  "repoName": "report-web",
+  "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
+  "type": "bug",
+  "title": "适配 ea10defc 树状报表首行首次渲染修复到 6.5.2-dev",
+  "baseBranch": "6.5.2-dev",
+  "baseCommit": "ff968baa80167f0ebc2dbf3bf6d5a9e058353706",
+  "taskBranch": "bug/20260728-115043-ea10defc-6-5-2-dev",
+  "worktreePath": "C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-115043-ea10defc-6-5-2-dev",
+  "status": "merged",
+  "createdAt": "2026-07-28T03:50:44.497Z",
+  "updatedAt": "2026-07-28T05:59:55.442Z",
+  "modelProfile": "strong",
+  "syncTargetsConfirmed": true,
+  "sync": [],
+  "modelRuns": [
+    {
+      "stage": "scout",
+      "profile": "strong",
+      "model": "openai-codex/gpt-5.6-sol",
+      "startedAt": "2026-07-28T03:50:59.418Z",
+      "runId": "9b9a0c5a-c335-4ecf-8574-1485a13aff4d"
+    },
+    {
+      "stage": "plan",
+      "profile": "strong",
+      "model": "openai-codex/gpt-5.6-sol",
+      "startedAt": "2026-07-28T04:09:40.192Z",
+      "runId": "f836566e-5f3c-46a6-a325-493b85e64c28"
+    },
+    {
+      "stage": "implement",
+      "profile": "strong",
+      "model": "openai-codex/gpt-5.6-sol",
+      "startedAt": "2026-07-28T05:21:04.065Z",
+      "runId": "9a1dd131-55e6-4d06-820c-697042ad5e5e"
+    },
+    {
+      "stage": "review",
+      "profile": "strong",
+      "model": "openai-codex/gpt-5.6-sol",
+      "startedAt": "2026-07-28T05:38:02.258Z",
+      "runId": "283a56ce-9a5a-43b8-a349-108d1a1a8986"
+    },
+    {
+      "stage": "summary",
+      "profile": "strong",
+      "model": "openai-codex/gpt-5.6-sol",
+      "startedAt": "2026-07-28T05:52:26.418Z",
+      "status": "completed",
+      "runId": "f7436868-cb34-4273-9a51-0725ef9efaf4",
+      "finishedAt": "2026-07-28T05:59:55.442Z"
+    }
+  ],
+  "timeline": [
+    {
+      "at": "2026-07-28T03:50:44.497Z",
+      "event": "created",
+      "detail": "Created from 6.5.2-dev"
+    },
+    {
+      "at": "2026-07-28T03:50:59.418Z",
+      "event": "model-run",
+      "detail": "scout → openai-codex/gpt-5.6-sol (9b9a0c5a-c335-4ecf-8574-1485a13aff4d)"
+    },
+    {
+      "at": "2026-07-28T04:09:40.107Z",
+      "event": "planning-context-confirmed",
+      "detail": "base=6.5.2-dev; sync=none"
+    },
+    {
+      "at": "2026-07-28T04:09:40.192Z",
+      "event": "model-run",
+      "detail": "plan → openai-codex/gpt-5.6-sol (f836566e-5f3c-46a6-a325-493b85e64c28)"
+    },
+    {
+      "at": "2026-07-28T05:21:04.065Z",
+      "event": "model-run",
+      "detail": "implement → openai-codex/gpt-5.6-sol (9a1dd131-55e6-4d06-820c-697042ad5e5e)"
+    },
+    {
+      "at": "2026-07-28T05:38:02.258Z",
+      "event": "model-run",
+      "detail": "review → openai-codex/gpt-5.6-sol (283a56ce-9a5a-43b8-a349-108d1a1a8986)"
+    },
+    {
+      "at": "2026-07-28T05:45:00.709Z",
+      "event": "base-merged",
+      "detail": "d645150c2012dff5c8c98a9bf61c63b284dc7a1c into 6.5.2-dev"
+    },
+    {
+      "at": "2026-07-28T05:45:53.611Z",
+      "event": "cleanup-completed"
+    },
+    {
+      "at": "2026-07-28T05:52:26.418Z",
+      "event": "model-run",
+      "detail": "summary → openai-codex/gpt-5.6-sol (f7436868-cb34-4273-9a51-0725ef9efaf4)"
+    },
+    {
+      "at": "2026-07-28T05:59:55.442Z",
+      "event": "model-run-completed",
+      "detail": "single f7436868-cb34-4273-9a51-0725ef9efaf4"
+    }
+  ],
+  "planningContextConfirmedAt": "2026-07-28T04:09:40.107Z",
+  "taskHead": "a3354fd96867a36d00752bba7706c7e46199baa3",
+  "syncCommits": [
+    "a3354fd96867a36d00752bba7706c7e46199baa3"
+  ],
+  "mergeCommit": "d645150c2012dff5c8c98a9bf61c63b284dc7a1c",
+  "mergedAt": "2026-07-28T05:45:00.709Z",
+  "finishedAt": "2026-07-28T05:45:53.611Z"
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "FEATURE-20260728-104337-pdf",
+  "repoName": "ng-design",
+  "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\ng-design",
+  "type": "feature",
+  "title": "报表条码PDF与边框线型降级集成",
+  "baseBranch": "ljx-7.0",
+  "baseCommit": "5e2db88605e53304264fa3faaaa762f696cf65d7",
+  "taskBranch": "feature/20260728-104337-pdf",
+  "worktreePath": "C:\\Users\\jinxu\\workspace\\xzd\\ng-design.worktrees\\feature-20260728-104337-pdf",
+  "status": "aborted",
+  "createdAt": "2026-07-28T02:43:38.555Z",
+  "updatedAt": "2026-07-28T03:11:20.094Z",
+  "modelProfile": "auto",
+  "syncTargetsConfirmed": true,
+  "sync": [],
+  "modelRuns": [
+    {
+      "stage": "scout",
+      "profile": "light",
+      "model": "fucheers/gpt-5.6-luna",
+      "startedAt": "2026-07-28T02:43:47.914Z",
+      "runId": "8b878d79-41c8-408e-a4c9-75033ecdb903"
+    }
+  ],
+  "timeline": [
+    {
+      "at": "2026-07-28T02:43:38.555Z",
+      "event": "created",
+      "detail": "Created from ljx-7.0"
+    },
+    {
+      "at": "2026-07-28T02:43:47.914Z",
+      "event": "model-run",
+      "detail": "scout → fucheers/gpt-5.6-luna (8b878d79-41c8-408e-a4c9-75033ecdb903)"
+    },
+    {
+      "at": "2026-07-28T03:11:20.094Z",
+      "event": "aborted"
+    }
+  ],
+  "finishedAt": "2026-07-28T03:11:20.094Z"
+}

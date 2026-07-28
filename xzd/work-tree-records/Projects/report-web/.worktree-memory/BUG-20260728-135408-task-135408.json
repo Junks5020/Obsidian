@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "BUG-20260728-135408-task-135408",
+  "repoName": "report-web",
+  "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
+  "type": "bug",
+  "title": "修复报表渲染内容",
+  "baseBranch": "6.5.1-dev",
+  "baseCommit": "817141b09c88f92f92b11ef05b5043ab6a46d8ff",
+  "taskBranch": "bug/20260728-135408-task-135408",
+  "worktreePath": "C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-135408-task-135408",
+  "status": "doing",
+  "createdAt": "2026-07-28T05:54:09.272Z",
+  "updatedAt": "2026-07-28T05:54:09.272Z",
+  "modelProfile": "auto",
+  "syncTargetsConfirmed": true,
+  "sync": [
+    {
+      "branch": "6.5.2-dev",
+      "status": "pending",
+      "updatedAt": "2026-07-28T05:54:09.272Z"
+    }
+  ],
+  "modelRuns": [],
+  "timeline": [
+    {
+      "at": "2026-07-28T05:54:09.272Z",
+      "event": "created",
+      "detail": "Created from 6.5.1-dev"
+    }
+  ]
+}

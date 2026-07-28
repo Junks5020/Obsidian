@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
+                "file": "plan/R-260601-000015-报表优化需求与开发计划.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02-6.5.1-dev至6.5.1修复同步审计-20260727"
+              "title": "R-260601-000015-报表优化需求与开发计划"
             }
           }
         ],
@@ -228,18 +228,19 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "plan/刘金旭-7.0需求项目规划.md",
+    "plan/R-260601-000015-报表优化需求与开发计划.md",
     "xzd/版本管理/01-版本覆盖矩阵.md",
+    "xzd/work-tree-records/Projects/ng-design/Tasks/FEATURE-20260727-204521-task-204521.md",
+    "xzd/环境.md",
+    "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
     "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
     "xzd/版本管理/00-版本总览.md",
-    "xzd/环境.md",
     "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
     "xzd/版本管理/变更记录/BUG-20260629-001-decimal-places.md",
     "Pasted image 20260701093053.png",
     "Pasted image 20260701093209.png",
     "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
-    "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
-    "plan/R-260601-000015-报表优化需求与开发计划.md",
-    "plan/刘金旭-7.0需求项目规划.md",
     "raw/xzd-7.0-版本.md",
     "plan/示例项目计划.md",
     "plan/测试.md",
@@ -266,7 +267,6 @@
     "未命名 1.canvas",
     "未命名 1.base",
     "ribao.md",
-    "题库.md",
     "s.canvas",
     "xzd/每日任务",
     "Pasted image 20260415142050.png"

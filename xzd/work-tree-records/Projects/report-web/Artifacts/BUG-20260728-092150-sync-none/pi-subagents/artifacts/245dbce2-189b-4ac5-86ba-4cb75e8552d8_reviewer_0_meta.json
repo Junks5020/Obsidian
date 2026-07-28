@@ -1,0 +1,152 @@
+{
+  "runId": "245dbce2-189b-4ac5-86ba-4cb75e8552d8",
+  "agent": "reviewer",
+  "task": "[Read from: C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-092150-sync-none\\src\\components\\report\\preview\\plugins\\utils.ts, C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-092150-sync-none\\src\\components\\report\\preview\\plugins\\treeRender\\index.tsx, C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-092150-sync-none\\src\\components\\report\\preview\\plugins\\cellRootLifecycle.ts, C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-092150-sync-none\\tests\\tree-preview-first-render.test.ts, C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-092150-sync-none\\src\\components\\report\\preview\\tableSheets\\index.tsx]\n\n只读审查当前最终任务 diff（忽略 package-lock.json、ngproxy.ini、.pi-subagents）。BUG：树状报表 row 0 首次渲染缺失折叠图标。先前 hot.render 方案已撤回。当前方案：tree renderer 对 row 0 新建 React root 时，把最新 JSX 聚合到 microtask，再在 React useEffect 生命周期外 flushSync，确保下一次 paint 前提交；root 被回收则跳过。新增 jsdom 真实 renderer 测试。请重点验证 React 18 生命周期安全、微任务/flushSync 正确性、陈旧 props/root 回收、Handsontable TD 复用、性能、测试能否在旧代码失败。不要改文件，按严重性给行号证据。\n\n## Acceptance Contract\nAcceptance level: attested\nCompletion is not accepted from prose alone. End with a structured acceptance report.\n\nCriteria:\n- criterion-1: Return concrete findings with file paths and severity when applicable\n\nRequired evidence: review-findings, residual-risks\n\nFinish with a fenced JSON block tagged `acceptance-report` in this shape:\nUse empty arrays when no items apply; array fields contain strings unless object entries are shown.\n`criteriaSatisfied[].status` must be exactly one of: satisfied, not-satisfied, not-applicable.\n`commandsRun[].result` must be exactly one of: passed, failed, not-run.\n`manualNotes` and `notes` are optional strings; an empty string means no note and does not satisfy `manual-notes` evidence.\n```acceptance-report\n{\n  \"criteriaSatisfied\": [\n    {\n      \"id\": \"criterion-1\",\n      \"status\": \"satisfied\",\n      \"evidence\": \"specific proof\"\n    }\n  ],\n  \"changedFiles\": [\n    \"src/file.ts\"\n  ],\n  \"testsAddedOrUpdated\": [\n    \"test/file.test.ts\"\n  ],\n  \"commandsRun\": [\n    {\n      \"command\": \"command\",\n      \"result\": \"passed\",\n      \"summary\": \"short result\"\n    }\n  ],\n  \"validationOutput\": [\n    \"validation output or concise summary\"\n  ],\n  \"residualRisks\": [\n    \"none\"\n  ],\n  \"noStagedFiles\": true,\n  \"diffSummary\": \"short description of the diff\",\n  \"reviewFindings\": [\n    \"blocker: file.ts:12 - issue found, or no blockers\"\n  ],\n  \"manualNotes\": \"anything else the parent should know\"\n}\n```",
+  "exitCode": 0,
+  "model": "fucheers/gpt-5.6-sol",
+  "attemptedModels": [
+    "fucheers/gpt-5.6-sol"
+  ],
+  "modelAttempts": [
+    {
+      "model": "fucheers/gpt-5.6-sol",
+      "success": true,
+      "exitCode": 0,
+      "usage": {
+        "input": 70732,
+        "output": 18145,
+        "cacheRead": 484352,
+        "cacheWrite": 0,
+        "cost": 0,
+        "turns": 14
+      }
+    }
+  ],
+  "acceptance": {
+    "status": "attested",
+    "evidenceStatus": "attested",
+    "explicit": false,
+    "effectiveAcceptance": {
+      "level": "attested",
+      "explicit": false,
+      "inferredReason": [
+        "read-only/reviewer-style agent"
+      ],
+      "criteria": [
+        {
+          "id": "criterion-1",
+          "must": "Return concrete findings with file paths and severity when applicable",
+          "evidence": [
+            "review-findings",
+            "residual-risks"
+          ],
+          "severity": "required"
+        }
+      ],
+      "evidence": [
+        "review-findings",
+        "residual-risks"
+      ],
+      "verify": [],
+      "stopRules": []
+    },
+    "inferredReason": [
+      "read-only/reviewer-style agent"
+    ],
+    "criteria": [
+      {
+        "id": "criterion-1",
+        "must": "Return concrete findings with file paths and severity when applicable",
+        "evidence": [
+          "review-findings",
+          "residual-risks"
+        ],
+        "severity": "required"
+      }
+    ],
+    "runtimeChecks": [],
+    "verifyRuns": [],
+    "childReport": {
+      "criteriaSatisfied": [
+        {
+          "id": "criterion-1",
+          "status": "satisfied",
+          "evidence": "给出了带严重性及行号的具体 review findings，并验证 src/components/report/preview/plugins/utils.ts:39-83、src/components/report/preview/plugins/treeRender/index.tsx:36,68-75、src/components/report/preview/plugins/cellRootLifecycle.ts:11-17 和 tests/tree-preview-first-render.test.ts:60-78。"
+        }
+      ],
+      "changedFiles": [
+        "src/components/report/preview/plugins/utils.ts",
+        "src/components/report/preview/plugins/treeRender/index.tsx",
+        "tests/tree-preview-first-render.test.ts"
+      ],
+      "testsAddedOrUpdated": [
+        "tests/tree-preview-first-render.test.ts"
+      ],
+      "commandsRun": [
+        {
+          "command": "npx tsx tests/tree-preview-first-render.test.ts",
+          "result": "passed",
+          "summary": "输出 tree preview first render tests passed；真实 React tree renderer 在一个微任务内提交折叠图标和最新 props。"
+        },
+        {
+          "command": "npx tsx tests/tree-preview-collapse.test.ts && npx tsx tests/preview-resource-lifecycle.test.ts",
+          "result": "passed",
+          "summary": "既有树折叠与 React root 生命周期回归测试均通过。"
+        },
+        {
+          "command": "npx eslint src/components/report/preview/plugins/utils.ts src/components/report/preview/plugins/treeRender/index.tsx",
+          "result": "passed",
+          "summary": "两个改动生产文件无 ESLint 报错。"
+        },
+        {
+          "command": "git diff --check -- src/components/report/preview/plugins/utils.ts src/components/report/preview/plugins/treeRender/index.tsx tests/tree-preview-first-render.test.ts",
+          "result": "passed",
+          "summary": "任务 diff 无 Git whitespace error。"
+        },
+        {
+          "command": "npx prettier --check src/components/report/preview/plugins/utils.ts src/components/report/preview/plugins/treeRender/index.tsx tests/tree-preview-first-render.test.ts",
+          "result": "failed",
+          "summary": "三个任务文件均被报告需要格式化；主要为 import 顺序及生产文件 CRLF。"
+        },
+        {
+          "command": "npx tsc --noEmit --pretty false",
+          "result": "failed",
+          "summary": "完整类型检查被大量既有第三方声明及既有源码错误阻断；未发现指向本次新增 utils/tree renderer 逻辑的错误。"
+        },
+        {
+          "command": "React 18.3.1 jsdom probe: createRoot.render twice, then inspect after await Promise.resolve()",
+          "result": "passed",
+          "summary": "等价旧路径在一个微任务后输出 <empty-after-one-microtask>，证明新增测试的时序断言能区分旧实现。"
+        }
+      ],
+      "validationOutput": [
+        "当前实现只对 row 0 的新 React root 排队一次微任务，并以 WeakMap 聚合最新 JSX。",
+        "flushSync 位于 queueMicrotask 回调内，避开当前 React effect 调用栈并在下一 paint 前执行。",
+        "TD root 属性身份检查配合 releaseCellReactRoots 删除旧 root，可跳过坐标复用、renderer 切换或销毁后的陈旧提交。",
+        "任务测试、既有树折叠测试、root 生命周期测试及生产文件 ESLint 均通过。",
+        "Prettier 检查失败；完整 TypeScript 检查受仓库既有错误阻断。"
+      ],
+      "residualRisks": [
+        "测试未从真实 React useEffect 中触发 renderer，不能直接检测未来将 flushSync 移回 React 生命周期产生的警告。",
+        "测试未直接构造微任务执行前 TD 被复用或 root 被销毁的场景；当前跳过行为仅由生产身份 guard 和 lifecycle 调用链验证。",
+        "row 0 在 Handsontable overlay/frozen clone 中可能产生少量独立 flushSync 微任务；实现已限定为新 root，但尚无大表性能基准。",
+        "三个任务文件尚未通过项目 Prettier 检查。"
+      ],
+      "noStagedFiles": true,
+      "diffSummary": "tree renderer 获取 optimizeRender 的新-root 标志；row 0 新 root 的 JSX 通过 WeakMap 聚合到微任务后 flushSync 提交，并在 TD/root 身份失效时跳过；新增 jsdom 真实 renderer 首次渲染回归测试。",
+      "reviewFindings": [
+        "no blockers: src/components/report/preview/plugins/utils.ts:74-83 - flushSync 位于微任务中，避开 React effect 当前调用栈。",
+        "correct: src/components/report/preview/plugins/utils.ts:62-72 - 同一 root 的 pending JSX 被最新 content 覆盖，且只调度一个微任务。",
+        "correct: src/components/report/preview/plugins/treeRender/index.tsx:68-75 - 仅 row 0 新 root 延迟同步提交，并以 TD[rootKey] === root 防止回收后的陈旧提交。",
+        "correct: src/components/report/preview/plugins/cellRootLifecycle.ts:11-17 - TD 坐标复用时旧 root 被 unmount 且属性被删除，使身份 guard 失效。",
+        "correct: tests/tree-preview-first-render.test.ts:61-68 - 真实 renderer 验证首次折叠图标、下一 paint 前提交及最新 props 聚合；等价旧 React root.render 路径在同一时点仍为空。",
+        "low: tests/tree-preview-first-render.test.ts:60-78 - 未直接覆盖 useEffect 触发和微任务前 root 回收两个场景。",
+        "low: src/components/report/preview/plugins/utils.ts:1-5, tests/tree-preview-first-render.test.ts:1-2 - Prettier 检查失败，最终提交前需要格式化。"
+      ],
+      "manualNotes": "只读审查，未修改文件；按要求忽略 package-lock.json、ngproxy.ini 和 .pi-subagents。src/components/report/preview/tableSheets/index.tsx 与 cellRootLifecycle.ts 当前无任务 diff。"
+    }
+  },
+  "transcriptPath": "C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\bug-20260728-092150-sync-none\\.pi-subagents\\artifacts\\245dbce2-189b-4ac5-86ba-4cb75e8552d8_reviewer_0_transcript.jsonl",
+  "skills": [],
+  "timestamp": 1785207461844
+}
