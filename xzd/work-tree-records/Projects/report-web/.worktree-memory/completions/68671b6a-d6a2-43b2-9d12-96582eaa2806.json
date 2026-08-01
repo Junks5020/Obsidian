@@ -1,0 +1,125 @@
+{
+  "lifecycleArtifactVersion": 3,
+  "id": "68671b6a-d6a2-43b2-9d12-96582eaa2806",
+  "agent": "reviewer",
+  "mode": "single",
+  "success": true,
+  "state": "complete",
+  "summary": "reviewer:\n## Review\n\n- **Correct:** The root cause is confirmed in `src/components/report/preview/plugins/filterRender/util.tsx:215-240`: filter options are read strictly from `filterRange.from..to`. A backend range of `1..1` therefore exposes only the first row. Multi-condition state is grouped by `${sheet}-${expand}-${from}_${to}` at `util.tsx:19,161-178`, so peer columns must normalize to the same range/key.\n\n- **Correct:** Clearing only the refreshed sheet’s filter state is preferable to clearing the entire map. Filters are exported across sheets in `src/pages/TableManager/preview/utils/query.ts:102-137`; global clearing would discard valid filters on other tabs. `src/components/report/preview/store.ts:140-152` is directionally correct because refreshed row indexes and cached filter values are stale.\n\n- **Blocker:** Current peer discovery can merge separate table blocks. `src/components/report/preview/plugins/filterRender/range.ts:32-45` takes the largest range from every header on the same row/start, while `range.ts:49-54` accepts a tree in any column as evidence. Thus a tree table can extend an unrelated one-row table beside it.\n  - Restrict the authoritative peer to a filter header whose own filter column contains the expanded tree cells.\n  - Restrict propagation to the contiguous filtered-header block containing that tree header; stop at an unfiltered spacer/header boundary.\n  - Continue requiring actual target-column data beyond the reported end (`range.ts:55-60`).\n  - Do not broadly normalize every same-row range or all non-tree reports.\n\n- **Note:** The conservative `from === to` guard at `range.ts:29` precisely covers the reported one-row corruption and reduces accidental expansion. Keep it unless there is evidence that the API also returns partially truncated multi-row ranges.\n\n- **Note:** Prefer the established prefix test over parsing keys with `split('-')`. `store.ts:141-145` fails for hyphenated sheet keys; use `!key.startsWith(\\`${String(defaultSheet)}-\\`)`, matching `query.ts:105-106`.\n\n- **Note:** `resetCacheData` currently clears only cached sheets (`store.ts:123-127`). A new design-preview payload invokes it at `src/pages/TableManager/preview/index.tsx:415-425`; it should also clear all `filterRangeMap` entries so filters from a previous schema/report cannot survive.\n\n- **Note:** Preserve the existing tree guard. It rejects ranges intersecting configured `globalSettings.treeRows` at `util.tsx:82-103`. Do not weaken it as part of this fix; normalization should not synthesize or modify `treeRows`. Legacy responses containing only expanded tree cells will retain their present behavior.\n\n### Regression tests\n\nAdd a pure test around `normalizeTreeFilterRange` plus reducer tests:\n\n1. **Reported case:** tree header has `down 1..N`; adjacent headers have `1..1`; tree cells and target-column values exist through `N`. Each peer becomes `1..N` and produces the same multi-condition key.\n2. **Multiple blocks:** same header row/start, tree table and separate one-row table divided by an unfiltered spacer. The second block remains `1..1`.\n3. **Tree evidence guard:** no tree cells, or tree cells not in the authoritative peer column → unchanged.\n4. **Target-data guard:** tree expands to `N`, but target column has no data beyond row 1 → unchanged.\n5. **Horizontal guard:** `expand: 'right'` remains unchanged.\n6. **Already-valid range:** a non-single-row API range remains unchanged.\n7. **Refresh state:** `updateReportSheets` removes only current-sheet keys and preserves other sheets.\n8. **Schema reset:** `resetCacheData` clears all filter state.\n9. **Hyphenated key:** current sheet `sheet-1` correctly removes `sheet-1-down-...` without removing another sheet.\n\n`git diff --check` passed. Full `tsc --noEmit` is not a useful signal here because the repository currently has numerous pre-existing dependency/type-definition errors.",
+  "results": [
+    {
+      "agent": "reviewer",
+      "context": "fresh",
+      "output": "## Review\n\n- **Correct:** The root cause is confirmed in `src/components/report/preview/plugins/filterRender/util.tsx:215-240`: filter options are read strictly from `filterRange.from..to`. A backend range of `1..1` therefore exposes only the first row. Multi-condition state is grouped by `${sheet}-${expand}-${from}_${to}` at `util.tsx:19,161-178`, so peer columns must normalize to the same range/key.\n\n- **Correct:** Clearing only the refreshed sheet’s filter state is preferable to clearing the entire map. Filters are exported across sheets in `src/pages/TableManager/preview/utils/query.ts:102-137`; global clearing would discard valid filters on other tabs. `src/components/report/preview/store.ts:140-152` is directionally correct because refreshed row indexes and cached filter values are stale.\n\n- **Blocker:** Current peer discovery can merge separate table blocks. `src/components/report/preview/plugins/filterRender/range.ts:32-45` takes the largest range from every header on the same row/start, while `range.ts:49-54` accepts a tree in any column as evidence. Thus a tree table can extend an unrelated one-row table beside it.\n  - Restrict the authoritative peer to a filter header whose own filter column contains the expanded tree cells.\n  - Restrict propagation to the contiguous filtered-header block containing that tree header; stop at an unfiltered spacer/header boundary.\n  - Continue requiring actual target-column data beyond the reported end (`range.ts:55-60`).\n  - Do not broadly normalize every same-row range or all non-tree reports.\n\n- **Note:** The conservative `from === to` guard at `range.ts:29` precisely covers the reported one-row corruption and reduces accidental expansion. Keep it unless there is evidence that the API also returns partially truncated multi-row ranges.\n\n- **Note:** Prefer the established prefix test over parsing keys with `split('-')`. `store.ts:141-145` fails for hyphenated sheet keys; use `!key.startsWith(\\`${String(defaultSheet)}-\\`)`, matching `query.ts:105-106`.\n\n- **Note:** `resetCacheData` currently clears only cached sheets (`store.ts:123-127`). A new design-preview payload invokes it at `src/pages/TableManager/preview/index.tsx:415-425`; it should also clear all `filterRangeMap` entries so filters from a previous schema/report cannot survive.\n\n- **Note:** Preserve the existing tree guard. It rejects ranges intersecting configured `globalSettings.treeRows` at `util.tsx:82-103`. Do not weaken it as part of this fix; normalization should not synthesize or modify `treeRows`. Legacy responses containing only expanded tree cells will retain their present behavior.\n\n### Regression tests\n\nAdd a pure test around `normalizeTreeFilterRange` plus reducer tests:\n\n1. **Reported case:** tree header has `down 1..N`; adjacent headers have `1..1`; tree cells and target-column values exist through `N`. Each peer becomes `1..N` and produces the same multi-condition key.\n2. **Multiple blocks:** same header row/start, tree table and separate one-row table divided by an unfiltered spacer. The second block remains `1..1`.\n3. **Tree evidence guard:** no tree cells, or tree cells not in the authoritative peer column → unchanged.\n4. **Target-data guard:** tree expands to `N`, but target column has no data beyond row 1 → unchanged.\n5. **Horizontal guard:** `expand: 'right'` remains unchanged.\n6. **Already-valid range:** a non-single-row API range remains unchanged.\n7. **Refresh state:** `updateReportSheets` removes only current-sheet keys and preserves other sheets.\n8. **Schema reset:** `resetCacheData` clears all filter state.\n9. **Hyphenated key:** current sheet `sheet-1` correctly removes `sheet-1-down-...` without removing another sheet.\n\n`git diff --check` passed. Full `tsc --noEmit` is not a useful signal here because the repository currently has numerous pre-existing dependency/type-definition errors.",
+      "success": true,
+      "sessionFile": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\2026-07-29T01-52-37-087Z_019fab92-dedf-7a71-adc7-c26b6bb90321\\bb2b4b27\\run-0\\session.jsonl",
+      "intercomTarget": "subagent-reviewer-68671b6a-d6a2-43b2-9d12-96582eaa2806-1",
+      "model": "openai-codex/gpt-5.6-sol",
+      "attemptedModels": [
+        "openai-codex/gpt-5.6-sol"
+      ],
+      "modelAttempts": [
+        {
+          "model": "openai-codex/gpt-5.6-sol",
+          "success": true,
+          "exitCode": 0,
+          "usage": {
+            "input": 116953,
+            "output": 9484,
+            "cacheRead": 751104,
+            "cacheWrite": 0,
+            "cost": 1.244837,
+            "turns": 16
+          }
+        }
+      ],
+      "totalCost": {
+        "inputTokens": 116953,
+        "outputTokens": 9484,
+        "costUsd": 1.244837
+      },
+      "artifactPaths": {
+        "inputPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer_input.md",
+        "outputPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer_output.md",
+        "jsonlPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer.jsonl",
+        "transcriptPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer_transcript.jsonl",
+        "metadataPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer_meta.json"
+      },
+      "transcriptPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer_transcript.jsonl",
+      "launchContractDigest": "b1a31370584d0a439a92d88e933f9e5f6c729c4c5ecded0dc5e6dc05f4579b22",
+      "effects": {
+        "fileMutation": {
+          "status": "not-applicable",
+          "expected": false,
+          "attempted": true
+        }
+      },
+      "acceptance": {
+        "status": "not-required",
+        "evidenceStatus": "not-required",
+        "explicit": true,
+        "effectiveAcceptance": {
+          "level": "none",
+          "explicit": true,
+          "inferredReason": [
+            "read-only/reviewer-style agent"
+          ],
+          "criteria": [
+            {
+              "id": "criterion-1",
+              "must": "Return concrete findings with file paths and severity when applicable",
+              "evidence": [],
+              "severity": "required"
+            }
+          ],
+          "evidence": [],
+          "verify": [],
+          "stopRules": [],
+          "reason": "disabled by deprecated false shorthand"
+        },
+        "inferredReason": [
+          "read-only/reviewer-style agent"
+        ],
+        "criteria": [
+          {
+            "id": "criterion-1",
+            "must": "Return concrete findings with file paths and severity when applicable",
+            "evidence": [],
+            "severity": "required"
+          }
+        ],
+        "runtimeChecks": [],
+        "verifyRuns": []
+      },
+      "status": "completed",
+      "summary": "## Review\n\n- **Correct:** The root cause is confirmed in `src/components/report/preview/plugins/filterRender/util.tsx:215-240`: filter options are read strictly from `filterRange.from..to`. A backend range of `1..1` therefore exposes only the first row. Multi-condition state is grouped by `${sheet}-${expand}-${from}_${to}` at `util.tsx:19,161-178`, so peer columns must normalize to the same range/key.\n\n- **Correct:** Clearing only the refreshed sheet’s filter state is preferable to clearing the entire map. Filters are exported across sheets in `src/pages/TableManager/preview/utils/query.ts:102-137`; global clearing would discard valid filters on other tabs. `src/components/report/preview/store.ts:140-152` is directionally correct because refreshed row indexes and cached filter values are stale.\n\n- **Blocker:** Current peer discovery can merge separate table blocks. `src/components/report/preview/plugins/filterRender/range.ts:32-45` takes the largest range from every header on the same row/start, while `range.ts:49-54` accepts a tree in any column as evidence. Thus a tree table can extend an unrelated one-row table beside it.\n  - Restrict the authoritative peer to a filter header whose own filter column contains the expanded tree cells.\n  - Restrict propagation to the contiguous filtered-header block containing that tree header; stop at an unfiltered spacer/header boundary.\n  - Continue requiring actual target-column data beyond the reported end (`range.ts:55-60`).\n  - Do not broadly normalize every same-row range or all non-tree reports.\n\n- **Note:** The conservative `from === to` guard at `range.ts:29` precisely covers the reported one-row corruption and reduces accidental expansion. Keep it unless there is evidence that the API also returns partially truncated multi-row ranges.\n\n- **Note:** Prefer the established prefix test over parsing keys with `split('-')`. `store.ts:141-145` fails for hyphenated sheet keys; use `!key.startsWith(\\`${String(defaultSheet)}-\\`)`, matching `query.ts:105-106`.\n\n- **Note:** `resetCacheData` currently clears only cached sheets (`store.ts:123-127`). A new design-preview payload invokes it at `src/pages/TableManager/preview/index.tsx:415-425`; it should also clear all `filterRangeMap` entries so filters from a previous schema/report cannot survive.\n\n- **Note:** Preserve the existing tree guard. It rejects ranges intersecting configured `globalSettings.treeRows` at `util.tsx:82-103`. Do not weaken it as part of this fix; normalization should not synthesize or modify `treeRows`. Legacy responses containing only expanded tree cells will retain their present behavior.\n\n### Regression tests\n\nAdd a pure test around `normalizeTreeFilterRange` plus reducer tests:\n\n1. **Reported case:** tree header has `down 1..N`; adjacent headers have `1..1`; tree cells and target-column values exist through `N`. Each peer becomes `1..N` and produces the same multi-condition key.\n2. **Multiple blocks:** same header row/start, tree table and separate one-row table divided by an unfiltered spacer. The second block remains `1..1`.\n3. **Tree evidence guard:** no tree cells, or tree cells not in the authoritative peer column → unchanged.\n4. **Target-data guard:** tree expands to `N`, but target column has no data beyond row 1 → unchanged.\n5. **Horizontal guard:** `expand: 'right'` remains unchanged.\n6. **Already-valid range:** a non-single-row API range remains unchanged.\n7. **Refresh state:** `updateReportSheets` removes only current-sheet keys and preserves other sheets.\n8. **Schema reset:** `resetCacheData` clears all filter state.\n9. **Hyphenated key:** current sheet `sheet-1` correctly removes `sheet-1-down-...` without removing another sheet.\n\n`git diff --check` passed. Full `tsc --noEmit` is not a useful signal here because the repository currently has numerous pre-existing dependency/type-definition errors.",
+      "index": 0,
+      "artifactPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\68671b6a-d6a2-43b2-9d12-96582eaa2806_reviewer_output.md",
+      "sessionPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\2026-07-29T01-52-37-087Z_019fab92-dedf-7a71-adc7-c26b6bb90321\\bb2b4b27\\run-0\\session.jsonl"
+    }
+  ],
+  "outputs": {},
+  "exitCode": 0,
+  "timestamp": 1785291627025,
+  "durationMs": 341759,
+  "totalTokens": {
+    "input": 116953,
+    "output": 9484,
+    "total": 126437
+  },
+  "totalCost": {
+    "inputTokens": 116953,
+    "outputTokens": 9484,
+    "costUsd": 1.244837
+  },
+  "truncated": false,
+  "artifactsDir": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts",
+  "cwd": "C:\\Users\\jinxu\\workspace\\xzd\\report-web.worktrees\\sync-6.5.1-dev",
+  "asyncDir": "C:\\Users\\jinxu\\AppData\\Local\\Temp\\pi-subagents-user-jinxu\\async-subagent-runs\\68671b6a-d6a2-43b2-9d12-96582eaa2806",
+  "launchContractDigest": "b1a31370584d0a439a92d88e933f9e5f6c729c4c5ecded0dc5e6dc05f4579b22",
+  "sessionId": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\2026-07-29T01-52-37-087Z_019fab92-dedf-7a71-adc7-c26b6bb90321.jsonl",
+  "sessionFile": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\2026-07-29T01-52-37-087Z_019fab92-dedf-7a71-adc7-c26b6bb90321\\bb2b4b27\\run-0\\session.jsonl",
+  "intercomTarget": "subagent-chat-019fab92",
+  "runId": "68671b6a-d6a2-43b2-9d12-96582eaa2806",
+  "triggerTurn": true
+}

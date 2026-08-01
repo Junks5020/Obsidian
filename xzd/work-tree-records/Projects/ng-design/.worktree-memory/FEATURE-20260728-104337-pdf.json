@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "FEATURE-20260728-104337-pdf",
   "repoName": "ng-design",
   "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\ng-design",
@@ -40,5 +40,7 @@
       "event": "aborted"
     }
   ],
-  "finishedAt": "2026-07-28T03:11:20.094Z"
+  "finishedAt": "2026-07-28T03:11:20.094Z",
+  "executionMode": "worktree",
+  "stageResults": []
 }

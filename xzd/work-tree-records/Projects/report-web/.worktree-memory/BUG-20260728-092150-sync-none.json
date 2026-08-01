@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "BUG-20260728-092150-sync-none",
   "repoName": "report-web",
   "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
@@ -63,5 +63,7 @@
   ],
   "mergeCommit": "817141b09c88f92f92b11ef05b5043ab6a46d8ff",
   "mergedAt": "2026-07-28T03:22:16.323Z",
-  "finishedAt": "2026-07-28T03:23:10.757Z"
+  "finishedAt": "2026-07-28T03:23:10.757Z",
+  "executionMode": "worktree",
+  "stageResults": []
 }

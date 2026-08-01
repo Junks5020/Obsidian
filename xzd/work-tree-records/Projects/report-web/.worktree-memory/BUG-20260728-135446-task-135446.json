@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "BUG-20260728-135446-task-135446",
   "repoName": "report-web",
   "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
@@ -33,5 +33,7 @@
       "event": "aborted"
     }
   ],
-  "finishedAt": "2026-07-28T06:10:54.979Z"
+  "finishedAt": "2026-07-28T06:10:54.979Z",
+  "executionMode": "worktree",
+  "stageResults": []
 }

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "BUG-20260728-135408-task-135408",
   "repoName": "report-web",
   "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
@@ -28,5 +28,7 @@
       "event": "created",
       "detail": "Created from 6.5.1-dev"
     }
-  ]
+  ],
+  "executionMode": "worktree",
+  "stageResults": []
 }

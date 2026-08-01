@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "BUG-20260728-141339-task-141339",
   "repoName": "report-web",
   "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
@@ -81,5 +81,7 @@
       "detail": "lifecycle cacb7f0a-1a59-4d2a-a803-1e883df7cd62"
     }
   ],
-  "planningContextConfirmedAt": "2026-07-28T06:13:54.751Z"
+  "planningContextConfirmedAt": "2026-07-28T06:13:54.751Z",
+  "executionMode": "worktree",
+  "stageResults": []
 }

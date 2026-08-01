@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "id": "BUG-20260729-100126-task-100126",
+  "repoName": "report-web",
+  "repoRoot": "C:\\Users\\jinxu\\workspace\\xzd\\report-web",
+  "type": "bug",
+  "title": "需要检查一下，预览页面，如果有表格中的过滤的话，里面的数据是怎么设置的？",
+  "executionMode": "undecided",
+  "baseBranch": "6.5.2-dev",
+  "baseCommit": "d80175f48f3a95ac6cc974ef61efbc89e591dec5",
+  "taskBranch": "",
+  "worktreePath": "",
+  "status": "analyzing",
+  "createdAt": "2026-07-29T02:01:26.412Z",
+  "updatedAt": "2026-07-29T02:04:45.919Z",
+  "modelProfile": "auto",
+  "syncTargetsConfirmed": false,
+  "sync": [],
+  "modelRuns": [
+    {
+      "stage": "analyze",
+      "profile": "light",
+      "model": "openai-codex/gpt-5.6-luna",
+      "queuedAt": "2026-07-29T02:01:26.540Z",
+      "status": "failed",
+      "runId": "9e8a804c-9433-4658-bd9b-a92a510caa7f",
+      "startedAt": "2026-07-29T02:01:34.718Z",
+      "finishedAt": "2026-07-29T02:04:45.919Z"
+    }
+  ],
+  "timeline": [
+    {
+      "at": "2026-07-29T02:01:26.412Z",
+      "event": "task-started",
+      "detail": "Read-only analysis from 6.5.2-dev"
+    },
+    {
+      "at": "2026-07-29T02:01:26.540Z",
+      "event": "model-launch-pending",
+      "detail": "analyze → openai-codex/gpt-5.6-luna (pending:840ee8d4-1807-4d57-b1fb-763719863fef)"
+    },
+    {
+      "at": "2026-07-29T02:01:34.718Z",
+      "event": "model-run",
+      "detail": "analyze → openai-codex/gpt-5.6-luna (9e8a804c-9433-4658-bd9b-a92a510caa7f)"
+    },
+    {
+      "at": "2026-07-29T02:04:45.919Z",
+      "event": "model-run-failed",
+      "detail": "single 9e8a804c-9433-4658-bd9b-a92a510caa7f"
+    }
+  ],
+  "stageResults": [
+    {
+      "stage": "analyze",
+      "runId": "9e8a804c-9433-4658-bd9b-a92a510caa7f",
+      "recordedAt": "2026-07-29T02:04:45.919Z",
+      "summary": "grep failed (exit 1): Path not found: C:\\Users\\jinxu\\workspace\\xzd\\report-web\\src\\components\\report\\preview\\utils\\export",
+      "artifactPath": "C:\\Users\\jinxu\\.pi\\agent\\sessions\\--C--Users-jinxu-workspace-xzd-report-web.worktrees-sync-6.5.1-dev--\\subagent-artifacts\\9e8a804c-9433-4658-bd9b-a92a510caa7f_scout_output.md"
+    }
+  ]
+}
