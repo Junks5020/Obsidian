@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/变更记录/BUG-20260702-001-print-fields.md",
+                "file": "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BUG-20260702-001-print-fields"
+              "title": "03-6.5.2-dev至6.5.2及master同步审计-20260727"
             }
           }
         ],
@@ -228,18 +228,23 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
-    "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
+    "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
+    "xzd/版本管理/01-版本覆盖矩阵.md",
+    "xzd/版本管理/00-版本总览.md",
+    "xzd/版本管理/模板/变更记录模板.md",
+    "xzd/版本管理/参考/故障模式.md",
+    "xzd/版本管理/参考/调试盲区.md",
+    "xzd/版本管理/参考/故障记录.md",
     "xzd/版本管理/变更记录/BUG-20260701-001-force-page-preview.md",
+    "xzd/版本管理/变更记录/BUG-20260702-001-print-fields.md",
+    "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
     "xzd/版本管理/变更记录/BUG-20260630-001-dataset-filter.md",
     "xzd/版本管理/变更记录/BUG-20260629-001-decimal-places.md",
     "plan/R-260601-000015-报表优化需求与开发计划.md",
     "plan/刘金旭-7.0需求项目规划.md",
-    "xzd/版本管理/01-版本覆盖矩阵.md",
     "xzd/work-tree-records/Projects/ng-design/Tasks/FEATURE-20260727-204521-task-204521.md",
     "xzd/环境.md",
-    "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
     "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
-    "xzd/版本管理/00-版本总览.md",
     "Pasted image 20260701093053.png",
     "Pasted image 20260701093209.png",
     "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
@@ -254,15 +259,10 @@
     "xzd/每日任务",
     "Excalidraw/Drawing 2026-06-30 17.06.15.excalidraw.md",
     "AGENTS.md.md",
-    "ai-workflow/如何使用各个等级的模型.md",
     "ai-workflow",
-    "raw/google广告接入流程.md",
-    "raw/GSD手册.md",
-    "raw/NotePadTemplateMarketFE-项目亮点.md",
     "wiki",
     "raw",
     "xzd",
-    "raw/NotePadQuestionBankFE-项目亮点.md",
     "test.txt",
     "未命名.canvas",
     "未命名 1.canvas",
