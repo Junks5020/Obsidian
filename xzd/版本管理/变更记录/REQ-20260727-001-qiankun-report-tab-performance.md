@@ -111,6 +111,13 @@ tags: [version-change, requirement, report-web, performance, qiankun]
 - 300ms 延迟用于避免快速来回切换时频繁销毁重建；如主应用切换动画超过该时间，应结合实际数据调整。
 - 完整 TypeScript 检查仍受项目既有第三方声明及无关源码错误影响，不属于本次优化引入。
 
+## 关联 Bug 修复
+
+| Bug | Commit | 分支 | 关系 | 验证 |
+| --- | --- | --- | --- | --- |
+| [[BUG-20260804-001-preview-table-regression\|BUG-20260804-001]] | `54e9d71ccd7adb6f1cb5cc05dc976289e33b4a4d` | 6.5.1-dev | 删除休眠功能时误删虚拟化与生命周期保障的等价修复 | 可运行测试及生产构建通过 |
+| [[BUG-20260804-001-preview-table-regression\|BUG-20260804-001]] | `e4e5d3b49e476c2596bf142c59dc769cb38794e5` | 6.5.2-dev | 保留浮动图片逻辑的分支适配修复 | 18 项测试、生产构建及双轴审查通过 |
+
 ## 后续动作
 
 - [ ] 在 qiankun 主应用中完成标签切换性能验收。
