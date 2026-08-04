@@ -6,6 +6,7 @@ tags:
   - project/7.0
   - report-table
   - 同步
+status: ✅ 已完成（16/16 + 6 项补充修复）
 ---
 
 # 🔄 report-table 功能同步计划（6.5.2-dev → 7.0）
@@ -115,19 +116,52 @@ tags:
 
 ## 📊 进度追踪
 
-- [ ] #1 b9a557b6 大合并单元格渲染
-- [ ] #2 dd46f74e 性能优化2
-- [ ] #3 bd5661be 根节点重复卸载
-- [ ] #4 a3354fd9 树首行折叠渲染
-- [ ] #5 d80175f4 树全部展开收起
-- [ ] #6 c524dc9b 表头过滤
-- [ ] #7 42d37ff5 父子树筛选范围
-- [ ] #8 adee3848 多列级联筛选
-- [ ] #9 02615117 设计器行列隐藏
-- [ ] #10 42169a88 行列隐藏状态同步
-- [ ] #11 ad3589d8 隐藏行列合并bug
-- [ ] #12 c086ecb9 浮动图片角标
-- [ ] #13 d3b11bcc 浮动图片拖拽体验
-- [ ] #14 bde2be64 字段图片文案
-- [ ] #15 5ef1859d 链接上限10
-- [ ] #16 5caa00fb 字段编码展示
+- [x] #1 b9a557b6 大合并单元格渲染 → `b8572e4fe`
+- [x] #2 dd46f74e 性能优化2 → `30a85d620`
+- [x] #3 bd5661be 根节点重复卸载 → `30a85d620`
+- [x] #4 a3354fd9 树首行折叠渲染 → `81fba3ba5`
+- [x] #5 d80175f4 树全部展开收起 → `d4277c05b`（工具函数+render.ts）+ 包导出
+- [x] #6 c524dc9b 表头过滤 → `9270a59ea`
+- [x] #7 42d37ff5 父子树筛选范围 → `9270a59ea`
+- [x] #8 adee3848 多列级联筛选 → `9270a59ea`
+- [x] #9 02615117 设计器行列隐藏 → `d4277c05b`
+- [x] #10 42169a88 行列隐藏状态同步 → `d4277c05b`
+- [x] #11 ad3589d8 隐藏行列合并bug → `d4277c05b`
+- [x] #12 c086ecb9 浮动图片角标 → `6f50aee2f`
+- [x] #13 d3b11bcc 浮动图片拖拽体验 → `bf8d3c3d5`
+- [x] #14 bde2be64 字段图片文案 → `6b6a007b7`
+- [x] #15 5ef1859d 链接上限10 → `8103e2e90` + `e64a4a2a5`（补 MAX_LINK_CONDITION_GROUPS）
+- [x] #16 5caa00fb 字段编码展示 → `cb42187c9`
+
+## 🔍 全量验证中补充的同步点前遗漏（已修复，`e64a4a2a5`）
+
+| 提交 | 日期 | 说明 |
+|------|------|------|
+| `29fa732c` | 04-29 | CellPercentInput `defaultValue=2` |
+| `4df519dd` | 06-09 | expressForm 格式化选项动态小数位（getDecimalFormat/baseZeroLen） |
+| `9cb0d45a` | 06-09 | fieldForms getDecimalFormat + CellFormMain formatValue 联动 format（useValuesChange） |
+| `03fd80b6` | 07-22 | treeConfig/treePreview showLevel 归一化（空值/非整数兜底 1） |
+| `2e3b8abe` | 07-24 | 打印设计页换行（white-space: pre）——随 `d4277c05b` 提交 |
+
+## ⚠️ 待决策：6.5.2-dev 新增的本地未推送提交
+
+同步期间 6.5.2-dev 新增本地提交 **`c6210ffc`**（08-04 16:59，**未推送到 origin**）：
+
+> fix: 移除预览表格休眠与行隐藏逻辑，单元格内容溢出时悬浮显示完整内容
+
+内容包括：
+1. **移除预览表格休眠**（usePreviewTableDormancy/tableRegistry 接线，文件保留未删）——即本次同步 #2 刚移植的功能
+2. **移除预览「隐藏当前行/取消隐藏」右键功能**（previewRowHideEnabled、maskCurrentRow 等）——7.0 在此基础上有扩展（列隐藏 previewMaskedColsRef）
+3. **移除预览态强制分页行头标记**（afterGetRowHeader/afterRenderer 的 htForcePageBreakHeader）
+4. **恢复 `renderAllRows={!isReport}`**（7.0 为 props 默认 false，语义接近）
+5. **新增单元格内容溢出时 title 悬浮显示完整内容**（afterOnCellMouseOver/Out）
+
+处理建议：该提交尚未推送，且涉及移除 7.0 已扩展的功能（预览行列隐藏右键），**建议与作者确认后再决定是否跟随移除**；其中「溢出悬浮显示」为独立新增小功能，可单独移植。
+
+---
+
+## ✅ 验证结论（对 6.5.2-dev `c6210ffc` 全量文件对比）
+
+- 映射范围内所有功能差异已消除；剩余 diff 均为 7.0 结构性差异（useStore/getStyleClass/适配器/字体系统/条形码/ribbon 工具栏/data 模式等）
+- `tsc --noEmit`（TS 5.8）：src 0 错误
+- `father build` 的 dts 报错为混合 node_modules 环境问题（未改动文件同样报错），非本次修改引入
