@@ -145,10 +145,10 @@ status: ✅ 已完成（16/16 + 6 项补充修复）
 
 ## ✅ 已决策并执行：6.5.2-dev 新增提交 c6210ffc
 
-~~同步期间 6.5.2-dev 新增本地提交 **`c6210ffc`**~~ → **✅ 已决策并执行（`14bfbf811`）**：经确认按「功能型同步」元规则跟随移除（含 7.0 的列隐藏扩展），溢出悬浮 title 已移植；7.0 抽离期已有的卸载 destroy 清理保留（上游移除时连带丢失）。决策已沉淀：
+~~同步期间 6.5.2-dev 新增本地提交 **`c6210ffc`**~~ → **✅ 已决策并执行（`7e8488c49`）**：经确认按「功能型同步」元规则跟随移除（含 7.0 的列隐藏扩展），溢出悬浮 title 已移植；7.0 抽离期已有的卸载 destroy 清理保留（上游移除时连带丢失）。决策已沉淀（Obsidian）：
 
-- 术语表：`packages/@newgrand/udp-report-table/CONTEXT.md`
-- ADR：`packages/@newgrand/udp-report-table/docs/adr/0001-functional-sync-from-upstream.md`
+- 术语表：[[report-table-同步术语表]]
+- ADR：[[report-table-ADR-0001-跟随上游功能型同步]]
 
 > fix: 移除预览表格休眠与行隐藏逻辑，单元格内容溢出时悬浮显示完整内容
 
