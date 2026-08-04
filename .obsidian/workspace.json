@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "plan/刘金旭-7.0需求项目规划.md",
+                "file": "worktrees/report-web-ee4814f9/feture%2FR-260702-000011.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "刘金旭-7.0需求项目规划"
+              "title": "feture%2FR-260702-000011"
             }
           }
         ],
@@ -70,7 +70,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -107,7 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 461.5
   },
   "right": {
     "id": "11061a1d35e8f07c",
@@ -228,12 +230,16 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "raw/xzd-7.0-版本.md",
+    "plan/R-260702-000017-报表查询条件显隐配置-开发记录.md",
+    "ai-workflow/如何使用各个等级的模型.md",
+    "Pasted image 20260701093053.png",
+    "Pasted image 20260701093209.png",
+    "plan/刘金旭-7.0需求项目规划.md",
     "worktrees/report-web-ee4814f9/feture%2FR-260702-000011.md",
     "worktrees/report-web-ee4814f9",
     "worktrees",
     "plan/R-260601-000015-报表优化需求与开发计划.md",
-    "plan/R-260702-000017-报表查询条件显隐配置-开发记录.md",
-    "plan/刘金旭-7.0需求项目规划.md",
     "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
     "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
     "xzd/版本管理/01-版本覆盖矩阵.md",
@@ -250,16 +256,12 @@
     "xzd/work-tree-records/Projects/ng-design/Tasks/FEATURE-20260727-204521-task-204521.md",
     "xzd/环境.md",
     "xzd/版本管理/变更记录/REQ-20260727-001-qiankun-report-tab-performance.md",
-    "Pasted image 20260701093053.png",
-    "Pasted image 20260701093209.png",
-    "raw/xzd-7.0-版本.md",
     "plan/示例项目计划.md",
     "plan/测试.md",
     "plan",
     "未命名.base",
     "xzd/每日任务/0701- 计划.md",
     "Excalidraw/Drawing 2026-07-01 09.33.51.excalidraw.md",
-    "todolist.md",
     "xzd/每日任务",
     "ai-workflow",
     "wiki",
