@@ -167,4 +167,13 @@ status: ✅ 已完成（16/16 + 6 项补充修复）
 
 - 映射范围内所有功能差异已消除；剩余 diff 均为 7.0 结构性差异（useStore/getStyleClass/适配器/字体系统/条形码/ribbon 工具栏/data 模式等）
 - `tsc --noEmit`（TS 5.8）：src 0 错误
-- `father build` 的 dts 报错为混合 node_modules 环境问题（未改动文件同样报错），非本次修改引入
+- `father build`：✅ 成功（lib + es 各 296 文件）——混合 node_modules 环境已修复（failed npm install 残留的破损真实目录已全部替换为 donor junction；包级 tsc 需 `tsconfig.check.json` 补 udp-core paths 映射，已 git 本地排除）
+- 包内测试：54/54 通过（feature-sync 5、migration-parity 8、print-design-payload 8、boundaries 33）
+
+## ✅ 追加同步：e4e5d3b4（08-04 20:20，已推送）
+
+**fix: 修复预览表格虚拟化与资源清理回归** → ng-design `3bcbba7d3`
+
+该提交部分回摆 c6210ffc：恢复强制分页行标记（改走 `print/utils/forcePageBreak` 的共享实现，7.0 用包内 `getForcePageBreakRow`）、恢复 tableRegistry 注册、`renderAllRows/Columns` 回到 false；并彻底删除 store 的 `previewRowHideEnabled` 残余（7.0 同步删除）。
+
+顺带修复（环境/边界）：`paging.tsx` 去掉 `@umijs/max` 依赖（组件包不应依赖应用框架）、`usePreviewTableDormancy.ts` 的 `contentVisibility` 兼容 father dts 内置的 TS 5.4。测试基建：feature-sync 迁移到 `shared/visibility.ts` 新 API + 加载器支持递归相对导入。
