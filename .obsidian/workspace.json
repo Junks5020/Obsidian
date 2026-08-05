@@ -228,8 +228,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "cffb382f9c610389",
+  "active": "471971ee1dae6833",
   "lastOpenFiles": [
+    "worktrees/report-web-ee4814f9/fix-scrollbar.md",
     "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
     "xzd/版本管理/report-table-同步术语表.md",
     "xzd/版本管理/变更记录/BUG-20260708-001-navigation-field-type.md",
@@ -260,7 +261,6 @@
     "xzd/版本管理/参考/故障记录.md",
     "xzd/版本管理/变更记录/BUG-20260701-001-force-page-preview.md",
     "xzd/版本管理/变更记录/BUG-20260702-001-print-fields.md",
-    "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
     "plan",
     "未命名.base",
     "xzd/每日任务",
