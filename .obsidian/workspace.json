@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "worktrees/report-web-ee4814f9/feture%2FR-260702-000011.md",
+                "file": "xzd/版本管理/01-版本覆盖矩阵.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "feture%2FR-260702-000011"
+              "title": "01-版本覆盖矩阵"
             }
           }
         ],
@@ -230,12 +230,17 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
+    "xzd/版本管理/report-table-同步术语表.md",
+    "xzd/版本管理/变更记录/BUG-20260708-001-navigation-field-type.md",
+    "xzd/版本管理/变更记录/BUG-20260706-003-centered-pdf-layout.md",
+    "xzd/版本管理/变更记录/BUG-20260629-001-decimal-places.md",
+    "worktrees/report-web-ee4814f9/process_font_hiden.md",
+    "worktrees/report-web-ee4814f9/feture%2FR-260702-000011.md",
+    "worktrees/ng-design-ee10196c/sync_branch.md",
     "xzd/版本管理/变更记录/BUG-20260804-001-preview-table-regression.md",
     "xzd/版本管理/report-table-ADR-0001-跟随上游功能型同步.md",
-    "xzd/版本管理/report-table-同步术语表.md",
-    "worktrees/report-web-ee4814f9/process_font_hiden.md",
     "plan/report-table-6.5.2-7.0-功能同步计划.md",
-    "worktrees/ng-design-ee10196c/sync_branch.md",
     "worktrees/ng-design-ee10196c",
     "raw/xzd-7.0-版本.md",
     "plan/R-260702-000017-报表查询条件显隐配置-开发记录.md",
@@ -243,11 +248,9 @@
     "Pasted image 20260701093053.png",
     "Pasted image 20260701093209.png",
     "plan/刘金旭-7.0需求项目规划.md",
-    "worktrees/report-web-ee4814f9/feture%2FR-260702-000011.md",
     "worktrees/report-web-ee4814f9",
     "worktrees",
     "plan/R-260601-000015-报表优化需求与开发计划.md",
-    "xzd/版本管理/03-6.5.2-dev至6.5.2及master同步审计-20260727.md",
     "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
     "xzd/版本管理/01-版本覆盖矩阵.md",
     "xzd/版本管理/00-版本总览.md",
@@ -258,9 +261,6 @@
     "xzd/版本管理/变更记录/BUG-20260701-001-force-page-preview.md",
     "xzd/版本管理/变更记录/BUG-20260702-001-print-fields.md",
     "xzd/版本管理/变更记录/BUG-20260705-002-save-stay-on-page.md",
-    "xzd/版本管理/变更记录/BUG-20260630-001-dataset-filter.md",
-    "xzd/版本管理/变更记录/BUG-20260629-001-decimal-places.md",
-    "xzd/work-tree-records/Projects/ng-design/Tasks/FEATURE-20260727-204521-task-204521.md",
     "plan",
     "未命名.base",
     "xzd/每日任务",
