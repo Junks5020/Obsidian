@@ -36,4 +36,6 @@ date: 2026-08-13
 
 旧的前端授权覆盖入口 `btn`、`permission`、`downloadAttachment` 及 URL `btn*` 参数不再参与现代附件运行时权限判断，不能放宽或收紧分类权限块返回的 0/1/2；本轮仅保留公开声明并标记为 deprecated。`disabled`、`status` 等组件交互状态不属于这组权限覆盖参数，另按各自语义处理。
 
+`status` 保留为初始化请求和弹窗生命周期参数，不再由前端据此推导增删改权限，`status='view'` 也不自动等同于禁用。`disabled=true` 保留为独立的本地交互锁，只收紧新增、导入、删除、编辑、分类编辑、归档、拖拽和保存等变更操作；查看、预览和下载仍只由当前分类权限决定。UI 与 handler 同时检查交互锁，但不修改权限对象的 0/1/2；公开文档不再将有效的 `disabled` 标为 deprecated。
+
 相关：[[ng-design-附件术语表]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]
