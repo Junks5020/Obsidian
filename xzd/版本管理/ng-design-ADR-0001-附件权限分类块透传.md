@@ -18,4 +18,6 @@ date: 2026-08-13
 
 旧公开回调 `onBeforeDownLoad` 保留运行时兼容，但重新界定为后端授权通过后的“下载前业务校验”：仅当当前分类的 `download` / `zipDownload` 为 1 时调用；回调可取消本次下载并返回业务提示，但不能放行后端已拒绝的操作，也不参与权限归一化。这样既不把业务回调当作授权来源，又避免现有业务校验在升级后静默失效。
 
+旧的前端授权覆盖入口 `btn`、`permission`、`downloadAttachment` 及 URL `btn*` 参数不再参与现代附件运行时权限判断，不能放宽或收紧分类权限块返回的 0/1/2；本轮仅保留公开声明并标记为 deprecated。`disabled`、`status` 等组件交互状态不属于这组权限覆盖参数，另按各自语义处理。
+
 相关：[[ng-design-附件术语表]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]
