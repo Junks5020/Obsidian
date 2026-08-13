@@ -52,4 +52,6 @@ date: 2026-08-13
 
 后端 `download` 统一控制单文件下载、批量所选文件下载、预览页内下载，以及非按类型控制场景的 ZIP 下载。前端 `zipDownload` 只是逐值继承 `download` 的呈现别名，再叠加“`controlByType=true` 时无条件隐藏并拒绝 ZIP”的本地能力约束；`download=0/2` 时不请求下载信息、不写下载日志，也不执行 `onBeforeDownLoad`。
 
+“下载记录”是只读审计信息而非下载动作，继续由 `view` 控制，不读取 `download`。`view=0` 时入口保留但禁用，`view=2` 时隐藏；两者都不得调用 `getDownLoadList`。
+
 相关：[[ng-design-附件术语表]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]
