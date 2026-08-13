@@ -14,4 +14,6 @@ date: 2026-08-13
 
 前端此前用来模拟分类差异的硬编码推导（审批保护、工作流/来源强制隐藏等）一并删除，按钮呈现差异（置灰或隐藏）完全由后端返回的数值决定。仅保留依赖纯前端状态、后端无法表达的推导：分类树未选类型禁上传、`canDeleteTemporaryAttachments`、`canDeleteApprovedAttachment`。
 
+权限判断使用统一的“权限分类上下文”快照：组件在当前 tab、类型选择和相关前端状态变化时维护上下文，并让呈现层与所有操作 handler 使用同一份上下文。弹窗确认链从组件 API 读取当前快照后再调用 `handleValid` / `handleSave`，避免审批后 tab、按类型分类或独立工作流弹窗在执行时回退到默认单据权限。handler 的新增/调整参数采用具名上下文对象，避免位置参数中连续传入 `undefined` 导致分类错位。
+
 相关：[[ng-design-附件术语表]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]
