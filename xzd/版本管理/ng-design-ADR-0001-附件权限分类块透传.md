@@ -8,7 +8,7 @@ date: 2026-08-13
 
 # ADR-0001：现代附件权限按分类块透传并忽略兼容字段
 
-附件初始化接口现在按附件分类返回全部权限块（billAttach\*/approvedAttach\*/sourceAttach\*/workflowAttach\*，按类型控制时含 per-type 块），同时保留 `unifyButtonRights`/`typeButtonRights` 作为旧版本前端的兼容字段。现代附件决定：按当前附件分类选择对应权限块，权限数值 0/1/2（置灰/可用/隐藏）原样透传，完全不读兼容字段，分类块缺失时 fail-closed 拒绝。
+附件初始化接口现在按附件分类返回全部权限块（billAttach\*/approvedAttach\*/sourceAttach\*/workflowAttach\*，按类型控制时含 per-type 块），同时保留 `unifyButtonRights`/`typeButtonRights` 作为旧版本前端的兼容字段。现代附件决定：按当前附件分类选择对应权限块，按钮权限数值 0/1/2（置灰/可用/隐藏）原样透传，完全不读兼容字段，分类块缺失时 fail-closed 拒绝。
 
 选择忽略兼容字段而非兜底，是因为兼容字段承载的不是当前分类的权限：后端示例中 `unifyButtonRights` 全 1，而已审批单据的 `billAttachButtonRights` 变动权限全 0，兜底会直接绕过后端表达的权限收敛。代价是新前端不再兼容旧版后端响应（无分类块即整体拒绝），`ljx-6.5.2` 分支只配套新版后端。
 
@@ -20,9 +20,9 @@ date: 2026-08-13
 
 分类树未选类型同样建模为独立的目标类型约束，而不把 `add` / `imp` 改成 2。仅 `attach`、`pendingApprovedAttach`、`approvedAttach` 在存在分类树且未选具体 `typeId` 时令 `canAddToSelectedType` / `canImportToSelectedType` 为假，UI 隐藏入口且 handler 拒绝；`oriBizAttach`、`workFlowAttach` 永不受此约束影响。
 
-按类型控制下保留“全部类型”聚合浏览，但不合成一套虚构权限：至少一个类型 `visible=1` 时显示内容区，列表只保留记录 `typeId` 对应块存在且 `visible=1` 的记录；缺类型块或缺 `typeId` 的记录隐藏。单条操作按记录类型判权，多选要求所有记录均允许，否则整体拒绝。新增、导入沿用目标类型约束，打包下载因可能跨越不可见类型而在聚合态隐藏，仅选中具体类型后提供。
+按类型控制下保留“全部类型”聚合浏览，但不合成一套虚构权限：单条操作按记录 `typeId` 对应的类型块判权，多选要求所有记录均允许，否则整体拒绝；类型块缺失或记录缺少 `typeId` 时操作 fail-closed。新增、导入沿用目标类型约束。当前 `createZip` 请求只按整个附件 session 打包且不携带 `typeId`，无法保证压缩包不包含其他类型的附件，因此只要 `controlByType=true`，无论处于全部类型聚合态还是已选中具体类型，前端都隐藏 ZIP 入口且 handler 拒绝调用；待后端提供按类型打包能力后再另行开放。
 
-`visible` 是分类内容的结构性开关而非普通按钮权限：只有 1 显示当前分类内容，0 或 2 都隐藏当前分类的 toolbar、列表及交互区，但保留 tab 导航且不自动切换。按钮字段仍分别遵循 0 置灰、1 可用、2 隐藏。
+`visible` 当前只定义为 0/1，含义是附件是否可见。字段继续保留在接口和前端类型中，但本轮暂不消费，不参与 tab、toolbar、列表、内容区或操作的显隐与授权判断；此前把它作为结构性开关并将 0/2 都解释为隐藏内容的方案作废。其他按钮字段仍分别遵循 0 置灰、1 可用、2 隐藏。
 
 权限初始化使用显式 `pending` / `ready` / `failed` 三态。进入 pending 时立即撤销上一轮权限和内容；接口成功即进入 ready，当前分类块缺失只触发该分类 fail-closed，不等同于初始化失败；网络异常、接口非成功或响应不可解析才进入 failed，并整体不渲染现代附件区域。初始化 service 因此必须保留成功与失败信息，不能继续将所有结果压成空对象。
 
