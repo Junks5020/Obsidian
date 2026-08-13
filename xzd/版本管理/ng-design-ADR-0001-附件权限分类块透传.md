@@ -18,6 +18,8 @@ date: 2026-08-13
 
 后端 `delete` 只控制删除既有附件，本会话新引入且未提交附件的撤销完全使用上述独立能力。单条和批量删除均按记录所属分类及类型的 `delete` 判权，多选要求全部记录为 1；0 置灰、2 隐藏，`disabled=true` 进一步拒绝，UI 和 handler 使用同一结果。标签附件删除还叠加审批后保护作为额外收紧条件。
 
+多选同时包含既有附件和本会话新增附件时逐条按各自规则判权：会话新增读取独立撤销能力，既有附件读取记录所属分类及类型的 `delete` 并叠加附加保护。只有全部记录通过时才允许一次性执行同一删除请求；任一记录不满足则整体拒绝，不自动缩减选区，也不做部分删除。
+
 标签附件保留单条审批删除保护，并以 `canDeleteLabelAttachment` 表达：只有分类权限 `delete=1`，且“单据未审批或该记录本身属于审批后附件”时才允许删除。按钮呈现与 handler 执行使用同一条件；它只收紧后端授权，不改变原始权限值。
 
 分类树未选类型同样建模为独立的目标类型约束，而不把 `add` / `imp` 改成 2。仅 `attach`、`pendingApprovedAttach`、`approvedAttach` 在存在分类树且未选具体 `typeId` 时令 `canAddToSelectedType` / `canImportToSelectedType` 为假，UI 隐藏入口且 handler 拒绝；`oriBizAttach`、`workFlowAttach` 永不受此约束影响。
