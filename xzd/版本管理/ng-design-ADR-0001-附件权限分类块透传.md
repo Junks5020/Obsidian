@@ -24,6 +24,10 @@ date: 2026-08-13
 
 本需求同时建立可验证上述契约的 React 18 组件测试基础设施：显式引入 Jest 29、`jest-environment-jsdom` 29 和 Testing Library，覆盖 Table、Form、Label、Image 各消费端的 0/1/2 呈现与 handler 拒绝；纯权限逻辑继续使用显式依赖的 `tsx`，根目录统一由 `npm test` 执行。不得复用仓库中由旧 `umi-test` 带入、绑定 React 16 Enzyme 的 Jest 24。仓库当前没有受版本控制的 CI 配置，因此不擅自新增 CI 文件，只在变更登记中注明现有外置流水线必须执行 `npm test`。
 
+长期保留一张使用本地确定性数据的 dumi“附件权限验收”示例页，提供组件形态、附件分类、`controlByType` / `typeId`、各按钮字段 0/1/2、`disabled` 和初始化状态等场景切换，并展示请求与 handler 是否触发。浏览器验收和后续人工回归复用该页，不依赖测试账号恰好取得某组后端权限；该页面只属于文档开发和回归环境，不进入附件组件公开 API。
+
+本需求的前端完成门槛以该确定性 dumi 验收页和自动化测试为准，覆盖按真实接口结构建模的选块、三态、上下文和 handler 防线。真实新版后端联调属于配套版本集成阶段并单独记录；后端环境或测试账号不可用不阻塞前端计划完成，也不得以未联调为由降低前端验收覆盖。
+
 标签附件保留单条审批删除保护，并以 `canDeleteLabelAttachment` 表达：只有分类权限 `delete=1`，且“单据未审批或该记录本身属于审批后附件”时才允许删除。按钮呈现与 handler 执行使用同一条件；它只收紧后端授权，不改变原始权限值。
 
 分类树未选类型同样建模为独立的目标类型约束，而不把 `add` / `imp` 改成 2。仅 `attach`、`pendingApprovedAttach`、`approvedAttach` 在存在分类树且未选具体 `typeId` 时令 `canAddToSelectedType` / `canImportToSelectedType` 为假，UI 隐藏入口且 handler 拒绝；`oriBizAttach`、`workFlowAttach` 永不受此约束影响。
