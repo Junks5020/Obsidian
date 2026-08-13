@@ -22,13 +22,13 @@ updated: 2026-08-13
 
 **分类权限块**：附件初始化接口按附件分类分别返回的权限对象：单据附件（`billAttachButtonRights`）、审批后附件（`approvedAttachButtonRights`）、来源单据附件（`sourceAttachButtonRights`）、工作流附件（`workflowAttachButtonRights`）。是现代附件操作可见性与可用性的唯一业务来源。
 
-**按类型控制**：初始化接口的 `controlByType` 开关；为真时单据附件与审批后附件的权限按附件类型（分类树节点）分别返回（`billAttachTypeButtonRights`、`approvedAttachTypeButtonRights`），对应分类树模式。
+**按类型控制**：初始化接口的 `controlByType` 开关；仅作用于单据附件、审批前附件和审批后附件。为真时前两者取 `billAttachTypeButtonRights[typeId]`，审批后取 `approvedAttachTypeButtonRights[typeId]`；来源单据附件与工作流附件始终取各自普通分类权限块，不使用 `typeId`。
 
 **权限数值语义**：权限块内各按钮取值的统一含义——0 置灰禁用、1 可用、2 隐藏；由后端按用户权限返回，前端原样透传，不做覆盖。
 
 **统一按钮权限**：`unifyButtonRights`（及按类型形式 `typeButtonRights`），后端为兼容旧版本前端而保留的冗余字段；新版现代附件不读取。
 
-**附件可见性**：当前权限分类上下文中的 `visible` 开关，只控制当前分类的内容区域；tab 显隐仍由审批状态与数据存在决定。分类树模式未选中类型时，任一类型可见即保持内容区域可见。
+**附件可见性**：当前权限分类上下文中的 `visible` 开关，只控制当前分类的内容区域；tab 显隐仍由审批状态与数据存在决定。不可见的当前分类保留 tab 导航但不显示其内容，不自动切换分类；分类树模式未选中类型时，任一类型可见即保持内容区域可见。
 
 **本地上传**：通过按钮、拖拽、粘贴或图片选择进入附件的文件上传路径，由当前分类权限块中的 `add` 控制。
 
