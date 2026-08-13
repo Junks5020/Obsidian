@@ -48,4 +48,8 @@ date: 2026-08-13
 
 `handleValid` 定义为确认或保存前执行的纯业务完整性校验，不读取 `add`、`imp`、`edit` 或 `delete`。它按操作完成后的最终附件集合检查所有必填分类：校验失败返回 `false` 并提示缺失分类，初始化 `failed` 时同样拒绝确认；显式确认和保存执行校验，取消或直接关闭不执行。这样共享导入和删除等路径都不能绕过必填约束。
 
+后端 `view` 统一控制所有“读取附件内容”的路径，包括文件名预览、控件预览或在线查看、图片缩略图和大图预览，以及业务方提供的 `customOpenTab`。前端可保留 `preview` 作为逐值继承 `view` 的呈现别名，但它不是独立权限来源；`view=0` 保留记录并禁用查看，`view=2` 隐藏查看入口，两者都不得请求缩略图、预览 URL 或打开内容页。
+
+后端 `download` 统一控制单文件下载、批量所选文件下载、预览页内下载，以及非按类型控制场景的 ZIP 下载。前端 `zipDownload` 只是逐值继承 `download` 的呈现别名，再叠加“`controlByType=true` 时无条件隐藏并拒绝 ZIP”的本地能力约束；`download=0/2` 时不请求下载信息、不写下载日志，也不执行 `onBeforeDownLoad`。
+
 相关：[[ng-design-附件术语表]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]
