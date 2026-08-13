@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/01-版本覆盖矩阵.md",
+                "file": "xzd/版本管理/work-items/attachment-category-rights/issues/01-权限归一化按分类选块.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-版本覆盖矩阵"
+              "title": "01-权限归一化按分类选块"
             }
           }
         ],
@@ -228,8 +228,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "471971ee1dae6833",
+  "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/版本管理/00-版本总览.md",
+    "xzd/版本管理/01-版本覆盖矩阵.md",
     "代码提交记录/ng-config-web/模板/变更记录模板.md",
     "代码提交记录/ng-config-web/变更记录/BUG-20260805-001-附件预览底部空白.md",
     "代码提交记录/ng-config-web/模板",
@@ -261,8 +263,6 @@
     "worktrees",
     "plan/R-260601-000015-报表优化需求与开发计划.md",
     "xzd/版本管理/02-6.5.1-dev至6.5.1修复同步审计-20260727.md",
-    "xzd/版本管理/01-版本覆盖矩阵.md",
-    "xzd/版本管理/00-版本总览.md",
     "xzd/版本管理/模板/变更记录模板.md",
     "xzd/版本管理/参考/故障模式.md",
     "plan",
