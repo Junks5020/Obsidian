@@ -22,13 +22,15 @@ updated: 2026-08-13
 
 **附件分类标识**：现代附件只接受 `attach`、`pendingApprovedAttach`、`approvedAttach`、`oriBizAttach`、`workFlowAttach` 五个分类值，并通过共享的 `AttachmentCategory` 类型表达。旧公开 handler 完全缺少分类上下文时默认 `attach`；显式传入非法值时 fail-closed，不能静默回退到单据权限。
 
-**分类权限块**：附件初始化接口按附件分类分别返回的权限对象：单据附件（`billAttachButtonRights`）、审批后附件（`approvedAttachButtonRights`）、来源单据附件（`sourceAttachButtonRights`）、工作流附件（`workflowAttachButtonRights`）。是现代附件操作可见性与可用性的唯一业务来源。
+**分类权限块**：附件初始化接口按附件分类分别返回的权限对象：单据附件（`billAttachButtonRights`）、审批后附件（`approvedAttachButtonRights`）、来源单据附件（`sourceAttachButtonRights`）、工作流附件（`workflowAttachButtonRights`）。是现代附件操作可见性与可用性的唯一业务来源；初始化成功但所需块缺失时，记录元数据仍展示，受控操作统一按 0 拒绝。
 
 **按类型控制**：初始化接口的 `controlByType` 开关；仅作用于单据附件、审批前附件和审批后附件。为真时前两者取 `billAttachTypeButtonRights[typeId]`，审批后取 `approvedAttachTypeButtonRights[typeId]`；来源单据附件与工作流附件始终取各自普通分类权限块，不使用 `typeId`。
 
 **目标类型约束**：单据附件、审批前附件和审批后附件在存在分类树时，新增或导入附件必须先选中具体类型。未选类型只会令 `canAddToSelectedType` / `canImportToSelectedType` 为假，并由 UI 与 handler 共同拒绝；它不改写分类权限块的 `add` / `imp` 原值。来源单据附件与工作流附件不受该约束影响。
 
-**全部类型聚合态**：按类型控制时未选中具体 `typeId` 的浏览状态。它不合成虚构的聚合权限；单条操作按记录所属类型判权，多选操作要求全部记录均获授权，类型块缺失或记录缺少 `typeId` 时操作 fail-closed。聚合态不提供新增或导入；只要处于按类型控制，打包下载在聚合态和具体类型态都不提供。
+**全部类型聚合态**：按类型控制时未选中具体 `typeId` 的浏览状态。它展示所有附件记录元数据且不合成虚构的聚合权限；单条操作按记录所属类型判权，多选操作要求全部记录均获授权，类型块缺失或记录缺少 `typeId` 时该记录的受控操作按 0 禁用。聚合态不提供新增或导入；只要处于按类型控制，打包下载在聚合态和具体类型态都不提供。
+
+**权限块缺失拒绝**：权限初始化已 `ready`，但当前分类块或记录对应类型块不存在时的 fail-closed 行为。附件记录元数据继续展示，所有受控操作按 0 禁用且 handler 拒绝；不读取兼容字段或 `visible`，也不将其升级为初始化 `failed`。
 
 **权限数值语义**：权限块内除 `visible` 外各按钮取值的统一含义——0 置灰禁用、1 可用、2 隐藏；由后端按用户权限返回，前端原样透传，不做覆盖。
 
