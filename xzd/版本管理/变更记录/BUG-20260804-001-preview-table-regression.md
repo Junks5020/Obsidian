@@ -5,7 +5,7 @@ status: completed
 commit: e4e5d3b49e476c2596bf142c59dc769cb38794e5
 source_branch: 6.5.2-dev
 created: 2026-08-04
-updated: 2026-08-04
+updated: 2026-08-12
 target_versions: [6.5.1-dev, 6.5.1, 6.5.2-dev, 6.5.2, ljx-7.0]
 tags: [version-change, bug, report-web, preview, performance, lifecycle]
 ---
@@ -28,6 +28,8 @@ tags: [version-change, bug, report-web, preview, performance, lifecycle]
 - 6.5.1-dev 等价 Commit：`54e9d71ccd7adb6f1cb5cc05dc976289e33b4a4d`
 - 回归来源 Commit：`c6210ffc8b9f67deaafab65d537bdf9cc3fd8832`
 - 6.5.1-dev 对应回归来源：`7e899e02dac77bedc3b012c750ff050d012739e9`
+- 6.5.1 回归移除提交：`9adef8e080f1f009a61275662b7fdb3addc608a4`
+- 6.5.1 修复提交：`b7a8499925513072351c215e64013f3cab2e63c5`
 - 合并方式：两个开发分支分别形成分支本地适配提交，避免覆盖 6.5.2 浮动图片逻辑。
 
 ## 版本同步
@@ -35,7 +37,7 @@ tags: [version-change, bug, report-web, preview, performance, lifecycle]
 | 版本名称 | 是否需要同步 | 当前状态 | 合入 Commit | 验证结果 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | 6.5.1-dev | 是 | 验证中 | `54e9d71ccd7adb6f1cb5cc05dc976289e33b4a4d` | 可运行测试及生产构建通过 | 等价修复来源 |
-| 6.5.1 | 是 | 待同步 | - | - | Git 未包含 6.5.1-dev 修复 |
+| 6.5.1 | 是 | 已同步 | `9adef8e080f1f009a61275662b7fdb3addc608a4` + `b7a8499925513072351c215e64013f3cab2e63c5` | 10 项聚焦测试、差异检查及生产构建通过 | 本地提交，尚未推送 |
 | 6.5.2-dev | 是 | 验证中 | `e4e5d3b49e476c2596bf142c59dc769cb38794e5` | 18 项测试、格式检查、生产构建及双轴审查通过 | 当前提交，仅存在于本地分支，尚未推送 |
 | 6.5.2 | 是 | 待同步 | - | - | Git 未包含当前修复 |
 | ljx-7.0 | 待确认 | 待关联 | - | - | 预览表实现与 ng-design 组件联动，需单独评估 |
@@ -59,4 +61,4 @@ tags: [version-change, bug, report-web, preview, performance, lifecycle]
 
 ## 同步结论
 
-当前修复已在两个开发分支分别形成提交。发布分支尚未包含修复，7.0 需要按 ng-design 架构另行确认。
+当前修复已同步到 `6.5.1` 本地发布分支，尚未推送；`6.5.2` 仍待同步，7.0 需要按 ng-design 架构另行确认。

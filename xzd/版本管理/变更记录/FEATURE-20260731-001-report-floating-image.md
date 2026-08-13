@@ -12,16 +12,37 @@ source_branch: 6.5.2-dev
 created: 2026-07-31
 target_versions:
   - 6.5.2-dev
+  - 6.5.2
   - master
+target_commits:
+  - branch: 6.5.2
+    commit: 92a49ee4a62bf62ef9d43a0f5af823fb44735302
+    status: synced
 tags:
   - version-change
   - feature
   - report-web
   - floating-image
   - report-print
+updated: 2026-08-07
 ---
 
+## 2026-08-07 回移至 6.5.2
+
+- 目标分支：`6.5.2`
+- 实际提交：`92a49ee4a62bf62ef9d43a0f5af823fb44735302`
+- 验证：浮动图片专项测试、`git diff --check`、`npm run build` 通过。
+
+## 2026-08-07 锚点空单元格预览修复
+
+- 问题：浮动图片锚定到没有文字或其他内容的单元格时，该单元格不会进入保存的 `cells`；后端因此不计算其布局，预览图层会被截断而无法渲染。
+- 修复：以 `float-image` 作为锚点单元格的 `className` 标识。设计器在新增、拖拽迁移和删除浮动图片时实时同步该标识；保存前再次全量校正，并将所有锚点坐标纳入有效保存范围。
+- 约束：保留单元格既有 class；多个图片共用锚点时标识只保留一次；最后一张图片迁移或删除后移除旧锚点标识。
+- 验证：`tests/floating-image.test.ts` 已覆盖空白锚点创建、锚点迁移、删除和共锚场景；浮动图片与预览表格回归测试、Prettier 和 `git diff --check` 均通过。
+
 # FEATURE-20260731-001：报表设计端支持浮动图片
+
+相关：[[report-web-术语表]] · [[00-版本总览]]
 
 ## 需求概述
 
