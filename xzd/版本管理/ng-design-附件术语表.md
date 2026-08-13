@@ -20,6 +20,8 @@ updated: 2026-08-13
 
 **权限分类上下文**：一次附件操作进行权限判断时采用的完整业务上下文，至少明确附件分类，并在适用时包含当前类型选择及依赖前端状态的判断条件。同一次操作从界面呈现到最终执行必须使用同一份上下文快照。它独立于 UI tab 的具体形态；独立工作流弹窗即使没有工作流 tab，也必须使用工作流附件权限分类。
 
+**附件分类标识**：现代附件只接受 `attach`、`pendingApprovedAttach`、`approvedAttach`、`oriBizAttach`、`workFlowAttach` 五个分类值，并通过共享的 `AttachmentCategory` 类型表达。旧公开 handler 完全缺少分类上下文时默认 `attach`；显式传入非法值时 fail-closed，不能静默回退到单据权限。
+
 **分类权限块**：附件初始化接口按附件分类分别返回的权限对象：单据附件（`billAttachButtonRights`）、审批后附件（`approvedAttachButtonRights`）、来源单据附件（`sourceAttachButtonRights`）、工作流附件（`workflowAttachButtonRights`）。是现代附件操作可见性与可用性的唯一业务来源。
 
 **按类型控制**：初始化接口的 `controlByType` 开关；仅作用于单据附件、审批前附件和审批后附件。为真时前两者取 `billAttachTypeButtonRights[typeId]`，审批后取 `approvedAttachTypeButtonRights[typeId]`；来源单据附件与工作流附件始终取各自普通分类权限块，不使用 `typeId`。

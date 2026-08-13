@@ -30,6 +30,8 @@ date: 2026-08-13
 
 附件 handlers 同时通过 `getTableAttachmentApi()`、组件 ref 和 `openAttachment()` 返回对象对外公开，因此本轮保留现有位置参数及顺序，只在末尾追加可选的权限上下文；已有对象参数的 handler 直接增加该字段。内部实现使用具名 options 对象，公开方法作为兼容适配层，并用精确函数类型替换宽泛的 `Function`。这避免内部继续通过多个 `undefined` 错位传参，也不让已有外部 JavaScript 调用静默失效。
 
+附件分类以共享 `AttachmentCategory` 联合类型约束 tab、权限上下文和 API。旧公开 handler 完全缺少 `attachType` 时为兼容默认按 `attach` 处理；若调用方显式传入五分类之外的值，则 fail-closed 隐藏内容并拒绝操作，开发环境同时告警，避免拼写错误静默取得单据权限。
+
 旧公开回调 `onBeforeDownLoad` 保留运行时兼容，但重新界定为后端授权通过后的“下载前业务校验”：仅当当前分类的 `download` / `zipDownload` 为 1 时调用；回调可取消本次下载并返回业务提示，但不能放行后端已拒绝的操作，也不参与权限归一化。这样既不把业务回调当作授权来源，又避免现有业务校验在升级后静默失效。
 
 旧的前端授权覆盖入口 `btn`、`permission`、`downloadAttachment` 及 URL `btn*` 参数不再参与现代附件运行时权限判断，不能放宽或收紧分类权限块返回的 0/1/2；本轮仅保留公开声明并标记为 deprecated。`disabled`、`status` 等组件交互状态不属于这组权限覆盖参数，另按各自语义处理。
