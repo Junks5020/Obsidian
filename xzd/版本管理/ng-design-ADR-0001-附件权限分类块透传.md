@@ -20,6 +20,10 @@ date: 2026-08-13
 
 多选同时包含既有附件和本会话新增附件时逐条按各自规则判权：会话新增读取独立撤销能力，既有附件读取记录所属分类及类型的 `delete` 并叠加附加保护。只有全部记录通过时才允许一次性执行同一删除请求；任一记录不满足则整体拒绝，不自动缩减选区，也不做部分删除。
 
+多选记录对同一操作返回不同权限值时，UI 采用 `2 > 0 > 1` 聚合优先级：任一记录为 2 则整体隐藏；否则任一记录为 0 则整体显示但禁用；只有全部为 1 才可执行。handler 不信任聚合后的 UI 状态，执行时仍按当前上下文逐条复核，防止选区变化或直接调用绕过授权。
+
+本需求同时建立可验证上述契约的 React 18 组件测试基础设施：显式引入 Jest 29、`jest-environment-jsdom` 29 和 Testing Library，覆盖 Table、Form、Label、Image 各消费端的 0/1/2 呈现与 handler 拒绝；纯权限逻辑继续使用显式依赖的 `tsx`，根目录统一由 `npm test` 执行。不得复用仓库中由旧 `umi-test` 带入、绑定 React 16 Enzyme 的 Jest 24。仓库当前没有受版本控制的 CI 配置，因此不擅自新增 CI 文件，只在变更登记中注明现有外置流水线必须执行 `npm test`。
+
 标签附件保留单条审批删除保护，并以 `canDeleteLabelAttachment` 表达：只有分类权限 `delete=1`，且“单据未审批或该记录本身属于审批后附件”时才允许删除。按钮呈现与 handler 执行使用同一条件；它只收紧后端授权，不改变原始权限值。
 
 分类树未选类型同样建模为独立的目标类型约束，而不把 `add` / `imp` 改成 2。仅 `attach`、`pendingApprovedAttach`、`approvedAttach` 在存在分类树且未选具体 `typeId` 时令 `canAddToSelectedType` / `canImportToSelectedType` 为假，UI 隐藏入口且 handler 拒绝；`oriBizAttach`、`workFlowAttach` 永不受此约束影响。
