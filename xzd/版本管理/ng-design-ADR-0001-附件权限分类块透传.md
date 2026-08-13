@@ -18,6 +18,8 @@ date: 2026-08-13
 
 标签附件保留单条审批删除保护，并以 `canDeleteLabelAttachment` 表达：只有分类权限 `delete=1`，且“单据未审批或该记录本身属于审批后附件”时才允许删除。按钮呈现与 handler 执行使用同一条件；它只收紧后端授权，不改变原始权限值。
 
+分类树未选类型同样建模为独立的目标类型约束，而不把 `add` / `imp` 改成 2。仅 `attach`、`pendingApprovedAttach`、`approvedAttach` 在存在分类树且未选具体 `typeId` 时令 `canAddToSelectedType` / `canImportToSelectedType` 为假，UI 隐藏入口且 handler 拒绝；`oriBizAttach`、`workFlowAttach` 永不受此约束影响。
+
 `visible` 是分类内容的结构性开关而非普通按钮权限：只有 1 显示当前分类内容，0 或 2 都隐藏当前分类的 toolbar、列表及交互区，但保留 tab 导航且不自动切换。按钮字段仍分别遵循 0 置灰、1 可用、2 隐藏。
 
 权限初始化使用显式 `pending` / `ready` / `failed` 三态。进入 pending 时立即撤销上一轮权限和内容；接口成功即进入 ready，当前分类块缺失只触发该分类 fail-closed，不等同于初始化失败；网络异常、接口非成功或响应不可解析才进入 failed，并整体不渲染现代附件区域。初始化 service 因此必须保留成功与失败信息，不能继续将所有结果压成空对象。

@@ -24,6 +24,8 @@ updated: 2026-08-13
 
 **按类型控制**：初始化接口的 `controlByType` 开关；仅作用于单据附件、审批前附件和审批后附件。为真时前两者取 `billAttachTypeButtonRights[typeId]`，审批后取 `approvedAttachTypeButtonRights[typeId]`；来源单据附件与工作流附件始终取各自普通分类权限块，不使用 `typeId`。
 
+**目标类型约束**：单据附件、审批前附件和审批后附件在存在分类树时，新增或导入附件必须先选中具体类型。未选类型只会令 `canAddToSelectedType` / `canImportToSelectedType` 为假，并由 UI 与 handler 共同拒绝；它不改写分类权限块的 `add` / `imp` 原值。来源单据附件与工作流附件不受该约束影响。
+
 **权限数值语义**：权限块内各按钮取值的统一含义——0 置灰禁用、1 可用、2 隐藏；由后端按用户权限返回，前端原样透传，不做覆盖。
 
 **统一按钮权限**：`unifyButtonRights`（及按类型形式 `typeButtonRights`），后端为兼容旧版本前端而保留的冗余字段；新版现代附件不读取。
