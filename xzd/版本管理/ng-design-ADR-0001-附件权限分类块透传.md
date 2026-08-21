@@ -4,17 +4,22 @@ tags:
   - ADR
 status: accepted
 date: 2026-08-13
+updated: 2026-08-14
 ---
 
 # ADR-0001：现代附件权限按分类块透传并忽略兼容字段
 
+> 交付范围更新：本 ADR 中关于新增 Jest/根 `npm test`、dumi 验收页及其完成门槛的条款，已由 [[ng-design-ADR-0002-附件权限补丁限定源码目录]] 取代；其余运行时权限契约继续有效。
+
 附件初始化接口现在按附件分类返回全部权限块（billAttach\*/approvedAttach\*/sourceAttach\*/workflowAttach\*，按类型控制时含 per-type 块），同时保留 `unifyButtonRights`/`typeButtonRights` 作为旧版本前端的兼容字段。现代附件决定：按当前附件分类选择对应权限块，按钮权限数值 0/1/2（置灰/可用/隐藏）原样透传，完全不读兼容字段。初始化 `ready` 但当前分类块或记录对应的类型块缺失时 fail-closed：附件记录元数据仍展示，所有受控操作按 0 禁用且 handler 拒绝，不升级为初始化失败。
+
+分类上下文由共享 `AttachmentCategory` 表达；`isWorkFlow=true` 始终优先选择 `workFlowAttach`，独立工作流弹窗即使没有工作流 tab 也不能回退到单据权限。
 
 选择忽略兼容字段而非兜底，是因为兼容字段承载的不是当前分类的权限：后端示例中 `unifyButtonRights` 全 1，而已审批单据的 `billAttachButtonRights` 变动权限全 0，兜底会直接绕过后端表达的权限收敛。代价是新前端不再兼容旧版后端响应（无分类块即整体拒绝），`ljx-6.5.2` 分支只配套新版后端。
 
 前端此前用来模拟分类差异的硬编码推导（审批保护、工作流/来源强制隐藏等）一并删除，按钮呈现差异（置灰或隐藏）完全由后端返回的数值决定。仅保留依赖纯前端状态、后端无法表达的派生约束：分类树未选类型时不能新增或导入、撤销本次会话新引入的附件、标签附件单条审批删除保护；这些约束不改写分类权限块原值。
 
-临时附件移除不再通过把归一化后的 `delete` 从 0/2 改成 1 来实现，而是建模为独立的 `canRemoveTemporaryAttachments` 派生能力。前端必须记录附件是否由本组件会话经 `add` 或 `imp` 授权后新引入；只有选择非空、全部属于本次会话新引入且仍为 `asrFlag=0` 时才允许撤销，`asrFlag=0` 本身不能证明来源。撤销不提升原始 `delete`，`disabled=true` 时仍拒绝；选择中出现非本会话附件或已提交附件时，恢复按后端 `delete` 判权。这样本地新增和共享导入都可在提交前撤回，同时保持分类权限值可原样审计。
+临时附件移除不再通过把归一化后的 `delete` 从 0/2 改成 1 来实现，而是建模为独立的 `canDeleteTemporaryAttachments` 派生能力。前端必须记录附件是否由本组件会话经 `add` 或 `imp` 授权后新引入；只有选择非空、全部属于本次会话新引入且仍为 `asrFlag=0` 时才允许撤销，`asrFlag=0` 本身不能证明来源。撤销不提升原始 `delete`，`disabled=true` 时仍拒绝；选择中出现非本会话附件或已提交附件时，恢复按后端 `delete` 判权。这样本地新增和共享导入都可在提交前撤回，同时保持分类权限值可原样审计。
 
 后端 `delete` 只控制删除既有附件，本会话新引入且未提交附件的撤销完全使用上述独立能力。单条和批量删除均按记录所属分类及类型的 `delete` 判权，多选要求全部记录为 1；0 置灰、2 隐藏，`disabled=true` 进一步拒绝，UI 和 handler 使用同一结果。标签附件删除还叠加审批后保护作为额外收紧条件。
 
@@ -28,7 +33,7 @@ date: 2026-08-13
 
 本需求的前端完成门槛以该确定性 dumi 验收页和自动化测试为准，覆盖按真实接口结构建模的选块、三态、上下文和 handler 防线。真实新版后端联调属于配套版本集成阶段并单独记录；后端环境或测试账号不可用不阻塞前端计划完成，也不得以未联调为由降低前端验收覆盖。
 
-标签附件保留单条审批删除保护，并以 `canDeleteLabelAttachment` 表达：只有分类权限 `delete=1`，且“单据未审批或该记录本身属于审批后附件”时才允许删除。按钮呈现与 handler 执行使用同一条件；它只收紧后端授权，不改变原始权限值。
+标签附件保留单条审批删除保护，并以 `canDeleteApprovedAttachment` 表达：只有分类权限 `delete=1`，且“单据未审批或该记录本身属于审批后附件”时才允许删除。按钮呈现与 handler 执行使用同一条件；它只收紧后端授权，不改变原始权限值。
 
 分类树未选类型同样建模为独立的目标类型约束，而不把 `add` / `imp` 改成 2。仅 `attach`、`pendingApprovedAttach`、`approvedAttach` 在存在分类树且未选具体 `typeId` 时令 `canAddToSelectedType` / `canImportToSelectedType` 为假，UI 隐藏入口且 handler 拒绝；`oriBizAttach`、`workFlowAttach` 永不受此约束影响。
 
@@ -68,4 +73,4 @@ date: 2026-08-13
 
 “下载记录”是只读审计信息而非下载动作，继续由 `view` 控制，不读取 `download`。`view=0` 时入口保留但禁用，`view=2` 时隐藏；两者都不得调用 `getDownLoadList`。
 
-相关：[[ng-design-附件术语表]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]
+相关：[[ng-design-附件术语表]] · [[ng-design-ADR-0002-附件权限补丁限定源码目录]] · [[work-items/attachment-category-rights/spec]] · [[00-版本总览]]

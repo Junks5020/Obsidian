@@ -4,7 +4,7 @@ tags:
   - 索引
 status: active
 date: 2026-08-05
-updated: 2026-08-13
+updated: 2026-08-14
 ---
 
 # ng-config-web 索引
@@ -20,7 +20,8 @@ updated: 2026-08-13
 
 ## 工作记录
 
-- [[2026-08-13-附件存储配置与附件数据迁移多语言key清单]]
+- [[2026-08-14-附件多语言key清单]]
+- [[2026-08-14-附件多语言key后端登记表]]
 - 研究笔记存放在 `research/`
 - Handoff 存放在 `handoffs/`
 - 本地工作项存放在 `work-items/`；当前项目的正式工作项以 GitLab 为准
