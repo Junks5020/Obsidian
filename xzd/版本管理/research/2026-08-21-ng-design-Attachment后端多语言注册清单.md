@@ -14,7 +14,7 @@ format: simple-v1
 
 # ng-design Attachment 后端多语言注册清单
 
-相关：[[00-版本总览]] · [[research/2026-08-21-ng-design-Attachment中文清单]] · [[ng-design-ADR-0003-Attachment中文消息具名占位符协议]]
+相关：[[00-版本总览]] · [[research/2026-08-21-ng-design-Attachment中文清单]] · [[research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单|udp-ui Attachment 后端多语言注册清单]] · [[ng-design-ADR-0003-Attachment中文消息具名占位符协议]]
 
 以下 57 条消息用于后端语言资源注册。动态变量采用 `simple-v1` 的 `{{name}}` 具名占位符格式。
 
