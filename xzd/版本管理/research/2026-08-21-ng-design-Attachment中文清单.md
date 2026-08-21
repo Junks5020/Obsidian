@@ -12,7 +12,7 @@ source: packages/@newgrand/udp-mobile-ui/src/component/Attachment
 
 # ng-design Attachment 中文清单
 
-相关：[[00-版本总览]] · [[ng-design-附件术语表]] · [[ng-design-ADR-0003-Attachment中文消息具名占位符协议]]
+相关：[[00-版本总览]] · [[research/2026-08-21-ng-design-Attachment后端多语言注册清单]] · [[ng-design-附件术语表]] · [[ng-design-ADR-0003-Attachment中文消息具名占位符协议]]
 
 ## 结论
 
