@@ -12,7 +12,7 @@ source: packages/@newgrand/udp-mobile-ui/src/component/Attachment
 
 # ng-design Attachment 中文清单
 
-相关：[[00-版本总览]] · [[ng-design-附件术语表]]
+相关：[[00-版本总览]] · [[ng-design-附件术语表]] · [[ng-design-ADR-0003-Attachment中文消息具名占位符协议]]
 
 ## 结论
 
@@ -1159,4 +1159,3 @@ source: packages/@newgrand/udp-mobile-ui/src/component/Attachment
 - 中文行：使用 Unicode Han Script（`\p{Script=Han}`）逐行检测目录内全部文件。
 - 运行时候选：使用仓库当前 TypeScript 编译器解析 `.ts` / `.tsx`，提取字符串字面量、无替换模板字符串、模板表达式和 JSX 文本。
 - 未自动修改源码；本文是抽离清单，不代表已经完成 i18n 接入。
-
