@@ -13,7 +13,7 @@ decision: simple-v1-named-placeholders
 
 # ng-design ADR-0003：Attachment 中文消息具名占位符协议
 
-相关：[[00-版本总览]] · [[research/2026-08-21-ng-design-Attachment中文清单]] · [[research/2026-08-21-ng-design-Attachment后端多语言注册清单]] · [[ng-design-附件术语表]]
+相关：[[00-版本总览]] · [[research/2026-08-21-ng-design-Attachment中文清单]] · [[research/2026-08-21-ng-design-Attachment后端多语言注册清单]] · [[research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单]] · [[ng-design-附件术语表]]
 
 ## 状态
 
