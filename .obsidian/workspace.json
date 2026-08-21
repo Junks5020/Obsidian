@@ -39,10 +39,14 @@
             "id": "cffb382f9c610389",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "xzd/版本管理/research/2026-08-21-ng-design-Attachment中文清单.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "2026-08-21-ng-design-Attachment中文清单"
             }
           }
         ],
