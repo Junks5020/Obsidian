@@ -3,7 +3,7 @@ tags:
   - report-web
   - 术语表
   - 领域模型
-updated: 2026-08-07
+updated: 2026-08-24
 ---
 
 ## Resolved Terms
@@ -15,7 +15,21 @@ A cell used as the position reference by one or more floating images. It stops b
 
 记录 report-web 报表设计、预览与导出链路中共享的业务语言。
 
-相关：[[变更记录/FEATURE-20260731-001-report-floating-image]] · [[00-版本总览]]
+相关：[[变更记录/FEATURE-20260731-001-report-floating-image]] · [[report-web-打印模板类型同步计划-20260824]] · [[00-版本总览]]
+
+## 打印模板
+
+**打印模板类型**:
+区分打印模板面向常规用户使用还是面向用户 APP 展示的业务分类。
+_Avoid_: 打印设置类型、报表类型
+
+**用户模板**:
+供常规用户打印、预览和导出使用的打印模板。
+_Avoid_: 普通模板、默认类型
+
+**用户_APP展示模板**:
+供用户 APP 展示使用、可被指定为默认模板的打印模板。
+_Avoid_: APP 模板、移动端模板、用户_APP
 
 ## 浮动图片
 
