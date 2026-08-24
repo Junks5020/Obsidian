@@ -3,7 +3,7 @@ tags:
   - report-web
   - 需求同步
   - 打印模板
-status: implementing
+status: implemented
 date: 2026-08-24
 updated: 2026-08-24
 source_branch: 6.5.2-dev
@@ -42,3 +42,26 @@ target_branch: 6.5.1-dev
 ## 实施状态
 
 - 2026-08-24：用户已确认共享理解，开始在 `6.5.1-dev` 实施。
+- 2026-08-24：已在工作树 `C:\Users\jinxu\workspace\xzd\report-web.worktrees\sync-6.5.1-dev` 完成实现和自动化验证，变更保持未提交、未推送。
+
+## 实施结果
+
+- 业务变更限定为 `columnOptions.tsx`、`tableDrawer.tsx`、`formCfg.ts` 三个白名单文件；测试变更限定为 `tests/print-manager-list.test.ts`。
+- 列表类型文案、表单类型选项、`defaultTemplate` 默认值、类型联动显隐及保存前字段归零已与 `6.5.2-dev` 对齐。
+- `previewEditStatus` 未重新引入；复制和旧数据行为未增加来源分支之外的兼容处理。
+- 主工作树 `6.5.2-dev` 的 `.umirc.ts` 已恢复；目标工作树原有 `.umirc.ts`、`ngproxy.ini`、`.idea/` 变更未被修改或纳入本次功能差异。
+
+## 验证结果
+
+- `npx tsx tests/print-manager-list.test.ts`：通过。
+- 四个变更文件 `npx prettier --check`：通过。
+- `npm run build`：通过，Webpack 在约 1.15 分钟内成功编译。
+- 四个变更文件 `git diff --check`：通过，仅输出 Git 的 LF/CRLF 工作树提示。
+
+## 人工验收清单
+
+- 新增打印模板时，“类型”提供“用户”和“用户_APP展示”两个选项。
+- 选择“用户_APP展示”时展示“默认模板”，隐藏“直接预览”和“导出权限”；选择“用户”时显示规则相反。
+- 列表分别将 `templateType=0` 和 `templateType=1` 展示为“用户”和“用户_APP展示”。
+- 保存“用户_APP展示”模板时确认请求中的 `directPreviewStatus`、`exportAuth` 为 `0`；保存“用户”模板时确认 `defaultTemplate` 为 `0`。
+- 编辑、详情和复制路径按已确认的 `6.5.2-dev` 现有行为回填和展示。
