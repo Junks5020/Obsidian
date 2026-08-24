@@ -57,6 +57,8 @@ target_branch: 6.5.1-dev
 - 四个变更文件 `npx prettier --check`：通过。
 - `npm run build`：通过，Webpack 在约 1.15 分钟内成功编译。
 - 四个变更文件 `git diff --check`：通过，仅输出 Git 的 LF/CRLF 工作树提示。
+- 目标工作树开发服务已在 `http://localhost:8473` 编译并启动；只读 HTTP 请求返回 `200` 和 HTML。
+- 浏览器业务冒烟未完成：当前 Chrome 扩展以 `ERR_BLOCKED_BY_CLIENT` 阻止本地地址，内置浏览器不可用；因此仍按下方人工验收清单完成后端联调场景。
 
 ## 人工验收清单
 
