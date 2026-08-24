@@ -26,6 +26,7 @@ target_branch: 6.5.1-dev
 - 保存前清零当前类型不适用的字段：用户_APP展示模板清零 `directPreviewStatus`、`exportAuth`，用户模板清零 `defaultTemplate`。
 - 打印模板类型相关的请求和响应字段与 `6.5.2-dev` 保持一致，包括 `templateType`、`defaultTemplate`、`directPreviewStatus`、`exportAuth` 及当前打印模板保存、详情、列表链路已有字段。
 - 采用白名单式适配同步：仅修改来源提交 `3078a79abf10aae5f9a2ccbcced26ed69b8c3e7c` 对应的三个打印模板文件，按 `6.5.2-dev` 最终行为补齐类型列、表单联动和保存归零逻辑；不直接移植或夹带两分支的其他差异。
+- 排除 `previewEditStatus` 及“预览时支持隐藏行列”能力，保持 `6.5.1-dev` 在 2026-08-12 产品回退后的现状。
 
 ## 已查证代码事实
 
@@ -36,7 +37,6 @@ target_branch: 6.5.1-dev
 
 ## 待确认
 
-- 是否推翻 2026-08-12 的产品回退决定，在 `6.5.1-dev` 重新引入 `previewEditStatus` 及“预览时支持隐藏行列”能力；该字段不属于用户_APP展示模板来源提交，不能默认夹带。
 - 对复制、编辑、详情三条既有数据回填路径的兼容口径。
 - 自动化测试与人工页面验收范围。
 - 是否需要在本次会话中完成分支切换、代码提交或仅产出实施规格。
