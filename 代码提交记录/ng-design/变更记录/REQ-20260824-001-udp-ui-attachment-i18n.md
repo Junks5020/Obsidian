@@ -22,7 +22,7 @@ updated: 2026-08-24
 
 | Commit | Branch | Date | Purpose | Validation |
 | --- | --- | --- | --- | --- |
-| `50ddf6e96c9d92ca002466739cee0bc10c85c35a` | `ljx-6.5.2` | 2026-08-24 | 新增 Attachment 语言清单、具名占位符、中文回退、弹窗按需加载与页面级缓存，并接入附件组件 | `tsx tests/attachment-i18n.test.ts` 通过；`npm run build --workspace=@newgrand/udp-ui` 通过 |
+| `80cd354048c23e96ce2a03a54e8e2a5eca6fbbbc` | `ljx-6.5.2` | 2026-08-24 | 新增 Attachment 语言清单、具名占位符、中文回退、弹窗按需加载与页面级缓存，并接入附件组件 | 移除前附件多语言回归脚本通过；`npm run build --workspace=@newgrand/udp-ui` 通过 |
 
 ## 关联 Bug 修复
 
@@ -34,14 +34,15 @@ updated: 2026-08-24
 | --- | --- | --- |
 | `sync_branch` | 不适用 | - |
 | `ljx-7.0` | 不适用 | - |
-| `ljx-6.5.2` | 验证中 | `50ddf6e96c9d92ca002466739cee0bc10c85c35a` |
+| `ljx-6.5.2` | 验证中 | `80cd354048c23e96ce2a03a54e8e2a5eca6fbbbc` |
 | `6.5.2` | 待同步 | - |
 
 ## 验证
 
-- `.\\node_modules\\.bin\\tsx.cmd tests\\attachment-i18n.test.ts`：通过。
+- `.\\node_modules\\.bin\\tsx.cmd tests\\attachment-i18n.test.ts`：在测试文件按要求移出提交前通过；该脚本现不在 Git 提交中。
 - `npm run build --workspace=@newgrand/udp-ui`：通过，ESM/CJS 均完成 319 个文件转换及声明生成。
 - 原提交 `a19ead1d8c7ee6aa275e73a339e9b9ff46b3bc06` 仅修改提交信息后由 `50ddf6e96c9d92ca002466739cee0bc10c85c35a` 取代，两者 tree hash 一致。
+- `50ddf6e96c9d92ca002466739cee0bc10c85c35a` 按要求移除 `tests/attachment-i18n.test.ts` 后由 `80cd354048c23e96ce2a03a54e8e2a5eca6fbbbc` 取代，附件生产源码无差异。
 - 提交仅存在于 `ljx-6.5.2`，尚未推送；发布分支 `6.5.2` 待后续同步。
 
 Related: [[../01-提交覆盖矩阵]]
