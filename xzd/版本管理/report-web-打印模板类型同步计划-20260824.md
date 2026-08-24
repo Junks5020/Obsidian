@@ -3,7 +3,7 @@ tags:
   - report-web
   - 需求同步
   - 打印模板
-status: planning
+status: implementing
 date: 2026-08-24
 updated: 2026-08-24
 source_branch: 6.5.2-dev
@@ -39,6 +39,6 @@ target_branch: 6.5.1-dev
 - 两分支的接口封装地址与调用方式没有差异：列表 `/reportcenter/printManage/pagePrint`、保存 `/reportcenter/printManage/savePrint`、详情 `/reportcenter/printManage/getPrint`。字段由列表响应直接消费，保存表单值经规整后直接提交。
 - 当前工作树检出 `6.5.2-dev`，并有用户未提交的 `.umirc.ts` 修改；实施时不得覆盖或夹带该修改。
 
-## 待确认
+## 实施状态
 
-- 用户最终确认以上范围已达到共享理解后开始实施。
+- 2026-08-24：用户已确认共享理解，开始在 `6.5.1-dev` 实施。
