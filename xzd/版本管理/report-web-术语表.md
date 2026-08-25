@@ -3,7 +3,7 @@ tags:
   - report-web
   - 术语表
   - 领域模型
-updated: 2026-08-24
+updated: 2026-08-25
 ---
 
 ## Resolved Terms
@@ -15,7 +15,7 @@ A cell used as the position reference by one or more floating images. It stops b
 
 记录 report-web 报表设计、预览与导出链路中共享的业务语言。
 
-相关：[[变更记录/FEATURE-20260731-001-report-floating-image]] · [[report-web-打印模板类型同步计划-20260824]] · [[00-版本总览]]
+相关：[[变更记录/FEATURE-20260731-001-report-floating-image]] · [[report-web-打印模板类型同步计划-20260824]] · [[report-web-二维码多字段追加执行计划-20260825]] · [[00-版本总览]]
 
 ## 打印模板
 
