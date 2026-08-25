@@ -49,3 +49,7 @@ Blocked by: [[issues/03-打印数据类型与契约]]
 - 示例以 `@newgrand/udp-report-table` 包名导入，类型对应发布后的新版本（含 ticket 03/01/02 的
   新增导出）；当前工作树内由测试以 `ts.transpileModule` 验证结构正确性。
 - 边界说明已同时落 Obsidian（本 ticket）与仓库示例 README（示例旁文档属于代码交付物）。
+
+### 2026-08-25 后续决策
+
+仓库中的 `examples/print-pdfmake/` 已移除。上述内容记录 2026-08-18 的历史交付与验收结果；本次移除不影响 `ReportPrintData`、打印数据校验/序列化或组件库公共 API。删除原因与影响见 [[report-table-打印示例删除决策-20260825]]。

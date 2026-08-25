@@ -48,7 +48,7 @@ updated: 2026-08-21
 第一阶段沿用 `formdata + Grids` 作为单据和表格打印输入；新打印引擎通过显式转换消费，不直接改变该输入契约。
 
 **打印使用示例 (Print Usage Example)**:
-面向业务应用的独立 TypeScript/`pdfmake` 示例，不属于组件库运行时公共 API，也不规定业务模板排版。
+面向业务应用的独立 TypeScript/`pdfmake` 使用说明或示例，可位于项目文档或业务应用中；不属于组件库运行时公共 API，也不规定业务模板排版。
 
 **上游 (Upstream)**:
 report-web 仓库的 `6.5.2-dev` 分支（`src/components/report/`）。report-table 功能与修复的唯一事实来源。
