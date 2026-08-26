@@ -3,7 +3,7 @@ tags:
   - report-table
   - work-item
   - styling
-status: ready-for-agent
+status: claimed
 date: 2026-08-26
 updated: 2026-08-26
 ---
@@ -16,7 +16,7 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 **Blocked by:** [[01-建立根样式入口与公共根标识]]
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 ## Scope
 
@@ -39,3 +39,4 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 ## Comments
 
+- 2026-08-26：领取 ticket 02，接续 ticket 01 已 resolved 的工作区基线。将物理合并可达本地 Less、移除调用点局部 Less 导入并删除三份不可达 Less；保留 Handsontable 官方 CSS 供 ticket 03 处理，同时保留现有用户修改。
