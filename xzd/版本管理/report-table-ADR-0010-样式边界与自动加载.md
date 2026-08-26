@@ -10,6 +10,10 @@ date: 2026-08-26
 
 `udp-report-table` 的样式只允许命中报表组件根节点及其拥有的弹层根节点，同页其他 Handsontable、Ant Design 弹层和普通 DOM 不得受到影响。样式继续由 `DesignReportTable` 与 `ReportTable` 自动加载，不要求业务应用显式导入样式入口，以保持现有组件消费契约。两个公共根组件统一使用 `.udp-report-table` 作为稳定归属标识；`DesignReportTable` 使用 `.udp-report-table--design`，`ReportTable` 按 `mode` 分别使用 `.udp-report-table--report-preview` 与 `.udp-report-table--data-preview`，与术语表中的报表预览和数据预览保持一致。这四个根标识是稳定的对外样式钩子；其他内部类名只在迁移期间为行为兼容而保留，不构成公共契约。现有可达局部 Less 的内容物理合并到包根 `src/style.less`，作为单轨的命名空间全局样式；代码不再读取 CSS Modules 映射或提供普通类名回退。不保留“单一入口加分散源文件”的组织方式；3 份当前不可达的局部 Less 直接删除，不通过迁移激活旧规则。Handsontable 官方 CSS 保持单一依赖来源，在构建阶段通过直接开发依赖 `postcss-prefix-selector` 加报表命名空间前缀并合入最终样式输出，不将第三方压缩 CSS 复制进根 Less，也不使用正则或字符串改写选择器；生成文件不提交，由包构建、Dumi 启动和文档构建命令自动产生，CI 校验生成结果的前缀完整性。每个报表根实例创建一个挂到 `body` 的 `.udp-report-table.udp-report-table--overlay` 弹层宿主，Ant Design 与 Handsontable 的报表自有弹层统一渲染到该宿主，并在实例卸载时清理；弹层无法取得所属宿主时不允许回退到裸 `body`，开发环境明确报错，生产环境阻止打开并记录错误。命名空间使用 `:where(.udp-report-table)` 限定匹配而不增加选择器权重。迁移一次性切换到命名空间样式：保留现有内部 DOM 类名，但不提供旧全局样式、兼容开关或双份 CSS。除根外元素不再被命中外，本次不允许任何视觉或交互变化；迁移中发现的既有样式问题必须单独登记。
 
+样式组织方式对齐 `udp-ui` Table：组件根目录维护一个大 Less，由公共组件实现自动导入，子组件使用确定的普通类名且不再拥有局部 Less。该组件只作为单文件组织参照；其裸全局选择器和 `body > ...` 弹层规则不复制到报表包，报表仍执行上述严格边界。
+
+`src/style.less` 按 Shared、Design、Report Preview、Data Preview、Overlay / Portal 分组；每个迁移区段保留原 Less 文件路径和适用根作用域注释，作为物理合并后的维护标识，不通过 `@import` 保留分散源文件。
+
 ## Considered Options
 
 - 选择：一个根样式文件物理持有报表组件的 Less 内容，使样式所有权集中可见。
@@ -25,6 +29,8 @@ date: 2026-08-26
 - 选择：本次不引入 Playwright 等新 E2E 框架；使用现有 `node:test` 做结构检查，保留隔离页面，并在实施验收时完成浏览器操作和截图验证。
 - 选择：取消 CSS Modules 映射与普通类名回退的双轨兼容，统一使用根命名空间保护的全局类名。
 - 选择：弹层宿主缺失时显式失败，不以裸 `body` 回退掩盖实例归属错误。
+- 选择：复用 `udp-ui` Table 的单文件、单入口、普通类名组织模式，但补足其未提供的严格根命名空间和实例弹层隔离。
+- 选择：大 Less 以“原文件路径、适用作用域、功能分组”标记迁移区段，保留定位和功能型同步线索。
 - 放弃：由一个根 Less 聚合组件旁的局部 Less；该方案维护归属更局部，但不满足本次物理合并目标。
 - 放弃：把 Handsontable 压缩 CSS 物理复制进根 Less；该方案会重复维护第三方源码。
 - 放弃：逐个为弹层添加 `popupClassName` 或 `rootClassName`；调用点多，遗漏会重新产生边界外样式。
