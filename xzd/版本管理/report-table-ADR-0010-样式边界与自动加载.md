@@ -8,7 +8,7 @@ date: 2026-08-26
 
 # ADR-0010：报表样式采用严格边界并由组件自动加载
 
-`udp-report-table` 的样式只允许命中报表组件根节点及其拥有的弹层根节点，同页其他 Handsontable、Ant Design 弹层和普通 DOM 不得受到影响。样式继续由 `DesignReportTable` 与 `ReportTable` 自动加载，不要求业务应用显式导入样式入口，以保持现有组件消费契约。两个公共根组件统一使用 `.udp-report-table` 作为稳定归属标识；`DesignReportTable` 使用 `.udp-report-table--design`，`ReportTable` 按 `mode` 分别使用 `.udp-report-table--report-preview` 与 `.udp-report-table--data-preview`，与术语表中的报表预览和数据预览保持一致。这四个根标识是稳定的对外样式钩子；其他内部类名只在迁移期间为行为兼容而保留，不构成公共契约。现有可达局部 Less 的内容物理合并到包根 `src/style.less`，不保留“单一入口加分散源文件”的组织方式；3 份当前不可达的局部 Less 直接删除，不通过迁移激活旧规则。Handsontable 官方 CSS 保持单一依赖来源，在构建阶段通过直接开发依赖 `postcss-prefix-selector` 加报表命名空间前缀并合入最终样式输出，不将第三方压缩 CSS 复制进根 Less，也不使用正则或字符串改写选择器；生成文件不提交，由包构建、Dumi 启动和文档构建命令自动产生，CI 校验生成结果的前缀完整性。每个报表根实例创建一个挂到 `body` 的 `.udp-report-table.udp-report-table--overlay` 弹层宿主，Ant Design 与 Handsontable 的报表自有弹层统一渲染到该宿主，并在实例卸载时清理。命名空间使用 `:where(.udp-report-table)` 限定匹配而不增加选择器权重。迁移一次性切换到命名空间样式：保留现有内部 DOM 类名，但不提供旧全局样式、兼容开关或双份 CSS。除根外元素不再被命中外，本次不允许任何视觉或交互变化；迁移中发现的既有样式问题必须单独登记。
+`udp-report-table` 的样式只允许命中报表组件根节点及其拥有的弹层根节点，同页其他 Handsontable、Ant Design 弹层和普通 DOM 不得受到影响。样式继续由 `DesignReportTable` 与 `ReportTable` 自动加载，不要求业务应用显式导入样式入口，以保持现有组件消费契约。两个公共根组件统一使用 `.udp-report-table` 作为稳定归属标识；`DesignReportTable` 使用 `.udp-report-table--design`，`ReportTable` 按 `mode` 分别使用 `.udp-report-table--report-preview` 与 `.udp-report-table--data-preview`，与术语表中的报表预览和数据预览保持一致。这四个根标识是稳定的对外样式钩子；其他内部类名只在迁移期间为行为兼容而保留，不构成公共契约。现有可达局部 Less 的内容物理合并到包根 `src/style.less`，作为单轨的命名空间全局样式；代码不再读取 CSS Modules 映射或提供普通类名回退。不保留“单一入口加分散源文件”的组织方式；3 份当前不可达的局部 Less 直接删除，不通过迁移激活旧规则。Handsontable 官方 CSS 保持单一依赖来源，在构建阶段通过直接开发依赖 `postcss-prefix-selector` 加报表命名空间前缀并合入最终样式输出，不将第三方压缩 CSS 复制进根 Less，也不使用正则或字符串改写选择器；生成文件不提交，由包构建、Dumi 启动和文档构建命令自动产生，CI 校验生成结果的前缀完整性。每个报表根实例创建一个挂到 `body` 的 `.udp-report-table.udp-report-table--overlay` 弹层宿主，Ant Design 与 Handsontable 的报表自有弹层统一渲染到该宿主，并在实例卸载时清理；弹层无法取得所属宿主时不允许回退到裸 `body`，开发环境明确报错，生产环境阻止打开并记录错误。命名空间使用 `:where(.udp-report-table)` 限定匹配而不增加选择器权重。迁移一次性切换到命名空间样式：保留现有内部 DOM 类名，但不提供旧全局样式、兼容开关或双份 CSS。除根外元素不再被命中外，本次不允许任何视觉或交互变化；迁移中发现的既有样式问题必须单独登记。
 
 ## Considered Options
 
@@ -23,6 +23,8 @@ date: 2026-08-26
 - 选择：样式迁移保持设计态、预览态、移动端和弹层的视觉与交互不变，不夹带既有问题修复。
 - 选择：建立运行时样式隔离场景，同时覆盖报表、外部 Handsontable、普通 Ant Design 控件、双报表实例及各自弹层宿主的卸载清理。
 - 选择：本次不引入 Playwright 等新 E2E 框架；使用现有 `node:test` 做结构检查，保留隔离页面，并在实施验收时完成浏览器操作和截图验证。
+- 选择：取消 CSS Modules 映射与普通类名回退的双轨兼容，统一使用根命名空间保护的全局类名。
+- 选择：弹层宿主缺失时显式失败，不以裸 `body` 回退掩盖实例归属错误。
 - 放弃：由一个根 Less 聚合组件旁的局部 Less；该方案维护归属更局部，但不满足本次物理合并目标。
 - 放弃：把 Handsontable 压缩 CSS 物理复制进根 Less；该方案会重复维护第三方源码。
 - 放弃：逐个为弹层添加 `popupClassName` 或 `rootClassName`；调用点多，遗漏会重新产生边界外样式。
