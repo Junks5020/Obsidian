@@ -4,7 +4,7 @@ tags:
   - work-item
   - build
   - styling
-status: ready-for-agent
+status: claimed
 date: 2026-08-26
 updated: 2026-08-26
 ---
@@ -17,7 +17,7 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 **Blocked by:** [[01-建立根样式入口与公共根标识]]
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 ## Scope
 
@@ -39,4 +39,3 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 - [ ] 生成器结构测试、TypeScript 检查、包构建、文档构建和 `git diff --check` 通过。
 
 ## Comments
-
