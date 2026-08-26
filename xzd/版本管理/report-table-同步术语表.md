@@ -10,7 +10,7 @@ updated: 2026-08-26
 
 基于 Handsontable 封装的报表组件包（7.0），由 report-web 的报表组件抽离而来，与上游保持功能型同步。
 
-相关：[[report-table-6.5.2-7.0-功能同步计划]] · [[report-table-文档同步计划-20260813]] · [[report-table-第二阶段打印API规划-20260819]] · [[report-table-ADR-0001-跟随上游功能型同步]] · [[report-table-ADR-0002-报表字体字段兼容双写]] · [[report-table-ADR-0003-字体清单与静态资源契约]] · [[report-table-ADR-0004-第一阶段复用现有服务适配层]] · [[report-table-ADR-0010-样式边界与自动加载]] · [[research/2026-08-18-硕正报表第一阶段对接范围]] · [[work-items/report-table-phase1/spec]] · [[work-items/report-font-integration/spec]]
+相关：[[report-table-6.5.2-7.0-功能同步计划]] · [[report-table-文档同步计划-20260813]] · [[report-table-第二阶段打印API规划-20260819]] · [[report-table-ADR-0001-跟随上游功能型同步]] · [[report-table-ADR-0002-报表字体字段兼容双写]] · [[report-table-ADR-0003-字体清单与静态资源契约]] · [[report-table-ADR-0004-第一阶段复用现有服务适配层]] · [[report-table-ADR-0010-样式边界与自动加载]] · [[research/2026-08-18-硕正报表第一阶段对接范围]] · [[work-items/report-table-phase1/spec]] · [[work-items/report-font-integration/spec]] · [[work-items/report-table-style-boundary/spec]]
 
 ## Language
 

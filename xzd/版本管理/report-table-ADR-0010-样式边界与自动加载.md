@@ -2,8 +2,9 @@
 tags:
   - report-table
   - ADR
-status: proposed
+status: accepted
 date: 2026-08-26
+updated: 2026-08-26
 ---
 
 # ADR-0010：报表样式采用严格边界并由组件自动加载
@@ -39,4 +40,4 @@ date: 2026-08-26
 - 放弃：逐个为弹层添加 `popupClassName` 或 `rootClassName`；调用点多，遗漏会重新产生边界外样式。
 - 放弃：旧全局样式兼容开关或双份 CSS；它们会延续污染并扩大样式体积和测试矩阵。
 
-相关：[[report-table-同步术语表]] · [[00-版本总览]]
+相关：[[report-table-同步术语表]] · [[work-items/report-table-style-boundary/spec]] · [[00-版本总览]]
