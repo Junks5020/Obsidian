@@ -3,7 +3,7 @@ tags:
   - report-table
   - 术语表
   - 领域模型
-updated: 2026-08-21
+updated: 2026-08-26
 ---
 
 # udp-report-table 术语表
@@ -22,6 +22,10 @@ updated: 2026-08-21
 
 **组件库交付边界 (Component-Library Delivery Boundary)**:
 报表组件库负责可复用组件、公共 API、交互权限和联调验证；业务应用负责路由、菜单、列表页面和业务数据编排。业务路由不是组件库交付物。
+
+**报表样式边界 (Report Style Boundary)**:
+`udp-report-table` 的样式只允许命中报表组件根节点及其拥有的弹层根节点；同页其他 Handsontable、Ant Design 弹层和普通 DOM 均位于该边界之外。
+_Avoid_: 全局报表样式、页面级报表主题
 
 **最小兼容 API 集 (Minimum Compatibility API Set)**:
 为已确认的 P0 报表设计和打印场景提供的稳定公共能力集合。未被真实业务调用证明必要的原生 API 不自动纳入本阶段。
