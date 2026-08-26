@@ -4,7 +4,7 @@ tags:
   - work-item
   - build
   - styling
-status: claimed
+status: resolved
 date: 2026-08-26
 updated: 2026-08-26
 ---
@@ -17,7 +17,7 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 **Blocked by:** [[01-建立根样式入口与公共根标识]]
 
-**Status:** claimed
+**Status:** resolved
 
 ## Scope
 
@@ -31,11 +31,15 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 ## Acceptance
 
-- [ ] Handsontable CSS 只有依赖包一个事实来源，仓库内压缩副本已移除。
-- [ ] 普通和特殊选择器经 AST 正确进入报表根或 overlay 边界，无无效选择器和裸全局选择器。
-- [ ] 连续生成两次字节一致，依赖版本变化时可稳定重建。
-- [ ] 直接执行包构建、Dumi 启动和文档构建均无需人工预生成。
-- [ ] 清理生成目录后仍可完成构建；Git 状态不出现生成 CSS。
-- [ ] 生成器结构测试、TypeScript 检查、包构建、文档构建和 `git diff --check` 通过。
+- [x] Handsontable CSS 只有依赖包一个事实来源，仓库内压缩副本已移除。
+- [x] 普通和特殊选择器经 AST 正确进入报表根或 overlay 边界，无无效选择器和裸全局选择器。
+- [x] 连续生成两次字节一致，依赖版本变化时可稳定重建。
+- [x] 直接执行包构建、Dumi 启动和文档构建均无需人工预生成。
+- [x] 清理生成目录后仍可完成构建；Git 状态不出现生成 CSS。
+- [x] 生成器结构测试、TypeScript 检查、包构建、文档构建和 `git diff --check` 通过。
 
 ## Comments
+
+- 2026-08-26：完成 ticket 03。新增 `scripts/generate-handsontable-css.cjs`，以已安装 `handsontable/dist/handsontable.full.min.css` 为唯一输入，使用 `postcss-prefix-selector` 和 `postcss-selector-parser` 通过 AST 生成 `:where(.udp-report-table)` 命名空间 CSS；覆盖普通、逗号列表、`html`、`body`、`:root`、`body > ...`、伪类及 keyframes/font-face 边界，并提供 `--check` 确定性校验。
+- 2026-08-26：根入口自动加载 `src/style.less` 和生成的 `src/generated/handsontable.css`；包构建、根项目 `start`/`analyze`/`docs` 前置命令以及 `.dumirc.ts` 均会自动生成样式。生成目录已加入 `.gitignore`，旧的 `src/design/css/handsontable.full.min.css` 已删除，生成物不进入 Git。
+- 2026-08-26：验证通过：`npm run check:styles --workspace=@newgrand/udp-report-table`；Handsontable AST 结构及边界测试；`node node_modules/father/node_modules/typescript/bin/tsc --noEmit -p packages/@newgrand/udp-report-table/tsconfig.json`；`npm run build --workspace=@newgrand/udp-report-table`；`npx dumi build`；`git diff --check`。
