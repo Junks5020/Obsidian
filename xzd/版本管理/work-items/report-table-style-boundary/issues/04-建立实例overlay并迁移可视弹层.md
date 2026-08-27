@@ -3,7 +3,7 @@ tags:
   - report-table
   - work-item
   - overlay
-status: claimed
+status: resolved
 date: 2026-08-26
 updated: 2026-08-26
 ---
@@ -16,7 +16,7 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 **Blocked by:** [[01-建立根样式入口与公共根标识]]
 
-**Status:** claimed
+**Status:** resolved
 
 ## Scope
 
@@ -30,11 +30,14 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 ## Acceptance
 
-- [ ] 同页两个报表实例各自只有一个 overlay 宿主，弹层 DOM 不串到另一实例。
-- [ ] 所有可视报表弹层和拖拽镜像均进入所属宿主；除临时复制 textarea 外无报表 UI 直接挂裸 `body`。
-- [ ] 卸载任一实例会移除其宿主及子节点，不删除或干扰另一实例宿主。
-- [ ] 缺失宿主在开发与生产环境分别符合显式失败契约，且没有 silent fallback。
-- [ ] 现有弹层打开、关闭、定位、焦点、层级和交互行为不变。
-- [ ] 生命周期/归属聚焦测试、TypeScript 检查、包构建和 `git diff --check` 通过。
+- [x] 同页两个报表实例各自只有一个 overlay 宿主，弹层 DOM 不串到另一实例。
+- [x] 所有可视报表弹层和拖拽镜像均进入所属宿主；除临时复制 textarea 外无报表 UI 直接挂裸 `body`。
+- [x] 卸载任一实例会移除其宿主及子节点，不删除或干扰另一实例宿主。
+- [x] 缺失宿主在开发与生产环境分别符合显式失败契约，且没有 silent fallback。
+- [x] 现有弹层打开、关闭、定位、焦点、层级和交互行为不变。
+- [x] 生命周期/归属聚焦测试、TypeScript 检查、包构建和 `git diff --check` 通过。
 
 ## Comments
+
+- 2026-08-27：完成每实例 overlay 宿主、统一 Ant Design/udp-ui modal 容器、Handsontable 菜单、筛选弹窗、拖拽镜像、浮动图片 Drawer、打印范围 popover 与链接弹层迁移。宿主缺失按环境显式失败，仅保留复制用临时 textarea 的裸 `body` 例外。
+- 验证：Father package build 通过；`report-overlay.test.cjs` 4/4；包内全量 `node:test` 80/80；`git diff --check` 通过（仅 CRLF 提示）。

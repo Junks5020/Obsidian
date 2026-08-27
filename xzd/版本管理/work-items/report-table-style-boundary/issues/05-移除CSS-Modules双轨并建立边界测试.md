@@ -4,7 +4,7 @@ tags:
   - work-item
   - testing
   - styling
-status: ready-for-agent
+status: claimed
 date: 2026-08-26
 updated: 2026-08-26
 ---
@@ -17,7 +17,7 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 
 **Blocked by:** [[02-物理合并Less并删除不可达样式]]、[[03-生成带命名空间的Handsontable样式]]、[[04-建立实例overlay并迁移可视弹层]]
 
-**Status:** ready-for-agent
+**Status:** claimed
 
 ## Scope
 
@@ -38,4 +38,3 @@ Parent: [[work-items/report-table-style-boundary/spec]]
 - [ ] 与迁移前相比，除边界外元素不再被命中外无视觉或交互变化。
 
 ## Comments
-
