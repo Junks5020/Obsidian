@@ -4,9 +4,9 @@ tags:
   - spec
   - work-item
   - styling
-status: ready-for-agent
+status: resolved
 date: 2026-08-26
-updated: 2026-08-26
+updated: 2026-08-27
 ---
 
 # udp-report-table 严格样式边界与自动加载规格
@@ -92,3 +92,6 @@ Handsontable 官方 CSS 继续以依赖包为唯一来源，通过直接开发�
 
 Frontier：[[issues/01-建立根样式入口与公共根标识]]。
 
+## Final Implementation
+
+2026-08-27 已完成 01-06 全部 tickets：报表包样式集中到 `src/style.less`，Handsontable 样式由 PostCSS AST 生成并自动校验，所有可视弹层归属实例 overlay；Dumi 隔离场景已完成真实浏览器桌面/移动视口验收，包测试、样式检查、包构建、Dumi 构建和 `git diff --check` 均通过。Ticket 06 已记录完整 DOM 归属、卸载/重挂和截图证据。

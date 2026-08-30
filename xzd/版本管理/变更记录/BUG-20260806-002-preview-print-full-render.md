@@ -1,12 +1,12 @@
 ---
 id: BUG-20260806-002
 type: bug
-status: completed
+status: verifying
 source_commit: f6289e600c3657a8fc4bd86979eee68950ed64a6
 source_branch: 6.5.1-dev
 target_commit: e7923f7bcf92ca3fb87bfd4c961305b81859bf94
 created: 2026-08-06
-updated: 2026-08-12
+updated: 2026-08-28
 target_versions: [6.5.1]
 tags: [version-change, bug, report-web, preview, print, pdf, virtualization]
 ---
@@ -34,8 +34,15 @@ tags: [version-change, bug, report-web, preview, print, pdf, virtualization]
 
 | 版本名称 | 是否需要同步 | 当前状态 | 合入 Commit | 验证结果 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| 6.5.1-dev | 是 | 已包含 | `f6289e600c3657a8fc4bd86979eee68950ed64a6` | 来源提交含两组修复 | 同步来源 |
+| 6.5.1-dev | 是 | 验证中 | `f6289e600c3657a8fc4bd86979eee68950ed64a6`<br>`548f3c7d78997431e630d48c55874b3d4cd60de9` | `print-full-render.test.ts` 通过 | 回滚行列隐藏功能时误删规范化函数定义，但后续调用仍保留；本提交已恢复为 6.5.1 的直接配置处理 |
 | 6.5.1 | 是 | 已同步 | `e7923f7bcf92ca3fb87bfd4c961305b81859bf94` | 聚焦测试、格式与差异检查、生产构建通过 | 全量渲染保护保留；规范化补充由 `63a5f6fafed8f45c497dc10429768a5b802f53b2` 回退；本地分支尚未推送 |
+
+## 2026-08-28 回归修复
+
+- 现象：点击预览页面的打印时，`generatePDFByHandsontable` 抛出 `ReferenceError: normalizeGlobalSettings is not defined`。
+- 根因：`3990e962ef81dd8ffa573efbbfb209ec41189d47` 回滚行列隐藏功能时删除了 `normalizeGlobalSettings` 定义；`f6289e600c3657a8fc4bd86979eee68950ed64a6` 的调用仍遗留在 `6.5.1-dev`。
+- 修复：`548f3c7d78997431e630d48c55874b3d4cd60de9` 删除遗留调用及其过时测试，使 `6.5.1-dev` 的 PDF 打印配置处理与 `6.5.1` 保持一致。
+- 验证：`node_modules/.bin/tsx tests/print-full-render.test.ts` 通过；未执行真实业务模板的浏览器打印验收。
 
 ## 验收决定
 
