@@ -7,406 +7,349 @@ tags:
   - 中文清单
 created: 2026-08-31
 updated: 2026-08-31
-total_keys: 152
+total_unique_keys: 130
+key_format: "printManager.<identifier> (单点扁平化/全局去重)"
 ---
 
-# PrintManager 页面多语言 (i18n) Key 与中文词条对照表
+# PrintManager 多语言 (i18n) Key 与中文词条对照表
 
 > **模块路径**：`src/pages/PrintManager/`  
-> **适用场景**：前端多语言国际化改造、国际化资源库 (`zh-CN` / `en-US`) 维护、多语言提取及自动化替换  
-> **Key 命名规范**：采用 `printManager.<模块>.<分类>.<语义标识>` 层级规范，共归纳定义 **152** 个多语言 Key。
+> **Key 规范原则**：
+> 1. **单点扁平化 (Single-dot Namespace)**：每个 Key 仅保留统一模块前缀 `printManager.<标识>`，避免深层点号嵌套（无 `a.b.c.d`）。
+> 2. **全局唯一与词条去重 (Unique & Deduplicated)**：相同中文词条（如“确定”、“取消”、“添加”、“删除”、“序号”、“单据类型”）在全局只保留一个唯一 Key，多处复用。
+> 3. **共提取唯一中文词条**：**130** 个。
 
 ---
 
 ## 目录
-- [一、Key 命名与规范说明](#一key-命名与规范说明)
-- [二、完整 zh-CN 语言包 JSON（可直接导入）](#二完整-zh-cn-语言包-json可直接导入)
-- [三、模块化 Key-Value 对照清单](#三模块化-key-value-对照清单)
-  - [1. 列表模块 (List)](#1-列表模块-list)
-  - [2. 模板属性抽屉与表单 (Drawer / Form)](#2-模板属性抽屉与表单-drawer--form)
-  - [3. 导出文件名与使用范围弹窗 (Sub-Modals)](#3-导出文件名与使用范围弹窗-sub-modals)
-  - [4. 公共操作符与判断条件 (Operators)](#4-公共操作符与判断条件-operators)
-  - [5. 设计器模块 (Design)](#5-设计器模块-design)
-  - [6. 流转历史设置 (Workflow Setting)](#6-流转历史设置-workflow-setting)
-  - [7. 预览模块 (Preview)](#7-预览模块-preview)
-  - [8. 提示、校验与二次确认 (Messages / Alerts)](#8-提示校验与二次确认-messages--alerts)
-- [四、代码注释与非 UI 常量清单（无需国际化）](#四代码注释与非-ui-常量清单无需国际化)
+- [一、完整 zh-CN 语言包 JSON（可直接导入）](#一完整-zh-cn-语言包-json可直接导入)
+- [二、按业务分类对照清单](#二按业务分类对照清单)
+  - [1. 基础操作与通用按钮](#1-基础操作与通用按钮)
+  - [2. 表格列头与表单字段](#2-表格列头与表单字段)
+  - [3. 页面标题与弹窗标题](#3-页面标题与弹窗标题)
+  - [4. 枚举与下拉选项](#4-枚举与下拉选项)
+  - [5. 操作符与判断条件](#5-操作符与判断条件)
+  - [6. 工作流流转历史设置](#6-工作流流转历史设置)
+  - [7. 占位符与提示/校验/确认信息](#7-占位符与提示校验确认信息)
+- [三、代码注释与非 UI 常量说明（无需国际化）](#三代码注释与非-ui-常量说明无需国际化)
 
 ---
 
-## 一、Key 命名与规范说明
-
-1. **命名层级**：`printManager.<module>.<category>.<identifier>`
-   * `module`：`list` (列表)、`design` (设计器)、`preview` (预览)、`common` (通用)
-   * `category`：`btn` (按钮)、`columns` (列头)、`form` (表单标签)、`toolbar` (工具栏)、`msg` (提示与弹窗)、`validation` (校验)、`enum` (枚举选项)
-   * `identifier`：小驼峰命名的具体业务含义，如 `shareStrategy`、`addTitle`、`confirmDelete`。
-2. **代码改造建议**：
-   * 在 React 组件中使用统一国际化 Hook，如：`intl.formatMessage({ id: 'printManager.list.btn.add' })`。
-
----
-
-## 二、完整 zh-CN 语言包 JSON（可直接导入）
+## 一、完整 zh-CN 语言包 JSON（可直接导入）
 
 ```json
 {
-  "printManager.list.searchPlaceholder": "请输入编码/名称",
-  "printManager.list.btn.add": "添加",
-  "printManager.list.btn.design": "设计",
-  "printManager.list.btn.edit": "编辑",
-  "printManager.list.btn.delete": "删除",
-  "printManager.list.btn.detail": "详情",
-  "printManager.list.btn.copy": "复制",
-  "printManager.list.btn.enable": "启用",
-  "printManager.list.btn.disable": "停用",
-  "printManager.list.btn.config": "配置",
-  "printManager.list.btn.custom": "自定义",
-  "printManager.list.btn.confirm": "确定",
-  "printManager.list.btn.cancel": "取消",
-  "printManager.list.btn.addCondition": "添加",
-  "printManager.list.btn.deleteCondition": "删除",
-  "printManager.list.columns.index": "序号",
-  "printManager.list.columns.billType": "单据类型",
-  "printManager.list.columns.formName": "所属表单",
-  "printManager.list.columns.code": "编号",
-  "printManager.list.columns.name": "名称",
-  "printManager.list.columns.remark": "备注",
-  "printManager.list.columns.templateType": "类型",
-  "printManager.list.columns.shareStrategy": "共享策略",
-  "printManager.list.columns.orgName": "单元/组织",
-  "printManager.list.columns.status": "状态",
-  "printManager.list.columns.useScope": "使用范围",
-  "printManager.list.columns.action": "操作",
-  "printManager.list.templateType.user": "用户",
-  "printManager.list.templateType.app": "用户_APP展示",
-  "printManager.list.shareStrategy.group": "集团共享",
-  "printManager.list.shareStrategy.unit": "单元共享",
-  "printManager.list.shareStrategy.org": "组织私有",
-  "printManager.list.useScope.all": "全部",
-  "printManager.list.useScope.part": "部分",
-  "printManager.list.exportName.default": "默认",
-  "printManager.list.exportName.custom": "自定义",
-  "printManager.list.exportAuth.noLimit": "不控制",
-  "printManager.list.exportAuth.pdfOnly": "只允许导出PDF",
-  "printManager.list.exportAuth.disabled": "不允许导出",
-  "printManager.list.billType.detail": "详情页",
-  "printManager.list.billType.list": "列表页",
-  "printManager.list.form.addTitle": "新增打印模板",
-  "printManager.list.form.manageTitle": "打印模板管理",
-  "printManager.list.form.viewTitle": "打印模板查看",
-  "printManager.list.form.code": "编码",
-  "printManager.list.form.name": "名称",
-  "printManager.list.form.billType": "单据类型",
-  "printManager.list.form.templateType": "类型",
-  "printManager.list.form.isDefault": "默认模板",
-  "printManager.list.form.directPreview": "直接预览",
-  "printManager.list.form.previewEditStatus": "预览时支持隐藏行列",
-  "printManager.list.form.exportAuth": "导出权限",
-  "printManager.list.form.useScope": "使用范围",
-  "printManager.list.form.exportName": "导出文件名称",
-  "printManager.list.form.shareStrategy": "共享策略",
-  "printManager.list.form.org": "所属组织",
-  "printManager.list.form.unit": "所属单元",
-  "printManager.list.form.creator": "创建人",
-  "printManager.list.form.createDate": "创建日期",
-  "printManager.list.form.remark": "备注",
-  "printManager.list.form.copySuffix": "_复制",
-  "printManager.list.exportName.title": "导出文件名称",
-  "printManager.list.exportName.typeField": "字段",
-  "printManager.list.exportName.typeConst": "常量",
-  "printManager.list.exportName.typeVar": "变量",
-  "printManager.list.exportName.varCurrentUser": "当前登陆人",
-  "printManager.list.exportName.varCurrentDate": "当前日期(年月日)",
-  "printManager.list.exportName.varCurrentTime": "当前时间(年月日时分秒)",
-  "printManager.list.exportName.colParam": "参数",
-  "printManager.list.exportName.colBillCode": "单据编码",
-  "printManager.list.useScope.title": "使用范围",
-  "printManager.list.useScope.colParam": "参数",
-  "printManager.list.useScope.colOperator": "判断符",
-  "printManager.list.useScope.colValue": "值",
-  "printManager.common.op.eq": "等于",
-  "printManager.common.op.notEq": "不等于",
-  "printManager.common.op.gt": "大于",
-  "printManager.common.op.ge": "大于等于",
-  "printManager.common.op.lt": "小于",
-  "printManager.common.op.le": "小于等于",
-  "printManager.common.op.like": "包含",
-  "printManager.common.op.notLike": "不包含",
-  "printManager.common.op.in": "属于",
-  "printManager.common.op.between": "区间",
-  "printManager.list.validation.codeMaxLength": "最长20字符",
-  "printManager.list.validation.codeFormat": "只能输入英文字符、数字和下划线！",
-  "printManager.list.validation.useScopeRequired": "使用范围为部分时必须配置条件信息",
-  "printManager.list.validation.exportNameRequired": "导出文件名称为自定义时必须配置名称信息",
-  "printManager.list.validation.paramFormatError": "请输入正确的参数格式",
-  "printManager.list.msg.confirmDelete": "是否确认删除?",
-  "printManager.list.msg.confirmCloseUnsaved": "有修改内容未保存，确定要关闭吗?",
-  "printManager.list.msg.notDesignedCannotEnable": "打印模板未进行设计，不允许启用",
-  "printManager.design.pageTitle": "打印模板设计",
-  "printManager.design.toolbar.importExport": "导入导出",
-  "printManager.design.toolbar.importPrint": "打印导入",
-  "printManager.design.toolbar.exportPrint": "打印导出",
-  "printManager.design.toolbar.globalFilter": "全局数据过滤",
-  "printManager.design.toolbar.workflowSetting": "流转历史设置",
-  "printManager.design.toolbar.preview": "预览",
-  "printManager.design.toolbar.save": "保存",
-  "printManager.design.export.title": "导出",
-  "printManager.design.export.excel": "EXCEL文件",
-  "printManager.design.export.json": "Json文件",
-  "printManager.design.dataSet.searchPlaceholder": "请输入名称",
-  "printManager.design.dataSet.title": "数据集",
-  "printManager.design.dataSet.add": "添加数据集",
-  "printManager.design.dataSet.selectWarning": "请选择数据集",
-  "printManager.design.dataSet.expand": "展开",
-  "printManager.design.dataSet.collapse": "收起",
-  "printManager.design.dataSet.columns.index": "序号",
-  "printManager.design.dataSet.columns.type": "类型",
-  "printManager.design.dataSet.columns.code": "编号",
-  "printManager.design.dataSet.columns.name": "名称",
-  "printManager.design.dataSet.type.complex": "复杂",
-  "printManager.design.dataSet.type.normal": "普通",
-  "printManager.design.filter.relation.and": "并且",
-  "printManager.design.filter.relation.or": "或者",
-  "printManager.design.filter.title": "全局数据过滤",
-  "printManager.design.filter.columns.relation": "关系",
-  "printManager.design.filter.columns.param": "参数",
-  "printManager.design.filter.columns.operator": "操作符",
-  "printManager.design.filter.columns.type": "类型",
-  "printManager.design.filter.columns.value": "值",
-  "printManager.design.filter.btn.addCondition": "添加",
-  "printManager.design.filter.btn.clear": "清空",
-  "printManager.design.workflow.title": "流转历史设置",
-  "printManager.design.workflow.scopeLabel": "审批流范围",
-  "printManager.design.workflow.scopeLatest": "最新一次审批（包含未结束/终止的审批）",
-  "printManager.design.workflow.scopeLatestEnded": "最新一次正常结束的审批",
-  "printManager.design.workflow.scopeAllEnded": "所有正常结束审批",
-  "printManager.design.workflow.scopeAll": "所有审批(包含未结束/终止的审批)",
-  "printManager.design.workflow.recordScopeLabel": "审批记录范围",
-  "printManager.design.workflow.recordAll": "所有审批记录",
-  "printManager.design.workflow.recordSubmitAll": "所有动作是提交的审批记录",
-  "printManager.design.workflow.recordSubmitLast": "仅最后一次动作是提交的审批记录",
-  "printManager.design.workflow.startNodeLabel": "打印发起人节点",
-  "printManager.design.msg.saveSuccess": "保存成功",
-  "printManager.design.msg.saveFailed": "保存失败: ",
-  "printManager.design.msg.exportError": "导出错误",
-  "printManager.preview.pageTitle": "打印模板预览",
-  "printManager.preview.toolbar.print": "打印",
-  "printManager.preview.toolbar.printSetting": "打印设置",
-  "printManager.preview.toolbar.export": "导出",
-  "printManager.preview.toolbar.exportExcel": "导出EXCEL",
-  "printManager.preview.toolbar.exportPdf": "导出PDF",
-  "printManager.preview.toolbar.close": "关闭",
-  "printManager.preview.msg.dataNotLoaded": "打印数据未加载完成，请稍后重试",
-  "printManager.preview.msg.tableNotReady": "表格实例未就绪，请稍后重试",
-  "printManager.preview.msg.printFailed": "打印失败",
-  "printManager.preview.msg.exportFailed": "导出失败",
-  "printManager.preview.msg.previewFailed": "预览失败: ",
-  "printManager.preview.msg.noApiResponse": "接口无返回"
+  "printManager.add": "添加",
+  "printManager.edit": "编辑",
+  "printManager.delete": "删除",
+  "printManager.design": "设计",
+  "printManager.detail": "详情",
+  "printManager.copy": "复制",
+  "printManager.save": "保存",
+  "printManager.preview": "预览",
+  "printManager.print": "打印",
+  "printManager.close": "关闭",
+  "printManager.confirm": "确定",
+  "printManager.cancel": "取消",
+  "printManager.reset": "重置",
+  "printManager.clear": "清空",
+  "printManager.config": "配置",
+  "printManager.custom": "自定义",
+  "printManager.expand": "展开",
+  "printManager.collapse": "收起",
+  "printManager.enable": "启用",
+  "printManager.disable": "停用",
+  "printManager.importExport": "导入导出",
+  "printManager.importPrint": "打印导入",
+  "printManager.exportPrint": "打印导出",
+  "printManager.export": "导出",
+  "printManager.exportExcel": "导出EXCEL",
+  "printManager.exportPdf": "导出PDF",
+  "printManager.printSetting": "打印设置",
+  "printManager.index": "序号",
+  "printManager.billType": "单据类型",
+  "printManager.formName": "所属表单",
+  "printManager.code": "编号",
+  "printManager.formCode": "编码",
+  "printManager.name": "名称",
+  "printManager.remark": "备注",
+  "printManager.type": "类型",
+  "printManager.shareStrategy": "共享策略",
+  "printManager.unitOrOrg": "单元/组织",
+  "printManager.belongOrg": "所属组织",
+  "printManager.belongUnit": "所属单元",
+  "printManager.status": "状态",
+  "printManager.useScope": "使用范围",
+  "printManager.action": "操作",
+  "printManager.isDefault": "默认模板",
+  "printManager.directPreview": "直接预览",
+  "printManager.previewHideRowCol": "预览时支持隐藏行列",
+  "printManager.exportAuth": "导出权限",
+  "printManager.exportFileName": "导出文件名称",
+  "printManager.creator": "创建人",
+  "printManager.createDate": "创建日期",
+  "printManager.param": "参数",
+  "printManager.billCode": "单据编码",
+  "printManager.operatorJudge": "判断符",
+  "printManager.operator": "操作符",
+  "printManager.relation": "关系",
+  "printManager.value": "值",
+  "printManager.dataSet": "数据集",
+  "printManager.addTemplateTitle": "新增打印模板",
+  "printManager.manageTitle": "打印模板管理",
+  "printManager.designTitle": "打印模板设计",
+  "printManager.previewTitle": "打印模板预览",
+  "printManager.viewTitle": "打印模板查看",
+  "printManager.workflowSettingTitle": "流转历史设置",
+  "printManager.globalFilterTitle": "全局数据过滤",
+  "printManager.addDataSetTitle": "添加数据集",
+  "printManager.userTemplate": "用户",
+  "printManager.appTemplate": "用户_APP展示",
+  "printManager.groupShare": "集团共享",
+  "printManager.unitShare": "单元共享",
+  "printManager.orgPrivate": "组织私有",
+  "printManager.allScope": "全部",
+  "printManager.partScope": "部分",
+  "printManager.defaultOption": "默认",
+  "printManager.detailPage": "详情页",
+  "printManager.listPage": "列表页",
+  "printManager.noControl": "不控制",
+  "printManager.onlyExportPdf": "只允许导出PDF",
+  "printManager.forbiddenExport": "不允许导出",
+  "printManager.normalType": "普通",
+  "printManager.complexType": "复杂",
+  "printManager.fieldParam": "字段",
+  "printManager.constantParam": "常量",
+  "printManager.variableParam": "变量",
+  "printManager.currentUser": "当前登陆人",
+  "printManager.currentDate": "当前日期(年月日)",
+  "printManager.currentTime": "当前时间(年月日时分秒)",
+  "printManager.excelFile": "EXCEL文件",
+  "printManager.jsonFile": "Json文件",
+  "printManager.and": "并且",
+  "printManager.or": "或者",
+  "printManager.opEq": "等于",
+  "printManager.opNotEq": "不等于",
+  "printManager.opGt": "大于",
+  "printManager.opGe": "大于等于",
+  "printManager.opLt": "小于",
+  "printManager.opLe": "小于等于",
+  "printManager.opLike": "包含",
+  "printManager.opNotLike": "不包含",
+  "printManager.opIn": "属于",
+  "printManager.opBetween": "区间",
+  "printManager.workflowScope": "审批流范围",
+  "printManager.workflowRecordScope": "审批记录范围",
+  "printManager.printStartNode": "打印发起人节点",
+  "printManager.workflowScopeLatest": "最新一次审批（包含未结束/终止的审批）",
+  "printManager.workflowScopeLatestEnded": "最新一次正常结束的审批",
+  "printManager.workflowScopeAllEnded": "所有正常结束审批",
+  "printManager.workflowScopeAll": "所有审批(包含未结束/终止的审批)",
+  "printManager.workflowRecordAll": "所有审批记录",
+  "printManager.workflowRecordSubmitAll": "所有动作是提交的审批记录",
+  "printManager.workflowRecordSubmitLast": "仅最后一次动作是提交的审批记录",
+  "printManager.searchPlaceholder": "请输入编码/名称",
+  "printManager.inputNamePlaceholder": "请输入名称",
+  "printManager.codeMaxLengthMsg": "最长20字符",
+  "printManager.codeFormatMsg": "只能输入英文字符、数字和下划线！",
+  "printManager.confirmDeleteMsg": "是否确认删除?",
+  "printManager.confirmCloseUnsavedMsg": "有修改内容未保存，确定要关闭吗?",
+  "printManager.useScopeRequiredMsg": "使用范围为部分时必须配置条件信息",
+  "printManager.exportNameRequiredMsg": "导出文件名称为自定义时必须配置名称信息",
+  "printManager.paramFormatErrorMsg": "请输入正确的参数格式",
+  "printManager.notDesignedCannotEnableMsg": "打印模板未进行设计，不允许启用",
+  "printManager.selectDataSetWarningMsg": "请选择数据集",
+  "printManager.saveSuccessMsg": "保存成功",
+  "printManager.saveFailedMsg": "保存失败: ",
+  "printManager.exportErrorMsg": "导出错误",
+  "printManager.exportFailedMsg": "导出失败",
+  "printManager.dataNotLoadedMsg": "打印数据未加载完成，请稍后重试",
+  "printManager.tableNotReadyMsg": "表格实例未就绪，请稍后重试",
+  "printManager.printFailedMsg": "打印失败",
+  "printManager.previewFailedMsg": "预览失败: ",
+  "printManager.noApiResponseMsg": "接口无返回",
+  "printManager.copySuffix": "_复制"
 }
 ```
 
 ---
 
-## 三、模块化 Key-Value 对照清单
+## 二、按业务分类对照清单
 
-### 1. 列表模块 (List)
+### 1. 基础操作与通用按钮
 
-| 多语言 Key                                   | 中文 (zh-CN)   | 类型            | 源码位置                                            | 适用场景 / 控件     |
-| :---------------------------------------- | :----------- | :------------ | :---------------------------------------------- | :------------ |
-| `printManager.list.searchPlaceholder`     | **请输入编码/名称** | `Placeholder` | `list/index.tsx:L23`                            | 列表顶部搜索框占位符    |
-| `printManager.list.btn.add`               | **添加**       | `Button`      | `list/store/index.ts:L17`                       | 列表顶部新增模板按钮    |
-| `printManager.list.btn.design`            | **设计**       | `Button`      | `list/components/columnOptions.tsx:L81`         | 表格行操作-打开设计器   |
-| `printManager.list.btn.edit`              | **编辑**       | `Button`      | `list/components/columnOptions.tsx:L44`         | 表格行操作-编辑模板属性  |
-| `printManager.list.btn.delete`            | **删除**       | `Button`      | `list/components/columnOptions.tsx:L60`         | 表格行操作-删除模板    |
-| `printManager.list.btn.detail`            | **详情**       | `Button`      | `list/components/columnOptions.tsx:L105`        | 表格行操作-查看模板详情  |
-| `printManager.list.btn.copy`              | **复制**       | `Button`      | `list/components/columnOptions.tsx:L130`        | 表格行操作-复制模板    |
-| `printManager.list.btn.enable`            | **启用**       | `Button/Tag`  | `list/components/columnOptions.tsx:L23`         | 表格行状态切换按钮/Tag |
-| `printManager.list.btn.disable`           | **停用**       | `Button/Tag`  | `list/components/columnOptions.tsx:L23`         | 表格行状态切换按钮/Tag |
-| `printManager.list.btn.config`            | **配置**       | `Button`      | `list/components/printUseScope/index.tsx:L42`   | 使用范围设置按钮      |
-| `printManager.list.btn.custom`            | **自定义**      | `Button`      | `list/components/printExportName/index.tsx:L42` | 导出文件名自定义设置按钮  |
-| `printManager.list.btn.confirm`           | **确定**       | `Button`      | `list/components/tableDrawer.tsx:L232`          | 抽屉/弹窗确定操作     |
-| `printManager.list.btn.cancel`            | **取消**       | `Button`      | `list/components/tableDrawer.tsx:L224`          | 抽屉/弹窗取消操作     |
-| `printManager.list.btn.addCondition`      | **添加**       | `Button`      | `list/components/printUseScope/index.tsx:L220`  | 添加条件/参数按钮     |
-| `printManager.list.btn.deleteCondition`   | **删除**       | `Button`      | `list/components/printUseScope/index.tsx:L191`  | 删除条件/参数按钮     |
-| `printManager.list.columns.index`         | **序号**       | `Column`      | `list/store/index.ts:L30`                       | 表格序号列         |
-| `printManager.list.columns.billType`      | **单据类型**     | `Column`      | `list/components/columnOptions.tsx:L166`        | 表格列-单据类型      |
-| `printManager.list.columns.formName`      | **所属表单**     | `Column`      | `list/components/columnOptions.tsx:L172`        | 表格列-所属表单      |
-| `printManager.list.columns.code`          | **编号**       | `Column`      | `list/components/columnOptions.tsx:L180`        | 表格列-模板编号      |
-| `printManager.list.columns.name`          | **名称**       | `Column`      | `list/components/columnOptions.tsx:L186`        | 表格列-模板名称      |
-| `printManager.list.columns.remark`        | **备注**       | `Column`      | `list/components/columnOptions.tsx:L194`        | 表格列-备注        |
-| `printManager.list.columns.templateType`  | **类型**       | `Column`      | `list/components/columnOptions.tsx:L202`        | 表格列-模板类型      |
-| `printManager.list.columns.shareStrategy` | **共享策略**     | `Column`      | `list/components/columnOptions.tsx:L208`        | 表格列-共享策略      |
-| `printManager.list.columns.orgName`       | **单元/组织**    | `Column`      | `list/components/columnOptions.tsx:L224`        | 表格列-所属单元/组织   |
-| `printManager.list.columns.status`        | **状态**       | `Column`      | `list/components/columnOptions.tsx:L230`        | 表格列-状态        |
-| `printManager.list.columns.useScope`      | **使用范围**     | `Column`      | `list/components/columnOptions.tsx:L237`        | 表格列-使用范围      |
-| `printManager.list.columns.action`        | **操作**       | `Column`      | `list/components/columnOptions.tsx:L244`        | 表格操作列         |
-| `printManager.list.templateType.user`     | **用户**       | `Enum`        | `list/store/formCfg.ts:L139`                    | 模板类型-用户       |
-| `printManager.list.templateType.app`      | **用户_APP展示** | `Enum`        | `list/store/formCfg.ts:L140`                    | 模板类型-用户_APP展示 |
-| `printManager.list.shareStrategy.group`   | **集团共享**     | `Enum`        | `list/store/formCfg.ts:L47`                     | 共享策略-集团共享     |
-| `printManager.list.shareStrategy.unit`    | **单元共享**     | `Enum`        | `list/store/formCfg.ts:L48`                     | 共享策略-单元共享     |
-| `printManager.list.shareStrategy.org`     | **组织私有**     | `Enum`        | `list/store/formCfg.ts:L49`                     | 共享策略-组织私有     |
-| `printManager.list.exportAuth.noLimit`    | **不控制**      | `Enum`        | `list/store/formCfg.ts:L166`                    | 导出权限-不控制      |
-| `printManager.list.exportAuth.pdfOnly`    | **只允许导出PDF** | `Enum`        | `list/store/formCfg.ts:L167`                    | 导出权限-只允许导出PDF |
-| `printManager.list.exportAuth.disabled`   | **不允许导出**    | `Enum`        | `list/store/formCfg.ts:L168`                    | 导出权限-不允许导出    |
-| `printManager.list.billType.detail`       | **详情页**      | `Enum`        | `list/store/formCfg.ts:L41`                     | 单据类型-详情页      |
-| `printManager.list.billType.list`         | **列表页**      | `Enum`        | `list/store/formCfg.ts:L42`                     | 单据类型-列表页      |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.add` | **添加** | 添加/新增按钮 | `list/store/index.ts:L17, list/components/printUseScope/index.tsx:L220, list/components/printExportName/index.tsx:L184, design/components/dataFilter/index.tsx:L153` |
+| `printManager.edit` | **编辑** | 表格行编辑操作 | `list/components/columnOptions.tsx:L44` |
+| `printManager.delete` | **删除** | 表格行删除操作 / 参数删除按钮 | `list/components/columnOptions.tsx:L60, list/components/printExportName/index.tsx:L152, list/components/printUseScope/index.tsx:L191` |
+| `printManager.design` | **设计** | 打开设计器操作 | `list/components/columnOptions.tsx:L81` |
+| `printManager.detail` | **详情** | 查看详情操作 | `list/components/columnOptions.tsx:L105` |
+| `printManager.copy` | **复制** | 复制模板操作 | `list/components/columnOptions.tsx:L130` |
+| `printManager.save` | **保存** | 设计器保存模板 | `design/store/headerToolbar.tsx:L36` |
+| `printManager.preview` | **预览** | 设计器预览按钮 | `design/store/headerToolbar.tsx:L34` |
+| `printManager.print` | **打印** | 预览页打印按钮 | `preview/store/headerToolbar.tsx:L10` |
+| `printManager.close` | **关闭** | 预览页关闭按钮 | `preview/store/headerToolbar.tsx:L26` |
+| `printManager.confirm` | **确定** | 弹窗/抽屉确定操作 | `list/components/tableDrawer.tsx:L232, list/components/printExportName/index.tsx:L189, list/components/printUseScope/index.tsx:L225, list/store/index.ts:L103` |
+| `printManager.cancel` | **取消** | 弹窗/抽屉取消操作 | `list/components/tableDrawer.tsx:L224, list/components/printExportName/index.tsx:L187, list/components/printUseScope/index.tsx:L223, list/store/index.ts:L96` |
+| `printManager.reset` | **重置** | 表单重置按钮 | `list/components/tableDrawer.tsx` |
+| `printManager.clear` | **清空** | 清空过滤条件按钮 | `design/components/dataFilter/index.tsx:L156` |
+| `printManager.config` | **配置** | 配置使用范围按钮 | `list/components/printUseScope/index.tsx:L42` |
+| `printManager.custom` | **自定义** | 自定义导出名称按钮 | `list/components/printExportName/index.tsx:L42` |
+| `printManager.expand` | **展开** | 数据集面板展开提示 | `design/components/leftDataSetList/index.tsx:L211` |
+| `printManager.collapse` | **收起** | 数据集面板收起提示 | `design/components/leftDataSetList/index.tsx:L211` |
+| `printManager.enable` | **启用** | 启用状态标签/操作 | `list/components/columnOptions.tsx:L23, L234` |
+| `printManager.disable` | **停用** | 停用状态标签/操作 | `list/components/columnOptions.tsx:L23, L234` |
+| `printManager.importExport` | **导入导出** | 导入导出下拉菜单 | `design/store/headerToolbar.tsx:L12` |
+| `printManager.importPrint` | **打印导入** | 打印导入操作 | `design/store/headerToolbar.tsx:L16` |
+| `printManager.exportPrint` | **打印导出** | 打印导出操作 | `design/store/headerToolbar.tsx:L20` |
+| `printManager.export` | **导出** | 导出菜单/操作 | `design/components/topHeaderTitle/index.tsx:L126, preview/store/headerToolbar.tsx:L14` |
+| `printManager.exportExcel` | **导出EXCEL** | 导出EXCEL操作 | `preview/store/headerToolbar.tsx:L18` |
+| `printManager.exportPdf` | **导出PDF** | 导出PDF操作 | `preview/store/headerToolbar.tsx:L22` |
+| `printManager.printSetting` | **打印设置** | 打印设置操作 | `preview/store/headerToolbar.tsx:L11` |
 
-### 2. 模板属性抽屉与表单 (Drawer / Form)
+### 2. 表格列头与表单字段
 
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.list.form.addTitle` | **新增打印模板** | `Title` | `list/store/formCfg.ts:L53` | 新增抽屉标题 |
-| `printManager.list.form.manageTitle` | **打印模板管理** | `Title` | `list/components/tableDrawer.tsx:L194` | 编辑抽屉默认标题 |
-| `printManager.list.form.viewTitle` | **打印模板查看** | `Title` | `list/store/index.ts:L72` | 查看详情页标题 |
-| `printManager.list.form.code` | **编码** | `Label` | `list/store/formCfg.ts:L90` | 表单项-编码 |
-| `printManager.list.form.name` | **名称** | `Label` | `list/store/formCfg.ts:L117` | 表单项-名称 |
-| `printManager.list.form.billType` | **单据类型** | `Label` | `list/store/formCfg.ts:L120` | 表单项-单据类型 |
-| `printManager.list.form.templateType` | **类型** | `Label` | `list/store/formCfg.ts:L133` | 表单项-模板类型 |
-| `printManager.list.form.isDefault` | **默认模板** | `Label` | `list/store/formCfg.ts:L145` | 表单项-默认模板开关 |
-| `printManager.list.form.directPreview` | **直接预览** | `Label` | `list/store/formCfg.ts:L153` | 表单项-直接预览开关 |
-| `printManager.list.form.previewEditStatus` | **预览时支持隐藏行列** | `Label` | `list/store/formCfg.ts:L159` | 表单项-支持隐藏行列开关 |
-| `printManager.list.form.exportAuth` | **导出权限** | `Label` | `list/store/formCfg.ts:L161` | 表单项-导出权限 |
-| `printManager.list.form.useScope` | **使用范围** | `Label` | `list/store/formCfg.ts:L175` | 表单项-使用范围 |
-| `printManager.list.form.exportName` | **导出文件名称** | `Label` | `list/store/formCfg.ts:L183` | 表单项-导出文件名称 |
-| `printManager.list.form.shareStrategy` | **共享策略** | `Label` | `list/store/formCfg.ts:L191` | 表单项-共享策略 |
-| `printManager.list.form.org` | **所属组织** | `Label` | `list/store/formCfg.ts:L211` | 表单项-所属组织 |
-| `printManager.list.form.unit` | **所属单元** | `Label` | `list/store/formCfg.ts:L223` | 表单项-所属单元 |
-| `printManager.list.form.creator` | **创建人** | `Label` | `list/store/formCfg.ts:L234` | 表单项-创建人 |
-| `printManager.list.form.createDate` | **创建日期** | `Label` | `list/store/formCfg.ts:L238` | 表单项-创建日期 |
-| `printManager.list.form.remark` | **备注** | `Label` | `list/store/formCfg.ts:L239` | 表单项-备注 |
-| `printManager.list.form.copySuffix` | **_复制** | `Suffix` | `list/components/tableDrawer.tsx:L167` | 复制模板时的名称后缀 |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.index` | **序号** | 表格序号列头 | `list/store/index.ts:L30, design/store/index.ts:L38` |
+| `printManager.billType` | **单据类型** | 单据类型列头/表单项 | `list/components/columnOptions.tsx:L166, list/store/formCfg.ts:L120` |
+| `printManager.formName` | **所属表单** | 所属表单列头/表单项 | `list/components/columnOptions.tsx:L172` |
+| `printManager.code` | **编号** | 编号列头 | `list/components/columnOptions.tsx:L180, design/store/index.ts:L55` |
+| `printManager.formCode` | **编码** | 模板编码表单标签 | `list/store/formCfg.ts:L90` |
+| `printManager.name` | **名称** | 名称列头/表单标签 | `list/components/columnOptions.tsx:L186, list/store/formCfg.ts:L117, design/store/index.ts:L60` |
+| `printManager.remark` | **备注** | 备注列头/表单标签 | `list/components/columnOptions.tsx:L194, list/store/formCfg.ts:L239` |
+| `printManager.type` | **类型** | 类型列头/表单标签 | `list/components/columnOptions.tsx:L202, list/store/formCfg.ts:L133, design/store/index.ts:L49, design/components/dataFilter/index.tsx:L113` |
+| `printManager.shareStrategy` | **共享策略** | 共享策略列头/表单标签 | `list/components/columnOptions.tsx:L208, list/store/formCfg.ts:L191` |
+| `printManager.unitOrOrg` | **单元/组织** | 单元/组织列头 | `list/components/columnOptions.tsx:L224` |
+| `printManager.belongOrg` | **所属组织** | 所属组织表单标签 | `list/store/formCfg.ts:L211` |
+| `printManager.belongUnit` | **所属单元** | 所属单元表单标签 | `list/store/formCfg.ts:L223` |
+| `printManager.status` | **状态** | 状态列头 | `list/components/columnOptions.tsx:L230` |
+| `printManager.useScope` | **使用范围** | 使用范围列头/表单标签/弹窗标题 | `list/components/columnOptions.tsx:L237, list/store/formCfg.ts:L175, list/components/printUseScope/index.tsx:L47` |
+| `printManager.action` | **操作** | 表格操作列头 | `list/components/columnOptions.tsx:L244, list/components/printExportName/index.tsx:L147, list/components/printUseScope/index.tsx:L186` |
+| `printManager.isDefault` | **默认模板** | 默认模板开关标签 | `list/store/formCfg.ts:L145` |
+| `printManager.directPreview` | **直接预览** | 直接预览开关标签 | `list/store/formCfg.ts:L153` |
+| `printManager.previewHideRowCol` | **预览时支持隐藏行列** | 支持隐藏行列开关标签 | `list/store/formCfg.ts:L159` |
+| `printManager.exportAuth` | **导出权限** | 导出权限表单标签 | `list/store/formCfg.ts:L161` |
+| `printManager.exportFileName` | **导出文件名称** | 导出文件名称标签/弹窗标题 | `list/store/formCfg.ts:L183, list/components/printExportName/index.tsx:L47` |
+| `printManager.creator` | **创建人** | 创建人表单标签 | `list/store/formCfg.ts:L234` |
+| `printManager.createDate` | **创建日期** | 创建日期表单标签 | `list/store/formCfg.ts:L238` |
+| `printManager.param` | **参数** | 参数列头 | `list/components/printExportName/index.tsx:L107, list/components/printUseScope/index.tsx:L126, design/components/dataFilter/index.tsx:L78` |
+| `printManager.billCode` | **单据编码** | 单据编码列头 | `list/components/printExportName/index.tsx:L124` |
+| `printManager.operatorJudge` | **判断符** | 判断符列头 | `list/components/printUseScope/index.tsx:L151` |
+| `printManager.operator` | **操作符** | 操作符列头 | `design/components/dataFilter/index.tsx:L95` |
+| `printManager.relation` | **关系** | 关系列头 | `design/components/dataFilter/index.tsx:L70` |
+| `printManager.value` | **值** | 值列头 | `list/components/printUseScope/index.tsx:L170, design/components/dataFilter/index.tsx:L132` |
+| `printManager.dataSet` | **数据集** | 数据集面板标题/概念 | `design/components/leftDataSetList/index.tsx:L165` |
 
-### 3. 导出文件名与使用范围弹窗 (Sub-Modals)
+### 3. 页面标题与弹窗标题
 
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.list.exportName.default` | **默认** | `Enum` | `list/components/printExportName/index.tsx:L28` | 导出名称-默认 |
-| `printManager.list.exportName.custom` | **自定义** | `Enum` | `list/components/printExportName/index.tsx:L29` | 导出名称-自定义 |
-| `printManager.list.exportName.title` | **导出文件名称** | `Title` | `list/components/printExportName/index.tsx:L47` | 导出文件名配置弹窗标题 |
-| `printManager.list.exportName.typeField` | **字段** | `Enum` | `list/components/printExportName/index.tsx:L71` | 导出名称参数类型-字段 |
-| `printManager.list.exportName.typeConst` | **常量** | `Enum` | `list/components/printExportName/index.tsx:L72` | 导出名称参数类型-常量 |
-| `printManager.list.exportName.typeVar` | **变量** | `Enum` | `list/components/printExportName/index.tsx:L73` | 导出名称参数类型-变量 |
-| `printManager.list.exportName.varCurrentUser` | **当前登陆人** | `Enum` | `list/components/printExportName/index.tsx:L76` | 变量选项-当前登陆人 |
-| `printManager.list.exportName.varCurrentDate` | **当前日期(年月日)** | `Enum` | `list/components/printExportName/index.tsx:L77` | 变量选项-当前日期 |
-| `printManager.list.exportName.varCurrentTime` | **当前时间(年月日时分秒)** | `Enum` | `list/components/printExportName/index.tsx:L78` | 变量选项-当前时间 |
-| `printManager.list.exportName.colParam` | **参数** | `Column` | `list/components/printExportName/index.tsx:L107` | 表格列-参数 |
-| `printManager.list.exportName.colBillCode` | **单据编码** | `Column` | `list/components/printExportName/index.tsx:L124` | 表格列-单据编码 |
-| `printManager.list.useScope.title` | **使用范围** | `Title` | `list/components/printUseScope/index.tsx:L47` | 使用范围配置弹窗标题 |
-| `printManager.list.useScope.colParam` | **参数** | `Column` | `list/components/printUseScope/index.tsx:L126` | 表格列-参数 |
-| `printManager.list.useScope.colOperator` | **判断符** | `Column` | `list/components/printUseScope/index.tsx:L151` | 表格列-判断符 |
-| `printManager.list.useScope.colValue` | **值** | `Column` | `list/components/printUseScope/index.tsx:L170` | 表格列-值 |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.addTemplateTitle` | **新增打印模板** | 新增模板抽屉标题 | `list/store/formCfg.ts:L53` |
+| `printManager.manageTitle` | **打印模板管理** | 管理模板抽屉标题 | `list/components/tableDrawer.tsx:L194` |
+| `printManager.designTitle` | **打印模板设计** | 设计器Tab/页面标题 | `list/components/columnOptions.tsx:L72` |
+| `printManager.previewTitle` | **打印模板预览** | 预览页Tab/页面标题 | `design/components/topHeaderTitle/utils.ts:L5` |
+| `printManager.viewTitle` | **打印模板查看** | 查看详情页标题 | `list/store/index.ts:L72` |
+| `printManager.workflowSettingTitle` | **流转历史设置** | 流转历史设置标题/按钮 | `design/store/headerToolbar.tsx:L30, design/components/workflowSetting/index.tsx:L14` |
+| `printManager.globalFilterTitle` | **全局数据过滤** | 全局数据过滤标题/按钮 | `design/store/headerToolbar.tsx:L26, design/components/dataFilter/index.tsx:L42` |
+| `printManager.addDataSetTitle` | **添加数据集** | 添加数据集弹窗标题/按钮 | `design/components/leftDataSetList/index.tsx:L176, L200` |
 
-### 4. 公共操作符与判断条件 (Operators)
+### 4. 枚举与下拉选项
 
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.common.op.eq` | **等于** | `Enum` | `list/components/maps.ts:L4` | 操作符-等于 |
-| `printManager.common.op.notEq` | **不等于** | `Enum` | `list/components/maps.ts:L5` | 操作符-不等于 |
-| `printManager.common.op.gt` | **大于** | `Enum` | `list/components/maps.ts:L6` | 操作符-大于 |
-| `printManager.common.op.ge` | **大于等于** | `Enum` | `list/components/maps.ts:L7` | 操作符-大于等于 |
-| `printManager.common.op.lt` | **小于** | `Enum` | `list/components/maps.ts:L8` | 操作符-小于 |
-| `printManager.common.op.le` | **小于等于** | `Enum` | `list/components/maps.ts:L9` | 操作符-小于等于 |
-| `printManager.common.op.like` | **包含** | `Enum` | `list/components/maps.ts:L21` | 操作符-包含 |
-| `printManager.common.op.notLike` | **不包含** | `Enum` | `list/components/maps.ts:L22` | 操作符-不包含 |
-| `printManager.common.op.in` | **属于** | `Enum` | `list/components/maps.ts:L10` | 操作符-属于 |
-| `printManager.common.op.between` | **区间** | `Enum` | `list/components/maps.ts:L11` | 操作符-区间 |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.userTemplate` | **用户** | 模板类型-用户 | `list/components/columnOptions.tsx:L205, list/store/formCfg.ts:L139` |
+| `printManager.appTemplate` | **用户_APP展示** | 模板类型-用户_APP展示 | `list/components/columnOptions.tsx:L205, list/store/formCfg.ts:L140` |
+| `printManager.groupShare` | **集团共享** | 共享策略-集团共享 | `list/components/columnOptions.tsx:L215, list/store/formCfg.ts:L47` |
+| `printManager.unitShare` | **单元共享** | 共享策略-单元共享 | `list/components/columnOptions.tsx:L217, list/store/formCfg.ts:L48` |
+| `printManager.orgPrivate` | **组织私有** | 共享策略-组织私有 | `list/components/columnOptions.tsx:L219, list/store/formCfg.ts:L49` |
+| `printManager.allScope` | **全部** | 使用范围-全部 | `list/components/columnOptions.tsx:L241, list/components/printUseScope/index.tsx:L28` |
+| `printManager.partScope` | **部分** | 使用范围-部分 | `list/components/columnOptions.tsx:L241, list/components/printUseScope/index.tsx:L29` |
+| `printManager.defaultOption` | **默认** | 导出名称-默认 | `list/components/printExportName/index.tsx:L28` |
+| `printManager.detailPage` | **详情页** | 单据类型-详情页 | `list/store/formCfg.ts:L41` |
+| `printManager.listPage` | **列表页** | 单据类型-列表页 | `list/store/formCfg.ts:L42` |
+| `printManager.noControl` | **不控制** | 导出权限-不控制 | `list/store/formCfg.ts:L166` |
+| `printManager.onlyExportPdf` | **只允许导出PDF** | 导出权限-只允许导出PDF | `list/store/formCfg.ts:L167` |
+| `printManager.forbiddenExport` | **不允许导出** | 导出权限-不允许导出 | `list/store/formCfg.ts:L168` |
+| `printManager.normalType` | **普通** | 数据集类型-普通 | `design/store/index.ts:L52` |
+| `printManager.complexType` | **复杂** | 数据集类型-复杂 | `design/store/index.ts:L52` |
+| `printManager.fieldParam` | **字段** | 参数类型-字段 | `list/components/printExportName/index.tsx:L71` |
+| `printManager.constantParam` | **常量** | 参数类型-常量 | `list/components/printExportName/index.tsx:L72` |
+| `printManager.variableParam` | **变量** | 参数类型-变量 | `list/components/printExportName/index.tsx:L73` |
+| `printManager.currentUser` | **当前登陆人** | 变量-当前登陆人 | `list/components/printExportName/index.tsx:L76` |
+| `printManager.currentDate` | **当前日期(年月日)** | 变量-当前日期 | `list/components/printExportName/index.tsx:L77` |
+| `printManager.currentTime` | **当前时间(年月日时分秒)** | 变量-当前时间 | `list/components/printExportName/index.tsx:L78` |
+| `printManager.excelFile` | **EXCEL文件** | EXCEL文件格式 | `design/components/topHeaderTitle/index.tsx:L136` |
+| `printManager.jsonFile` | **Json文件** | Json文件格式 | `design/components/topHeaderTitle/index.tsx:L137` |
+| `printManager.and` | **并且** | 逻辑关系-并且 | `design/components/dataFilter/index.tsx:L34` |
+| `printManager.or` | **或者** | 逻辑关系-或者 | `design/components/dataFilter/index.tsx:L35` |
 
-### 5. 设计器模块 (Design)
+### 5. 操作符与判断条件
 
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.design.pageTitle` | **打印模板设计** | `Title` | `list/components/columnOptions.tsx:L72` | 设计器页面 Tab 标题 |
-| `printManager.design.toolbar.importExport` | **导入导出** | `Toolbar` | `design/store/headerToolbar.tsx:L12` | 设计器顶部工具栏-导入导出下拉 |
-| `printManager.design.toolbar.importPrint` | **打印导入** | `Toolbar` | `design/store/headerToolbar.tsx:L16` | 设计器工具栏-打印导入 |
-| `printManager.design.toolbar.exportPrint` | **打印导出** | `Toolbar` | `design/store/headerToolbar.tsx:L20` | 设计器工具栏-打印导出 |
-| `printManager.design.toolbar.globalFilter` | **全局数据过滤** | `Toolbar` | `design/store/headerToolbar.tsx:L26` | 设计器工具栏-全局数据过滤按钮 |
-| `printManager.design.toolbar.workflowSetting` | **流转历史设置** | `Toolbar` | `design/store/headerToolbar.tsx:L30` | 设计器工具栏-流转历史设置按钮 |
-| `printManager.design.toolbar.preview` | **预览** | `Toolbar` | `design/store/headerToolbar.tsx:L34` | 设计器工具栏-预览按钮 |
-| `printManager.design.toolbar.save` | **保存** | `Toolbar` | `design/store/headerToolbar.tsx:L36` | 设计器工具栏-保存按钮 |
-| `printManager.design.export.title` | **导出** | `Title` | `design/components/topHeaderTitle/index.tsx:L126` | 设计器导出下拉标题 |
-| `printManager.design.export.excel` | **EXCEL文件** | `Enum` | `design/components/topHeaderTitle/index.tsx:L136` | 导出文件格式-EXCEL |
-| `printManager.design.export.json` | **Json文件** | `Enum` | `design/components/topHeaderTitle/index.tsx:L137` | 导出文件格式-Json |
-| `printManager.design.dataSet.searchPlaceholder` | **请输入名称** | `Placeholder` | `design/components/leftDataSetList/index.tsx:L142` | 数据集搜索框占位符 |
-| `printManager.design.dataSet.title` | **数据集** | `Title` | `design/components/leftDataSetList/index.tsx:L165` | 左侧数据集面板标题 |
-| `printManager.design.dataSet.add` | **添加数据集** | `Button/Tooltip` | `design/components/leftDataSetList/index.tsx:L176` | 添加数据集弹窗标题/按钮 |
-| `printManager.design.dataSet.selectWarning` | **请选择数据集** | `Message` | `design/components/leftDataSetList/index.tsx:L191` | 未选择数据集警告提示 |
-| `printManager.design.dataSet.expand` | **展开** | `Tooltip` | `design/components/leftDataSetList/index.tsx:L211` | 折叠面板展开提示 |
-| `printManager.design.dataSet.collapse` | **收起** | `Tooltip` | `design/components/leftDataSetList/index.tsx:L211` | 折叠面板收起提示 |
-| `printManager.design.dataSet.columns.index` | **序号** | `Column` | `design/store/index.ts:L38` | 数据集列表-序号列 |
-| `printManager.design.dataSet.columns.type` | **类型** | `Column` | `design/store/index.ts:L49` | 数据集列表-类型列 |
-| `printManager.design.dataSet.columns.code` | **编号** | `Column` | `design/store/index.ts:L55` | 数据集列表-编号列 |
-| `printManager.design.dataSet.columns.name` | **名称** | `Column` | `design/store/index.ts:L60` | 数据集列表-名称列 |
-| `printManager.design.dataSet.type.complex` | **复杂** | `Enum` | `design/store/index.ts:L52` | 数据集类型-复杂 |
-| `printManager.design.dataSet.type.normal` | **普通** | `Enum` | `design/store/index.ts:L52` | 数据集类型-普通 |
-| `printManager.design.filter.relation.and` | **并且** | `Enum` | `design/components/dataFilter/index.tsx:L34` | 逻辑连接符-并且 |
-| `printManager.design.filter.relation.or` | **或者** | `Enum` | `design/components/dataFilter/index.tsx:L35` | 逻辑连接符-或者 |
-| `printManager.design.filter.title` | **全局数据过滤** | `Title` | `design/components/dataFilter/index.tsx:L42` | 过滤配置弹窗标题 |
-| `printManager.design.filter.columns.relation` | **关系** | `Column` | `design/components/dataFilter/index.tsx:L70` | 表格列-关系 |
-| `printManager.design.filter.columns.param` | **参数** | `Column` | `design/components/dataFilter/index.tsx:L78` | 表格列-参数 |
-| `printManager.design.filter.columns.operator` | **操作符** | `Column` | `design/components/dataFilter/index.tsx:L95` | 表格列-操作符 |
-| `printManager.design.filter.columns.type` | **类型** | `Column` | `design/components/dataFilter/index.tsx:L113` | 表格列-类型 |
-| `printManager.design.filter.columns.value` | **值** | `Column` | `design/components/dataFilter/index.tsx:L132` | 表格列-值 |
-| `printManager.design.filter.btn.addCondition` | **添加** | `Button` | `design/components/dataFilter/index.tsx:L153` | 添加过滤条件按钮 |
-| `printManager.design.filter.btn.clear` | **清空** | `Button` | `design/components/dataFilter/index.tsx:L156` | 清空过滤条件按钮 |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.opEq` | **等于** | 操作符-等于 | `list/components/maps.ts:L4, design/components/dataFilter/constants.ts:L4` |
+| `printManager.opNotEq` | **不等于** | 操作符-不等于 | `list/components/maps.ts:L5, design/components/dataFilter/constants.ts:L5` |
+| `printManager.opGt` | **大于** | 操作符-大于 | `list/components/maps.ts:L6, design/components/dataFilter/constants.ts:L6` |
+| `printManager.opGe` | **大于等于** | 操作符-大于等于 | `list/components/maps.ts:L7, design/components/dataFilter/constants.ts:L7` |
+| `printManager.opLt` | **小于** | 操作符-小于 | `list/components/maps.ts:L8, design/components/dataFilter/constants.ts:L8` |
+| `printManager.opLe` | **小于等于** | 操作符-小于等于 | `list/components/maps.ts:L9, design/components/dataFilter/constants.ts:L9` |
+| `printManager.opLike` | **包含** | 操作符-包含 | `list/components/maps.ts:L21` |
+| `printManager.opNotLike` | **不包含** | 操作符-不包含 | `list/components/maps.ts:L22` |
+| `printManager.opIn` | **属于** | 操作符-属于 | `list/components/maps.ts:L10, design/components/dataFilter/constants.ts:L10` |
+| `printManager.opBetween` | **区间** | 操作符-区间 | `list/components/maps.ts:L11, design/components/dataFilter/constants.ts:L11` |
 
-### 6. 流转历史设置 (Workflow Setting)
+### 6. 工作流流转历史设置
 
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.design.workflow.title` | **流转历史设置** | `Title` | `design/components/workflowSetting/index.tsx:L14` | 流转历史设置抽屉标题 |
-| `printManager.design.workflow.scopeLabel` | **审批流范围** | `Label` | `design/components/workflowSetting/index.tsx:L40` | 表单项-审批流范围 |
-| `printManager.design.workflow.scopeLatest` | **最新一次审批（包含未结束/终止的审批）** | `Enum` | `design/components/workflowSetting/index.tsx:L21` | 审批流范围选项 0 |
-| `printManager.design.workflow.scopeLatestEnded` | **最新一次正常结束的审批** | `Enum` | `design/components/workflowSetting/index.tsx:L22` | 审批流范围选项 1 |
-| `printManager.design.workflow.scopeAllEnded` | **所有正常结束审批** | `Enum` | `design/components/workflowSetting/index.tsx:L23` | 审批流范围选项 2 |
-| `printManager.design.workflow.scopeAll` | **所有审批(包含未结束/终止的审批)** | `Enum` | `design/components/workflowSetting/index.tsx:L24` | 审批流范围选项 3 |
-| `printManager.design.workflow.recordScopeLabel` | **审批记录范围** | `Label` | `design/components/workflowSetting/index.tsx:L50` | 表单项-审批记录范围 |
-| `printManager.design.workflow.recordAll` | **所有审批记录** | `Enum` | `design/components/workflowSetting/index.tsx:L28` | 审批记录范围选项 0 |
-| `printManager.design.workflow.recordSubmitAll` | **所有动作是提交的审批记录** | `Enum` | `design/components/workflowSetting/index.tsx:L29` | 审批记录范围选项 1 |
-| `printManager.design.workflow.recordSubmitLast` | **仅最后一次动作是提交的审批记录** | `Enum` | `design/components/workflowSetting/index.tsx:L30` | 审批记录范围选项 2 |
-| `printManager.design.workflow.startNodeLabel` | **打印发起人节点** | `Label` | `design/components/workflowSetting/index.tsx:L60` | 表单项-打印发起人节点 |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.workflowScope` | **审批流范围** | 审批流范围字段标签 | `design/components/workflowSetting/index.tsx:L40` |
+| `printManager.workflowRecordScope` | **审批记录范围** | 审批记录范围字段标签 | `design/components/workflowSetting/index.tsx:L50` |
+| `printManager.printStartNode` | **打印发起人节点** | 打印发起人节点字段标签 | `design/components/workflowSetting/index.tsx:L60` |
+| `printManager.workflowScopeLatest` | **最新一次审批（包含未结束/终止的审批）** | 审批流范围选项0 | `design/components/workflowSetting/index.tsx:L21` |
+| `printManager.workflowScopeLatestEnded` | **最新一次正常结束的审批** | 审批流范围选项1 | `design/components/workflowSetting/index.tsx:L22` |
+| `printManager.workflowScopeAllEnded` | **所有正常结束审批** | 审批流范围选项2 | `design/components/workflowSetting/index.tsx:L23` |
+| `printManager.workflowScopeAll` | **所有审批(包含未结束/终止的审批)** | 审批流范围选项3 | `design/components/workflowSetting/index.tsx:L24` |
+| `printManager.workflowRecordAll` | **所有审批记录** | 审批记录范围选项0 | `design/components/workflowSetting/index.tsx:L28` |
+| `printManager.workflowRecordSubmitAll` | **所有动作是提交的审批记录** | 审批记录范围选项1 | `design/components/workflowSetting/index.tsx:L29` |
+| `printManager.workflowRecordSubmitLast` | **仅最后一次动作是提交的审批记录** | 审批记录范围选项2 | `design/components/workflowSetting/index.tsx:L30` |
 
-### 7. 预览模块 (Preview)
+### 7. 占位符与提示/校验/确认信息
 
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.preview.pageTitle` | **打印模板预览** | `Title` | `design/components/topHeaderTitle/utils.ts:L5` | 预览页面 Tab 标题 |
-| `printManager.preview.toolbar.print` | **打印** | `Toolbar` | `preview/store/headerToolbar.tsx:L10` | 预览页工具栏-打印按钮 |
-| `printManager.preview.toolbar.printSetting` | **打印设置** | `Toolbar` | `preview/store/headerToolbar.tsx:L11` | 预览页工具栏-打印设置 |
-| `printManager.preview.toolbar.export` | **导出** | `Toolbar` | `preview/store/headerToolbar.tsx:L14` | 预览页工具栏-导出下拉 |
-| `printManager.preview.toolbar.exportExcel` | **导出EXCEL** | `Toolbar` | `preview/store/headerToolbar.tsx:L18` | 预览页工具栏-导出EXCEL |
-| `printManager.preview.toolbar.exportPdf` | **导出PDF** | `Toolbar` | `preview/store/headerToolbar.tsx:L22` | 预览页工具栏-导出PDF |
-| `printManager.preview.toolbar.close` | **关闭** | `Toolbar` | `preview/store/headerToolbar.tsx:L26` | 预览页工具栏-关闭按钮 |
-
-### 8. 提示、校验与二次确认 (Messages / Alerts)
-
-| 多语言 Key | 中文 (zh-CN) | 类型 | 源码位置 | 适用场景 / 控件 |
-| :--- | :--- | :--- | :--- | :--- |
-| `printManager.list.validation.codeMaxLength` | **最长20字符** | `Message` | `list/store/formCfg.ts:L96` | 表单校验-编码最长20字符 |
-| `printManager.list.validation.codeFormat` | **只能输入英文字符、数字和下划线！** | `Message` | `list/store/formCfg.ts:L102` | 表单校验-编码字符格式 |
-| `printManager.list.validation.useScopeRequired` | **使用范围为部分时必须配置条件信息** | `Message` | `list/components/tableDrawer.tsx:L74` | 提交校验提示 |
-| `printManager.list.validation.exportNameRequired` | **导出文件名称为自定义时必须配置名称信息** | `Message` | `list/components/tableDrawer.tsx:L78` | 提交校验提示 |
-| `printManager.list.validation.paramFormatError` | **请输入正确的参数格式** | `Message` | `list/components/printExportName/index.tsx:L98` | 参数格式校验错误提示 |
-| `printManager.list.msg.confirmDelete` | **是否确认删除?** | `Confirm` | `list/components/columnOptions.tsx:L55` | 删除二次确认 |
-| `printManager.list.msg.confirmCloseUnsaved` | **有修改内容未保存，确定要关闭吗?** | `Confirm` | `list/components/tableDrawer.tsx:L41` | 未保存关闭确认 |
-| `printManager.list.msg.notDesignedCannotEnable` | **打印模板未进行设计，不允许启用** | `Message` | `list/store/index.ts:L48` | 未设计模板启用拦截 |
-| `printManager.design.msg.saveSuccess` | **保存成功** | `Message` | `design/components/topHeaderTitle/utils.ts:L25` | 模板保存成功提示 |
-| `printManager.design.msg.saveFailed` | **保存失败: ** | `Message` | `design/components/topHeaderTitle/utils.ts:L32` | 模板保存失败提示前缀 |
-| `printManager.design.msg.exportError` | **导出错误** | `Message` | `design/service.ts:L58` | 导出异常提示 |
-| `printManager.preview.msg.dataNotLoaded` | **打印数据未加载完成，请稍后重试** | `Message` | `preview/index.tsx:L95` | 打印数据未加载完成拦截 |
-| `printManager.preview.msg.tableNotReady` | **表格实例未就绪，请稍后重试** | `Message` | `preview/index.tsx:L99` | 表格实例未就绪拦截 |
-| `printManager.preview.msg.printFailed` | **打印失败** | `Message` | `preview/index.tsx:L113` | 打印执行失败提示 |
-| `printManager.preview.msg.exportFailed` | **导出失败** | `Message` | `preview/export.ts:L8` | 导出文件执行失败提示 |
-| `printManager.preview.msg.previewFailed` | **预览失败: ** | `Message` | `preview/index.tsx:L197` | 预览加载失败提示前缀 |
-| `printManager.preview.msg.noApiResponse` | **接口无返回** | `Message` | `preview/service.ts:L17` | 接口无数据返回提示 |
+| 多语言 Key | 中文 (zh-CN) | 用途说明 | 源码出现位置 |
+| :--- | :--- | :--- | :--- |
+| `printManager.searchPlaceholder` | **请输入编码/名称** | 列表搜索输入框占位符 | `list/index.tsx:L23` |
+| `printManager.inputNamePlaceholder` | **请输入名称** | 数据集搜索框占位符 | `design/components/leftDataSetList/index.tsx:L142` |
+| `printManager.codeMaxLengthMsg` | **最长20字符** | 编码长度校验提示 | `list/store/formCfg.ts:L96` |
+| `printManager.codeFormatMsg` | **只能输入英文字符、数字和下划线！** | 编码字符格式校验提示 | `list/store/formCfg.ts:L102` |
+| `printManager.confirmDeleteMsg` | **是否确认删除?** | 删除二次确认提示 | `list/components/columnOptions.tsx:L55` |
+| `printManager.confirmCloseUnsavedMsg` | **有修改内容未保存，确定要关闭吗?** | 未保存关闭确认提示 | `list/components/tableDrawer.tsx:L41` |
+| `printManager.useScopeRequiredMsg` | **使用范围为部分时必须配置条件信息** | 使用范围非空校验提示 | `list/components/tableDrawer.tsx:L74` |
+| `printManager.exportNameRequiredMsg` | **导出文件名称为自定义时必须配置名称信息** | 导出名称非空校验提示 | `list/components/tableDrawer.tsx:L78` |
+| `printManager.paramFormatErrorMsg` | **请输入正确的参数格式** | 参数格式校验错误提示 | `list/components/printExportName/index.tsx:L98, list/components/printUseScope/index.tsx:L117` |
+| `printManager.notDesignedCannotEnableMsg` | **打印模板未进行设计，不允许启用** | 未设计模板启用拦截提示 | `list/store/index.ts:L48` |
+| `printManager.selectDataSetWarningMsg` | **请选择数据集** | 未选择数据集警告提示 | `design/components/leftDataSetList/index.tsx:L191` |
+| `printManager.saveSuccessMsg` | **保存成功** | 模板保存成功提示 | `design/components/topHeaderTitle/utils.ts:L25` |
+| `printManager.saveFailedMsg` | **保存失败: ** | 模板保存失败提示前缀 | `design/components/topHeaderTitle/utils.ts:L32` |
+| `printManager.exportErrorMsg` | **导出错误** | 导出异常提示 | `design/service.ts:L58` |
+| `printManager.exportFailedMsg` | **导出失败** | 导出失败提示 | `preview/export.ts:L8` |
+| `printManager.dataNotLoadedMsg` | **打印数据未加载完成，请稍后重试** | 打印数据未就绪拦截 | `preview/index.tsx:L95` |
+| `printManager.tableNotReadyMsg` | **表格实例未就绪，请稍后重试** | 表格实例未就绪拦截 | `preview/index.tsx:L99` |
+| `printManager.printFailedMsg` | **打印失败** | 打印执行失败提示 | `preview/index.tsx:L113` |
+| `printManager.previewFailedMsg` | **预览失败: ** | 预览失败提示前缀 | `preview/index.tsx:L197` |
+| `printManager.noApiResponseMsg` | **接口无返回** | 接口无响应提示 | `preview/service.ts:L17` |
+| `printManager.copySuffix` | **_复制** | 复制模板名称后缀 | `list/components/tableDrawer.tsx:L167` |
 
 ---
 
-## 四、代码注释与非 UI 常量清单（无需国际化）
+## 三、代码注释与非 UI 常量说明（无需国际化）
 
-以下为源码中的开发者注释与内部系统内置集合，仅供代码阅读与维护参考，**无需**纳入国际化词条库：
+以下为源码中的开发者注释与内部系统过滤集合，仅供代码维护与架构理解，**无需**提取到国际化词条中：
 
 | 所在文件 | 行号 | 类型 | 内容说明 |
 | :--- | :--- | :--- | :--- |
-| `design/normalizeDataSetFields.ts` | L11 | 内部硬编码过滤集合 | `EXCLUDED_BUILT_IN_DATA_SETS = new Set(['流转历史', '流程确认事项'])` |
+| `design/normalizeDataSetFields.ts` | L11 | 内部硬编码集合 | `EXCLUDED_BUILT_IN_DATA_SETS = new Set(['流转历史', '流程确认事项'])` |
 | `list/components/columnOptions.tsx` | L9 | 开发者注释 | `// 内置模版 设计、修改、删除按钮置灰` |
 | `list/components/columnOptions.tsx` | L11 | 开发者注释 | `// 当前登录组织与模板所属组织不一致时 设计、修改、删除按钮置灰` |
 | `design/components/workflowSetting/index.tsx` | L80 | 开发者注释 | `// 订阅 modal` |
@@ -416,4 +359,4 @@ total_keys: 152
 | `preview/utils.ts` | L1-L15 | 开发者注释 | 预览工具函数说明注释 |
 
 ---
-*文档更新于 2026-08-31，专为 report-web PrintManager 多语言改造定制。*
+*文档生成于 2026-08-31，已完成单点扁平化 (Single-dot) 与中文词条全局去重。*
