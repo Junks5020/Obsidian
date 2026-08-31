@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
+                "file": "xzd/版本管理/report-table-ADR-0009-第一阶段只提供打印数据默认pdfmake消费.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单"
+              "title": "report-table-ADR-0009-第一阶段只提供打印数据默认pdfmake消费"
             }
           }
         ]
@@ -201,6 +201,10 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/版本管理/report-table-ADR-0006-第一阶段采用最小兼容API集.md",
+    "xzd/版本管理/report-table-ADR-0007-第一阶段权限仅作前端交互控制.md",
+    "xzd/版本管理/report-table-ADR-0008-第一阶段不实现公式引擎.md",
+    "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/06-隔离场景与最终验收.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/05-移除CSS-Modules双轨并建立边界测试.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/04-建立实例overlay并迁移可视弹层.md",
@@ -221,17 +225,13 @@
     "代码提交记录/report-web/变更记录/BUG-20260824-001-报表右边框图标裁切.md",
     "代码提交记录/report-web/变更记录/BUG-20260822-001-报表打印设置预览方向丢失.md",
     "xzd/版本管理/research/2026-08-21-ng-design-Attachment中文清单.md",
-    "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
     "xzd/版本管理/research/2026-08-21-ng-design-Attachment后端多语言注册清单.md",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-141127_18982.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_2-test_20260821-141127_18982.md",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-140758_81642.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_2-test_20260821-140758_81642.md",
     "xzd/版本管理/ng-design-ADR-0003-Attachment中文消息具名占位符协议.md",
-    "xzd/版本管理/ng-design-附件术语表.md",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-140422_28983.json",
-    "xzd/版本管理/部署记录/DEPLOY-6_5_2-test_20260821-140422_28983.md",
-    "ng-config-web/research/2026-08-13-附件存储配置与附件数据迁移多语言key清单.md",
     "代码提交记录/ng-config-web/模板",
     "代码提交记录/ng-config-web/变更记录",
     "代码提交记录/ng-config-web",
