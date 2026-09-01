@@ -195,7 +195,7 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
   "confirmRemoveSharedConditionMsg": "该条件为共享条件，删除后将同步移除所有Sheet页中的该查询条件，是否继续？",
   "confirmCancelShareConditionMsg": "该条件为共享条件，取消共享后将同步移除其他Sheet页中的该查询条件，是否继续？",
   "licenseLimitReachedMsg": "报表许可数已达到上线，无法添加，请增加许可张数后重试",
-  "licenseLimitApproachingMsg": "报表许可数即将到达上限，目前剩余【{remainCount}】张",
+  "licenseLimitApproachingMsg": "报表许可数即将到达上限，目前剩余【{{remainCount}}】张",
   "saveSuccessMsg": "保存成功",
   "saveFailedPrefix": "保存失败: ",
   "updateSuccessMsg": "更新成功",
@@ -221,8 +221,8 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
   "queryConditionLoadFailedMsg": "查询条件加载失败",
   "settingAppliedMsg": "设置已应用",
   "saveFailedRetryMsg": "保存失败，请重试",
-  "queryBeforeInputMsg": "查询前请先输入{item}",
-  "selectEmptyFieldsMsg": "请先选择【{fields}】",
+  "queryBeforeInputMsg": "查询前请先输入{{item}}",
+  "selectEmptyFieldsMsg": "请先选择【{{fields}}】",
   "noConfigurableQueryEmpty": "暂无可配置查询条件"
 }
 ```
@@ -417,7 +417,7 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
 | `confirmRemoveSharedConditionMsg` | **该条件为共享条件，删除后将同步移除所有Sheet页中的该查询条件，是否继续？** | 删除共享条件确认 | `design/components/...:L236` |
 | `confirmCancelShareConditionMsg` | **该条件为共享条件，取消共享后将同步移除其他Sheet页中的该查询条件，是否继续？** | 取消共享条件确认 | `design/components/...:L660` |
 | `licenseLimitReachedMsg` | **报表许可数已达到上线，无法添加，请增加许可张数后重试** | 许可数耗尽拦截提示 | `list/index.tsx:L44` |
-| `licenseLimitApproachingMsg` | **报表许可数即将到达上限，目前剩余【{remainCount}】张** | 许可数预警提示 | `list/index.tsx:L49` |
+| `licenseLimitApproachingMsg` | **报表许可数即将到达上限，目前剩余【{{remainCount}}】张** | 许可数预警提示 | `list/index.tsx:L49` |
 | `saveSuccessMsg` | **保存成功** | 保存成功轻提示 | `design/components/...:L19` |
 | `saveFailedPrefix` | **保存失败: ** | 保存失败提示前缀 | `design/components/...:L26` |
 | `updateSuccessMsg` | **更新成功** | 更新成功轻提示 | `list/components/columnOptions.tsx:L265` |
@@ -443,8 +443,8 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
 | `queryConditionLoadFailedMsg` | **查询条件加载失败** | 查询条件接口失败提示 | `preview/index.tsx:L673` |
 | `settingAppliedMsg` | **设置已应用** | 设置已应用轻提示 | `preview/index.tsx:L949` |
 | `saveFailedRetryMsg` | **保存失败，请重试** | 保存失败重试提示 | `preview/index.tsx:L966` |
-| `queryBeforeInputMsg` | **查询前请先输入{item}** | 必填查询项未输拦截 | `preview/index.tsx:L1041` |
-| `selectEmptyFieldsMsg` | **请先选择【{fields}】** | 必选项未选拦截提示 | `preview/utils/query.ts:L14` |
+| `queryBeforeInputMsg` | **查询前请先输入{{item}}** | 必填查询项未输拦截 | `preview/index.tsx:L1041` |
+| `selectEmptyFieldsMsg` | **请先选择【{{fields}}】** | 必选项未选拦截提示 | `preview/utils/query.ts:L14` |
 | `noConfigurableQueryEmpty` | **暂无可配置查询条件** | 查询设置空状态 | `preview/components/...:L91` |
 
 ---

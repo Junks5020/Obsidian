@@ -168,7 +168,7 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
   "searchKeywordPlaceholder": "请输入关键字",
   "selectFieldPlaceholder": "请选择字段",
   "filterConditionPlaceholder": "过滤条件",
-  "previewLimitTip": "数据预览只展示前{pageSize}条数据",
+  "previewLimitTip": "数据预览只展示前{{pageSize}}条数据",
   "previewSql": "预览SQL",
   "bindInfoAuthPreview": "绑定信息权限预览:",
   "bindInfoAuthTooltip": "选择绑定了信息权限的UI元数据，数据集就会按照您选择的容器进行信息权限过滤，不配置即代表无需进行信息权限过滤",
@@ -178,11 +178,11 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
   "codeMaxLengthMsg": "最长20字符",
   "codeFormatMsg": "只能输入英文字符、数字和下划线！",
   "dbAlreadyExistsMsg": "该数据库已存在",
-  "inputDbQuerySqlPlaceholder": "请输入{dbLabel}数据库查询语句",
+  "inputDbQuerySqlPlaceholder": "请输入{{dbLabel}}数据库查询语句",
   "clickAddDbQueryTip": "点击\"添加\"按钮选择需要维护的数据库",
   "duplicateParamMsg": "参数设置中存在重复的参数!",
-  "paramNotDefinedMsg": "{field}参数未在参数设置列表中定义",
-  "paramNotUsedMsg": "{field}参数未在查询语句中使用",
+  "paramNotDefinedMsg": "{{field}}参数未在参数设置列表中定义",
+  "paramNotUsedMsg": "{{field}}参数未在查询语句中使用",
   "confirmJumpToPreviewMsg": "保存前必须先进行数据预览，是否跳转至数据预览页?",
   "saveSuccessMsg": "保存成功",
   "confirmCloseUnsavedMsg": "有修改内容未保存，确定要关闭吗?",
@@ -370,7 +370,7 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
 | `searchKeywordPlaceholder` | **请输入关键字** | 穿梭框搜索占位符 | `components/report/transferTable/index.tsx:L53` |
 | `selectFieldPlaceholder` | **请选择字段** | 选择字段占位符 | `detailNormal/components/.../DataFilter:L91` |
 | `filterConditionPlaceholder` | **过滤条件** | 过滤值输入占位符 | `detailNormal/components/.../DataFilter:L111` |
-| `previewLimitTip` | **数据预览只展示前{pageSize}条数据** | 预览数量限制提示 | `components/previewTable/index.tsx:L149` |
+| `previewLimitTip` | **数据预览只展示前{{pageSize}}条数据** | 预览数量限制提示 | `components/previewTable/index.tsx:L149` |
 | `previewSql` | **预览SQL** | 查看SQL标签 | `components/previewTable/index.tsx:L161` |
 | `bindInfoAuthPreview` | **绑定信息权限预览:** | 权限预览提示前缀 | `components/previewTable/index.tsx:L170` |
 | `bindInfoAuthTooltip` | **选择绑定了信息权限的UI元数据，数据集就会按照您选择的容器进行信息权限过滤，不配置即代表无需进行信息权限过滤** | 权限绑定说明 | `components/bindInfoField/index.tsx:L24` |
@@ -380,11 +380,11 @@ key_format: "<identifier> (纯扁平化/无点号/全局唯一)"
 | `codeMaxLengthMsg` | **最长20字符** | 编码长度校验提示 | `detailNormal/store/formCfg.ts:L48` |
 | `codeFormatMsg` | **只能输入英文字符、数字和下划线！** | 编码字符格式校验提示 | `detailNormal/store/formCfg.ts:L54` |
 | `dbAlreadyExistsMsg` | **该数据库已存在** | 重复添加数据库提示 | `detailComplex/components/...:L62` |
-| `inputDbQuerySqlPlaceholder` | **请输入{dbLabel}数据库查询语句** | 数据库语句输入提示 | `detailComplex/components/...:L126` |
+| `inputDbQuerySqlPlaceholder` | **请输入{{dbLabel}}数据库查询语句** | 数据库语句输入提示 | `detailComplex/components/...:L126` |
 | `clickAddDbQueryTip` | **点击"添加"按钮选择需要维护的数据库** | 空状态引导文案 | `detailComplex/components/...:L135` |
 | `duplicateParamMsg` | **参数设置中存在重复的参数!** | 参数去重校验提示 | `detailComplex/components/...:L362` |
-| `paramNotDefinedMsg` | **{field}参数未在参数设置列表中定义** | SQL参数未定义校验 | `detailComplex/components/...:L375` |
-| `paramNotUsedMsg` | **{field}参数未在查询语句中使用** | 定义参数未使用校验 | `detailComplex/components/...:L382` |
+| `paramNotDefinedMsg` | **{{field}}参数未在参数设置列表中定义** | SQL参数未定义校验 | `detailComplex/components/...:L375` |
+| `paramNotUsedMsg` | **{{field}}参数未在查询语句中使用** | 定义参数未使用校验 | `detailComplex/components/...:L382` |
 | `confirmJumpToPreviewMsg` | **保存前必须先进行数据预览，是否跳转至数据预览页?** | 跳转预览确认框 | `detailNormal/components/...:L196` |
 | `saveSuccessMsg` | **保存成功** | 保存成功轻提示 | `detailNormal/components/...:L215` |
 | `confirmCloseUnsavedMsg` | **有修改内容未保存，确定要关闭吗?** | 关闭未保存确认提示 | `detailNormal/components/...:L250` |

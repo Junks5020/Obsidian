@@ -156,7 +156,7 @@
   "confirmRemoveSharedConditionMsg": "该条件为共享条件，删除后将同步移除所有Sheet页中的该查询条件，是否继续？",
   "confirmCancelShareConditionMsg": "该条件为共享条件，取消共享后将同步移除其他Sheet页中的该查询条件，是否继续？",
   "licenseLimitReachedMsg": "报表许可数已达到上线，无法添加，请增加许可张数后重试",
-  "licenseLimitApproachingMsg": "报表许可数即将到达上限，目前剩余【{remainCount}】张",
+  "licenseLimitApproachingMsg": "报表许可数即将到达上限，目前剩余【{{remainCount}}】张",
   "saveSuccessMsg": "保存成功",
   "saveFailedPrefix": "保存失败: ",
   "updateSuccessMsg": "更新成功",
@@ -182,7 +182,7 @@
   "queryConditionLoadFailedMsg": "查询条件加载失败",
   "settingAppliedMsg": "设置已应用",
   "saveFailedRetryMsg": "保存失败，请重试",
-  "queryBeforeInputMsg": "查询前请先输入{item}",
-  "selectEmptyFieldsMsg": "请先选择【{fields}】",
+  "queryBeforeInputMsg": "查询前请先输入{{item}}",
+  "selectEmptyFieldsMsg": "请先选择【{{fields}}】",
   "noConfigurableQueryEmpty": "暂无可配置查询条件"
 }

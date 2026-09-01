@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
+                "file": "xzd/PrintManager-中文清单.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-01-ng-config-web-Datamigration后端多语言注册清单"
+              "title": "PrintManager-中文清单"
             }
           }
         ]
@@ -201,10 +201,11 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/DataSetManager-中文清单.md",
     "xzd/00-多语言总览.md",
+    "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
     "xzd/SimpleTableManager-中文清单.md",
     "xzd/TableManager-中文清单.md",
-    "xzd/DataSetManager-中文清单.md",
     "xzd/DataSourceManager-中文清单.md",
     "xzd/i18n/TableManager.json",
     "xzd/i18n/SimpleTableManager.json",
@@ -213,7 +214,6 @@
     "xzd/i18n/DataSetManager.json",
     "xzd/i18n",
     "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
-    "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
     "ng-config-web/research/2026-09-01-附件数据迁移Datamigration多语言key清单.md",
     "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
     "ng-config-web/research/2026-09-01-附件存储配置Databaseinitconfig多语言key清单.md",
