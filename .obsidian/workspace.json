@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
+                "file": "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-01-ng-config-web-FilePreview后端多语言注册清单"
+              "title": "2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单"
             }
           }
         ]
@@ -201,8 +201,10 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
-    "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
     "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
+    "ng-config-web/research/2026-09-01-附件存储配置Databaseinitconfig多语言key清单.md",
+    "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
+    "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
     "xzd/版本管理/report-table-ADR-0010-样式边界与自动加载.md",
     "xzd/版本管理/report-table-ADR-0001-跟随上游功能型同步.md",
     "xzd/版本管理/report-table-打印示例删除决策-20260825.md",
@@ -229,8 +231,6 @@
     "xzd/版本管理/work-items/report-table-style-boundary/spec.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues",
     "xzd/版本管理/work-items/report-table-style-boundary",
-    "xzd/版本管理/research/2026-08-25-硕正报表API支持情况整理.md",
-    "xzd/版本管理/report-web-二维码多字段追加执行计划-20260825.md",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-141127_18982.json",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-140758_81642.json",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-140422_28983.json",
