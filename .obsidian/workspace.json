@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/PrintManager-中文清单.md",
+                "file": "xzd/TableManager-中文清单.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PrintManager-中文清单"
+              "title": "TableManager-中文清单"
             }
           }
         ]
@@ -201,12 +201,13 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/SimpleTableManager-中文清单.md",
+    "xzd/PrintManager-中文清单.md",
+    "xzd/DataSourceManager-中文清单.md",
     "xzd/DataSetManager-中文清单.md",
     "xzd/00-多语言总览.md",
     "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
-    "xzd/SimpleTableManager-中文清单.md",
     "xzd/TableManager-中文清单.md",
-    "xzd/DataSourceManager-中文清单.md",
     "xzd/i18n/TableManager.json",
     "xzd/i18n/SimpleTableManager.json",
     "xzd/i18n/PrintManager.json",
@@ -226,7 +227,6 @@
     "xzd/版本管理/ng-design-ADR-0002-附件权限补丁限定源码目录.md",
     "xzd/版本管理/ng-design-ADR-0001-附件权限分类块透传.md",
     "xzd/版本管理/ng-design-附件术语表.md",
-    "xzd/PrintManager-中文清单.md",
     "xzd/版本管理/部署记录/清单/6_5_2_20260831-204215_02388.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_2_20260831-204215_02388.md",
     "xzd/版本管理/部署记录/清单/6_5_2_20260831-204126_34196.json",
