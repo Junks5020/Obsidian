@@ -497,6 +497,7 @@ QC_Report_ReportManagement:
   "selectPlaceholder": "请选择",
   "codeMaxLengthMsg": "最长20字符",
   "codeFormatMsg": "只能输入英文字符、数字和下划线！",
+  "confirmDelete": "确认删除",
   "confirmDeleteMsg": "是否确认删除?",
   "confirmDeleteWithMenuMsg": "报表已生成菜单，删除报表会同步删除菜单信息，是否继续",
   "confirmDeleteMenuCascadeMsg": "删除菜单会同步删除配置的企业功能树菜单，是否继续？",
