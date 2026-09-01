@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/PrintManager-中文清单.md",
+                "file": "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PrintManager-中文清单"
+              "title": "2026-09-01-ng-config-web-FilePreview后端多语言注册清单"
             }
           }
         ]
@@ -201,6 +201,17 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
+    "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
+    "xzd/版本管理/report-table-ADR-0010-样式边界与自动加载.md",
+    "xzd/版本管理/report-table-ADR-0001-跟随上游功能型同步.md",
+    "xzd/版本管理/report-table-打印示例删除决策-20260825.md",
+    "xzd/版本管理/ng-design-Agent工作流配置.md",
+    "xzd/版本管理/ng-design-ADR-0003-Attachment中文消息具名占位符协议.md",
+    "xzd/版本管理/ng-design-ADR-0002-附件权限补丁限定源码目录.md",
+    "xzd/版本管理/ng-design-ADR-0001-附件权限分类块透传.md",
+    "xzd/版本管理/ng-design-附件术语表.md",
+    "xzd/PrintManager-中文清单.md",
     "xzd/版本管理/部署记录/清单/6_5_2_20260831-204215_02388.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_2_20260831-204215_02388.md",
     "xzd/版本管理/部署记录/清单/6_5_2_20260831-204126_34196.json",
@@ -209,7 +220,6 @@
     "xzd/版本管理/report-table-ADR-0006-第一阶段采用最小兼容API集.md",
     "xzd/版本管理/report-table-ADR-0007-第一阶段权限仅作前端交互控制.md",
     "xzd/版本管理/report-table-ADR-0008-第一阶段不实现公式引擎.md",
-    "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/06-隔离场景与最终验收.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/05-移除CSS-Modules双轨并建立边界测试.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/04-建立实例overlay并迁移可视弹层.md",
@@ -219,24 +229,14 @@
     "xzd/版本管理/work-items/report-table-style-boundary/spec.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues",
     "xzd/版本管理/work-items/report-table-style-boundary",
-    "xzd/版本管理/report-table-ADR-0010-样式边界与自动加载.md",
-    "xzd/版本管理/report-table-打印示例删除决策-20260825.md",
     "xzd/版本管理/research/2026-08-25-硕正报表API支持情况整理.md",
     "xzd/版本管理/report-web-二维码多字段追加执行计划-20260825.md",
-    "代码提交记录/report-web/变更记录/REQ-20260824-002-打印模板类型同步.md",
-    "xzd/版本管理/report-web-打印模板类型同步计划-20260824.md",
-    "代码提交记录/ng-design/变更记录/REQ-20260824-001-udp-ui-attachment-i18n.md",
-    "代码提交记录/report-web/变更记录/REQ-20260824-001-打印设置URL业务表单定位.md",
-    "代码提交记录/report-web/变更记录/BUG-20260824-001-报表右边框图标裁切.md",
-    "代码提交记录/report-web/变更记录/BUG-20260822-001-报表打印设置预览方向丢失.md",
-    "xzd/版本管理/research/2026-08-21-ng-design-Attachment中文清单.md",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-141127_18982.json",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-140758_81642.json",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-140422_28983.json",
     "代码提交记录/ng-config-web/模板",
     "代码提交记录/ng-config-web/变更记录",
     "代码提交记录/ng-config-web",
-    "代码提交记录",
     "Pasted image 20260701093053.png",
     "Pasted image 20260701093209.png",
     "未命名.canvas",
