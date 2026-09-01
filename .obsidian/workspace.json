@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "report-web多语言.md",
+                "file": "考试题目.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "report-web多语言"
+              "title": "考试题目"
             }
           }
         ],
@@ -216,8 +216,9 @@
   },
   "active": "23e36804af9c49b7",
   "lastOpenFiles": [
-    "xzd/PrintManager-中文清单.md",
     "report-web多语言.md",
+    "考试题目.md",
+    "xzd/PrintManager-中文清单.md",
     "xzd/TableManager-中文清单.md",
     "xzd/SimpleTableManager-中文清单.md",
     "xzd/DataSourceManager-中文清单.md",
@@ -249,7 +250,6 @@
     "xzd/版本管理/部署记录/DEPLOY-6_5_2_20260831-204126_34196.md",
     "xzd/版本管理/report-table-ADR-0009-第一阶段只提供打印数据默认pdfmake消费.md",
     "xzd/版本管理/report-table-ADR-0006-第一阶段采用最小兼容API集.md",
-    "xzd/版本管理/report-table-ADR-0007-第一阶段权限仅作前端交互控制.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues",
     "xzd/版本管理/work-items/report-table-style-boundary",
     "Pasted image 20260701093053.png",
