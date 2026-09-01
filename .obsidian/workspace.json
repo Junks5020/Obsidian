@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
+                "file": "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单"
+              "title": "2026-09-01-ng-config-web-Datamigration后端多语言注册清单"
             }
           }
         ]
@@ -201,9 +201,11 @@
   },
   "active": "cffb382f9c610389",
   "lastOpenFiles": [
+    "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
+    "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
+    "ng-config-web/research/2026-09-01-附件数据迁移Datamigration多语言key清单.md",
     "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
     "ng-config-web/research/2026-09-01-附件存储配置Databaseinitconfig多语言key清单.md",
-    "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
     "xzd/版本管理/research/2026-08-21-ng-design-udp-ui-Attachment后端多语言注册清单.md",
     "xzd/版本管理/report-table-ADR-0010-样式边界与自动加载.md",
     "xzd/版本管理/report-table-ADR-0001-跟随上游功能型同步.md",
@@ -227,8 +229,6 @@
     "xzd/版本管理/work-items/report-table-style-boundary/issues/04-建立实例overlay并迁移可视弹层.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/03-生成带命名空间的Handsontable样式.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues/02-物理合并Less并删除不可达样式.md",
-    "xzd/版本管理/work-items/report-table-style-boundary/issues/01-建立根样式入口与公共根标识.md",
-    "xzd/版本管理/work-items/report-table-style-boundary/spec.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues",
     "xzd/版本管理/work-items/report-table-style-boundary",
     "xzd/版本管理/部署记录/清单/6_5_2-test_20260821-141127_18982.json",
