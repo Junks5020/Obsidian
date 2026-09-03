@@ -167,3 +167,143 @@ export interface FileListState {
 5. **未启用标签**：`聊天记录`、`收藏单据`、`标签` 三个标签页定义了但未使用，如需启用请同步添加对应的多语言 key。
 
 6. **图标文件**：`src/pages/myFavorite/icons/` 目录下的图标（Common、Exl、JPG、PDF、PNG、ppt、record、TXT、video、Word）无需翻译。
+
+---
+
+## 六、多语言 JSON 配置
+
+### 完整的多语言配置（zh-CN + en-US）
+
+```json
+{
+  "zh-CN": {
+    "mfTitle": "我的收藏",
+    "mfSearchPlaceholder": "输入关键字检索",
+    "mfTagAll": "全部收藏",
+    "mfTagFile": "文件",
+    "mfTagLink": "链接",
+    "mfTagMedia": "图片与视频",
+    "mfUpload": "上传文件",
+    "mfFilePreview": "我的文件预览",
+    "mfNoMore": "没有更多了！",
+    "mfImgAlt": "链接",
+    "mfFrom": "来自:",
+    "mfPreviewError": "预览信息获取错误，请稍后重试",
+    "mfUploadFailReason": "上传失败，原因：{0}",
+    "mfUploadFailServer": "上传失败，原因：服务器错误"
+  },
+  "en-US": {
+    "mfTitle": "My Favorites",
+    "mfSearchPlaceholder": "Enter keywords to search",
+    "mfTagAll": "All Favorites",
+    "mfTagFile": "Files",
+    "mfTagLink": "Links",
+    "mfTagMedia": "Images & Videos",
+    "mfUpload": "Upload File",
+    "mfFilePreview": "My File Preview",
+    "mfNoMore": "No more items!",
+    "mfImgAlt": "Link",
+    "mfFrom": "From:",
+    "mfPreviewError": "Failed to retrieve preview information. Please try again later.",
+    "mfUploadFailReason": "Upload failed. Reason: {0}",
+    "mfUploadFailServer": "Upload failed. Reason: Server error"
+  }
+}
+```
+
+### 可选标签（未启用，预留）
+
+如需启用 `聊天记录`、`收藏单据`、`标签` 三个标签页，可追加以下配置：
+
+```json
+{
+  "zh-CN": {
+    "mfTagChat": "聊天记录",
+    "mfTagDocument": "收藏单据",
+    "mfTagLabel": "标签"
+  },
+  "en-US": {
+    "mfTagChat": "Chat History",
+    "mfTagDocument": "Saved Documents",
+    "mfTagLabel": "Labels"
+  }
+}
+```
+
+### 按 key 索引的扁平结构（供后端登记）
+
+```json
+{
+  "mfTitle": {
+    "zh-CN": "我的收藏",
+    "en-US": "My Favorites",
+    "source": "MyFavorite.tsx:69"
+  },
+  "mfSearchPlaceholder": {
+    "zh-CN": "输入关键字检索",
+    "en-US": "Enter keywords to search",
+    "source": "MyFavorite.tsx:72"
+  },
+  "mfTagAll": {
+    "zh-CN": "全部收藏",
+    "en-US": "All Favorites",
+    "source": "service.tsx:12, 15"
+  },
+  "mfTagFile": {
+    "zh-CN": "文件",
+    "en-US": "Files",
+    "source": "service.tsx:12, 15"
+  },
+  "mfTagLink": {
+    "zh-CN": "链接",
+    "en-US": "Links",
+    "source": "service.tsx:12, 15"
+  },
+  "mfTagMedia": {
+    "zh-CN": "图片与视频",
+    "en-US": "Images & Videos",
+    "source": "service.tsx:12, 15"
+  },
+  "mfUpload": {
+    "zh-CN": "上传文件",
+    "en-US": "Upload File",
+    "source": "service.tsx:17, uploadButton.tsx:29"
+  },
+  "mfFilePreview": {
+    "zh-CN": "我的文件预览",
+    "en-US": "My File Preview",
+    "source": "service.tsx:18, fileItem.tsx:45"
+  },
+  "mfNoMore": {
+    "zh-CN": "没有更多了！",
+    "en-US": "No more items!",
+    "source": "service.tsx:19, fileItem.tsx:71"
+  },
+  "mfImgAlt": {
+    "zh-CN": "链接",
+    "en-US": "Link",
+    "source": "service.tsx:20, fileItem.tsx:52"
+  },
+  "mfFrom": {
+    "zh-CN": "来自:",
+    "en-US": "From:",
+    "source": "service.tsx:21, fileItem.tsx:64"
+  },
+  "mfPreviewError": {
+    "zh-CN": "预览信息获取错误，请稍后重试",
+    "en-US": "Failed to retrieve preview information. Please try again later.",
+    "source": "MyFavorite.tsx:25"
+  },
+  "mfUploadFailReason": {
+    "zh-CN": "上传失败，原因：{0}",
+    "en-US": "Upload failed. Reason: {0}",
+    "source": "service.tsx:129",
+    "note": "动态参数 {0} 为服务端返回的错误信息"
+  },
+  "mfUploadFailServer": {
+    "zh-CN": "上传失败，原因：服务器错误",
+    "en-US": "Upload failed. Reason: Server error",
+    "source": "service.tsx:132"
+  }
+}
+```
