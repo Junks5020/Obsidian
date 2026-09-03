@@ -70,7 +70,20 @@ date: 2026-09-03
 | `mfUploadFailReason` | 上传失败，原因：{0} | Upload failed. Reason: {0} | `service.tsx:129`（上传失败，显示服务端返回的错误信息，`{0}` 为动态参数） |
 | `mfUploadFailServer` | 上传失败，原因：服务器错误 | Upload failed. Reason: Server error | `service.tsx:132`（上传异常兜底提示） |
 
-> **动态文案说明**：`mfUploadFailReason` 中的 `{0}` 占位符用于插入服务端返回的具体错误信息（`msg` 或 `Msg` 字段），运行时需配合字符串格式化函数（如 `formatStringForArgs`）替换占位符。
+> **动态文案说明**：
+> - **占位符格式**：项目统一使用 `{0}`、`{1}`、`{n}` 格式（**不是**双大括号 `{{变量名}}`）
+> - **替换函数**：配合 `formatStringForArgs` 函数使用，参考 `src/pages/workFlow/components/Common/utils.ts`
+> - **使用示例**：
+>   ```typescript
+>   // 定义（language.ts）
+>   mfUploadFailReason: '上传失败，原因：{0}'
+>   
+>   // 使用（service.tsx）
+>   import { formatStringForArgs } from '@/pages/workFlow/components/Common/utils';
+>   const errorMsg = formatStringForArgs(getLangText(LangKey.mfUploadFailReason), msg || Msg);
+>   // 输出：上传失败，原因：文件格式不支持
+>   ```
+> - **中英文语序差异**：占位符位置需根据实际语言调整，如「{0}图标」→「{0} icon」
 
 ---
 
