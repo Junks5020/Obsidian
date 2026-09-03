@@ -214,10 +214,12 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "23e36804af9c49b7",
+  "active": "471971ee1dae6833",
   "lastOpenFiles": [
-    "report-web多语言.md",
+    "代码提交记录/report-web/变更记录/REQ-20260902-001-报表多语言配置同步.md",
+    "专业考题.md",
     "考试题目.md",
+    "report-web多语言.md",
     "xzd/PrintManager-中文清单.md",
     "xzd/TableManager-中文清单.md",
     "xzd/SimpleTableManager-中文清单.md",
@@ -248,8 +250,6 @@
     "xzd/版本管理/部署记录/DEPLOY-6_5_2_20260831-204215_02388.md",
     "xzd/版本管理/部署记录/清单/6_5_2_20260831-204126_34196.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_2_20260831-204126_34196.md",
-    "xzd/版本管理/report-table-ADR-0009-第一阶段只提供打印数据默认pdfmake消费.md",
-    "xzd/版本管理/report-table-ADR-0006-第一阶段采用最小兼容API集.md",
     "xzd/版本管理/work-items/report-table-style-boundary/issues",
     "xzd/版本管理/work-items/report-table-style-boundary",
     "Pasted image 20260701093053.png",
