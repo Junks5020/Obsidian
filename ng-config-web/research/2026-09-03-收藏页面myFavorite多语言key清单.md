@@ -67,23 +67,33 @@ date: 2026-09-03
 | key | 中文默认值 | English | 出处 |
 |-----|-----------|---------|------|
 | `mfPreviewError` | 预览信息获取错误，请稍后重试 | Failed to retrieve preview information. Please try again later. | `MyFavorite.tsx:25`（获取附件信息失败） |
-| `mfUploadFailReason` | 上传失败，原因：{0} | Upload failed. Reason: {0} | `service.tsx:129`（上传失败，显示服务端返回的错误信息，`{0}` 为动态参数） |
+| `mfUploadFailReason` | 上传失败，原因：{{errorMsg}} | Upload failed. Reason: {{errorMsg}} | `service.tsx:129`（上传失败，显示服务端返回的错误信息，`{{errorMsg}}` 为动态参数） |
 | `mfUploadFailServer` | 上传失败，原因：服务器错误 | Upload failed. Reason: Server error | `service.tsx:132`（上传异常兜底提示） |
 
 > **动态文案说明**：
-> - **占位符格式**：项目统一使用 `{0}`、`{1}`、`{n}` 格式（**不是**双大括号 `{{变量名}}`）
-> - **替换函数**：配合 `formatStringForArgs` 函数使用，参考 `src/pages/workFlow/components/Common/utils.ts`
+> - **占位符格式**：使用语义化的 `{{变量名}}` 格式（如 `{{errorMsg}}`、`{{fileName}}`）
+> - **替换函数**：需要实现命名占位符的格式化函数（项目现有的 `formatStringForArgs` 仅支持 `{0}` 数字索引格式）
+> - **推荐实现**：
+>   ```typescript
+>   // utils.ts 或 language.ts 中新增
+>   export function formatStringWithParams(str: string, params: Record<string, any>) {
+>     return str.replace(/\{\{(\w+)\}\}/g, (_, key) => params[key] ?? '');
+>   }
+>   ```
 > - **使用示例**：
 >   ```typescript
 >   // 定义（language.ts）
->   mfUploadFailReason: '上传失败，原因：{0}'
+>   mfUploadFailReason: '上传失败，原因：{{errorMsg}}'
 >   
 >   // 使用（service.tsx）
->   import { formatStringForArgs } from '@/pages/workFlow/components/Common/utils';
->   const errorMsg = formatStringForArgs(getLangText(LangKey.mfUploadFailReason), msg || Msg);
+>   import { formatStringWithParams } from './utils';
+>   const text = formatStringWithParams(
+>     getLangText(LangKey.mfUploadFailReason), 
+>     { errorMsg: msg || Msg }
+>   );
 >   // 输出：上传失败，原因：文件格式不支持
 >   ```
-> - **中英文语序差异**：占位符位置需根据实际语言调整，如「{0}图标」→「{0} icon」
+> - **优势**：命名占位符语义更清晰，不受参数顺序影响，中英文语序差异时无需调整占位符位置
 
 ---
 
@@ -175,7 +185,7 @@ export interface FileListState {
 
 3. **后端登记**：需在平台语言包中为 `mf*` 前缀的 key 注册中英文翻译（busType 待确认，可能需要新增或复用现有 identity）。
 
-4. **动态文案处理**：`mfUploadFailReason` 的 `{0}` 占位符需配合格式化函数使用，参考 `workFlow` 页面的 `formatStringForArgs` 实现。
+4. **动态文案处理**：`mfUploadFailReason` 使用 `{{errorMsg}}` 命名占位符，需实现 `formatStringWithParams` 函数（见上文第四章节的使用示例）。
 
 5. **未启用标签**：`聊天记录`、`收藏单据`、`标签` 三个标签页定义了但未使用，如需启用请同步添加对应的多语言 key。
 
@@ -202,7 +212,7 @@ export interface FileListState {
     "mfImgAlt": "链接",
     "mfFrom": "来自:",
     "mfPreviewError": "预览信息获取错误，请稍后重试",
-    "mfUploadFailReason": "上传失败，原因：{0}",
+    "mfUploadFailReason": "上传失败，原因：{{errorMsg}}",
     "mfUploadFailServer": "上传失败，原因：服务器错误"
   },
   "en-US": {
@@ -218,7 +228,7 @@ export interface FileListState {
     "mfImgAlt": "Link",
     "mfFrom": "From:",
     "mfPreviewError": "Failed to retrieve preview information. Please try again later.",
-    "mfUploadFailReason": "Upload failed. Reason: {0}",
+    "mfUploadFailReason": "Upload failed. Reason: {{errorMsg}}",
     "mfUploadFailServer": "Upload failed. Reason: Server error"
   }
 }
@@ -308,10 +318,10 @@ export interface FileListState {
     "source": "MyFavorite.tsx:25"
   },
   "mfUploadFailReason": {
-    "zh-CN": "上传失败，原因：{0}",
-    "en-US": "Upload failed. Reason: {0}",
+    "zh-CN": "上传失败，原因：{{errorMsg}}",
+    "en-US": "Upload failed. Reason: {{errorMsg}}",
     "source": "service.tsx:129",
-    "note": "动态参数 {0} 为服务端返回的错误信息"
+    "note": "动态参数 {{errorMsg}} 为服务端返回的错误信息"
   },
   "mfUploadFailServer": {
     "zh-CN": "上传失败，原因：服务器错误",
