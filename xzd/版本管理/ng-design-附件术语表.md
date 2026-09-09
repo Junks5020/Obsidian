@@ -3,7 +3,7 @@ tags:
   - ng-design
   - 术语表
   - 领域模型
-updated: 2026-08-14
+updated: 2026-09-08
 ---
 
 # ng-design 附件术语表
@@ -13,6 +13,8 @@ updated: 2026-08-14
 相关：[[00-版本总览]] · [[ng-design-ADR-0001-附件权限分类块透传]] · [[ng-design-ADR-0002-附件权限补丁限定源码目录]]
 
 ## Language
+
+**自定义按钮权限请求参数**：附件组件调用方以 `customButtonRights` 传入的可选按钮权限片段，仅原样作为 `tableAttachInit` 初始化请求的显式输入；可仅包含 `add`、`delete`、`edit`、`view`、`download` 中的一部分，每个已提供值为 0 或 1。它属于复用 `ITableAttachmentApiProps` 的 Table、表单附件、Image、弹窗及公开 API 调用链，不属于使用 `labelAttachInit` 的标签附件。显式属性优先于 `extraParams.customButtonRights`。权限控制仍完全由后端处理并通过初始化响应返回，前端不得合并、补全或消费该请求参数。它不同于已废弃的前端权限覆盖参数。
 
 **现代附件**：由 React 现代附件组件渲染的附件区域，包括表格附件、表单附件、标签附件和图片附件模式；不包含旧版 `openOldAttachment` 弹窗。
 

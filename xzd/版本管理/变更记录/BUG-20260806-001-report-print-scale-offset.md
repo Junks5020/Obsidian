@@ -5,7 +5,7 @@ status: completed
 commit: a0b0ab1bfe9a85589af8cf883c8696144358209d
 source_branch: fix-report-print
 created: 2026-08-06
-updated: 2026-08-07
+updated: 2026-09-09
 target_versions: [6.5.2-dev, 6.5.2]
 tags: [version-change, bug, report-web, print, pdf, scale]
 ---
@@ -50,6 +50,7 @@ tags: [version-change, bug, report-web, print, pdf, scale]
 | --- | --- | --- | --- | --- |
 | fix-report-print | 验证中 | `a0b0ab1bfe9a85589af8cf883c8696144358209d` | 用户按原路径打印验证通过；19 个测试文件、格式检查、生产构建和双轴审查通过 | 修复来源 |
 | 6.5.2-dev | 已同步 | `062ca4138c5a6c46fbdcf31605a4fc3654ae005e` | 与 `a0b0ab1b` stable patch-id 等价 | 最终等价修复已在 dev 分支 |
+| 6.5.1-dev | 已回移（待提交） | - | `report-pdf-print-scale.test.ts` 在回移前失败、回移后通过；`git diff --check` 通过 | 2026-09-09 仅回移缩放坐标换算与对应回归测试 |
 | 6.5.2 | 待同步 | - | - | 2026-08-07 审计确认目标仍缺少缩放坐标修复 |
 
 ## 验证
