@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md",
+                "file": "专业考题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-03-收藏页面myFavorite多语言key清单"
+              "title": "专业考题"
             }
           }
         ],
@@ -216,9 +216,11 @@
   },
   "active": "23e36804af9c49b7",
   "lastOpenFiles": [
+    "考试题目.md",
+    "专业考题.md",
+    "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md",
     "xzd/版本管理/变更记录/BUG-20260904-001-calc-preview-reload-loop.md",
     "ng-config-web/research/2026-09-01-附件数据迁移Datamigration多语言key清单.md",
-    "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md",
     "ng-config-web/research/2026-09-01-文件预览FilePreview多语言key清单.md",
     "ng-config-web/research/2026-09-01-附件存储配置Databaseinitconfig多语言key清单.md",
     "ng-config-web/research/2026-08-14-附件多语言key清单.md",
@@ -226,9 +228,7 @@
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.0c5698dd5199",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.5c59765662a5",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.6e40ae69aade",
-    "考试题目.md",
     "代码提交记录/report-web/变更记录/REQ-20260902-001-报表多语言配置同步.md",
-    "专业考题.md",
     "report-web多语言.md",
     "xzd/PrintManager-中文清单.md",
     "xzd/TableManager-中文清单.md",

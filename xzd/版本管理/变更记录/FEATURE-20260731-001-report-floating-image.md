@@ -126,6 +126,12 @@ interface FloatImageConfig {
 5. **预览/导出**：后端将字段图片解析为 `formatData` URL；前端 `normalizePreviewFloatImage` 统一处理固定/字段图片，PDF 坐标按 `transScale` 与隐藏列进行换算。
 6. **PDF 图层**：`layerPdfTableWithFloatImages` 将表格与浮动图片包装为 pdfmake `columns`，保证二者处于同一页。
 
+## 关联 Bug 修复
+
+| Bug | Commit | Branch | 关系 |
+| --- | --- | --- | --- |
+| `BUG-20260909-001` | `1d6daf681ecb256306a4b96d9bd5a63d8caded8e` | `ljx-7.0` | 为全局 Less 下的浮动图片选中态使用专用类名，避免 report-web 宿主 `.selected` 样式将透明图片染成蓝底。 |
+
 ## 版本同步
 
 | 版本名称 | 是否需要同步 | 当前状态 | 合入 Commit | 验证结果 | 备注 |
