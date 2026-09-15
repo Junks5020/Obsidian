@@ -298,8 +298,13 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f93eb4b8cda2f3ea",
+  "active": "471971ee1dae6833",
   "lastOpenFiles": [
+    "报表多语言/QC_Report_SimpleReportDesign-待调整.md",
+    "报表多语言/PrintSetV2-待调整.md",
+    "报表多语言/QC_Report_ReportManagement-待调整.md",
+    "报表多语言/QC_Report_DatasetManagement-待调整.md",
+    "报表多语言/QC_Report_DataSourceManagement-待调整.md",
     "专业考题.md",
     "报表多语言/common.md",
     "报表多语言/QC_Report_SimpleReportDesign.md",
@@ -329,11 +334,6 @@
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.0c5698dd5199",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.5c59765662a5",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.6e40ae69aade",
-    "代码提交记录/report-web/变更记录/REQ-20260902-001-报表多语言配置同步.md",
-    "report-web多语言.md",
-    "xzd/PrintManager-中文清单.md",
-    "xzd/TableManager-中文清单.md",
-    "xzd/SimpleTableManager-中文清单.md",
     "xzd/i18n/TableManager.json",
     "xzd/i18n/SimpleTableManager.json",
     "Pasted image 20260701093053.png",
