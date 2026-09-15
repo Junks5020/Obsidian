@@ -3,7 +3,7 @@ tags:
   - project/deepseek-harness
   - work-item
   - stocks
-status: in-progress
+status: implemented
 date: 2026-09-09
 updated: 2026-09-09
 ---
@@ -16,17 +16,19 @@ updated: 2026-09-09
 
 **Blocked by:** 01
 
-**Status:** in-progress
+**Status:** implemented
 
-- [ ] 用户可创建并重命名账户卡片，选择市场（A 股/港股）与本币（CNY/HKD）
-- [ ] 用户可为账户填写可选现金余额；现金计入总资产但不作为证券持仓
-- [ ] 用户可在选定市场搜索证券（真实供应商确定前用模拟数据）并录入数量与每股综合成本，支持非整手数量
-- [ ] 用户可修改现有持仓与现金
-- [ ] 左栏按账户分组显示持仓，并提供跨账户汇总视图
-- [ ] 账户、持仓、现金使用当前 Windows 用户绑定加密存储；Key 不出现在 UI、日志或导出中
-- [ ] 单机断网时仍能创建与修改账户、持仓和现金
+- [x] 用户可创建并重命名账户卡片，选择市场（A 股/港股）与本币（CNY/HKD）
+- [x] 用户可为账户填写可选现金余额；现金计入总资产但不作为证券持仓
+- [x] 用户可在选定市场搜索证券（真实供应商确定前用模拟数据）并录入数量与每股综合成本，支持非整手数量
+- [x] 用户可修改现有持仓与现金
+- [x] 左栏按账户分组显示持仓，并提供跨账户汇总视图
+- [x] 账户、持仓、现金使用当前 Windows 用户绑定加密存储；Key 不出现在 UI、日志或导出中
+- [x] 单机断网时仍能创建与修改账户、持仓和现金
 
 ## Comments
+
+- 2026-09-09：`windows-dpapi`（当前用户 DPAPI）、`stock-ledger-storage`（单信封原子整快照）、`stock-ledger`（PortfolioLedger Host 服务）、`client-ui-stock-ledger`（浏览器维护 UI）共同落地。精确十进制使用 BigInt 缩放算术，不用浮点。
 
 - 2026-09-09：实施必须先交付并在原生 Windows 验证 DPAPI 当前用户保护与只写密文的账本存储后端。JSON/SQLite 文件权限、credentials YAML、混淆或同盘自管密钥均不满足本票据的当前 Windows 用户绑定加密要求；若该前置无法完成，票据保持 in-progress/blocked，不交付明文降级版本。
 
