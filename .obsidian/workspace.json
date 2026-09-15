@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "报表多语言/common.md",
+                "file": "报表多语言/QC_Report_ReportManagement-待调整.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "common"
+              "title": "QC_Report_ReportManagement-待调整"
             }
           }
         ],
@@ -298,15 +298,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "471971ee1dae6833",
+  "active": "f93eb4b8cda2f3ea",
   "lastOpenFiles": [
+    "报表多语言/报表多语言-待调整汇总.md",
     "报表多语言/QC_Report_SimpleReportDesign-待调整.md",
-    "报表多语言/PrintSetV2-待调整.md",
     "报表多语言/QC_Report_ReportManagement-待调整.md",
-    "报表多语言/QC_Report_DatasetManagement-待调整.md",
     "报表多语言/QC_Report_DataSourceManagement-待调整.md",
-    "专业考题.md",
+    "报表多语言/QC_Report_DatasetManagement-待调整.md",
+    "报表多语言/PrintSetV2-待调整.md",
     "报表多语言/common.md",
+    "专业考题.md",
     "报表多语言/QC_Report_SimpleReportDesign.md",
     "报表多语言/PrintSetV2.md",
     "报表多语言/QC_Report_DatasetManagement.md",
@@ -329,7 +330,6 @@
     "ng-config-web/research/2026-09-01-附件数据迁移Datamigration多语言key清单.md",
     "ng-config-web/research/2026-09-01-文件预览FilePreview多语言key清单.md",
     "ng-config-web/research/2026-09-01-附件存储配置Databaseinitconfig多语言key清单.md",
-    "ng-config-web/research/2026-08-14-附件多语言key清单.md",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.fc1fc6a9e320",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.0c5698dd5199",
     "ng-config-web/research/2026-09-03-收藏页面myFavorite多语言key清单.md.tmp.6604.5c59765662a5",
