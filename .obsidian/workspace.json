@@ -55,16 +55,72 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "报表多语言/QC_Report_ReportManagement.md",
+                "file": "报表多语言/QC_Report_DataSourceManagement.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QC_Report_ReportManagement"
+              "title": "QC_Report_DataSourceManagement"
+            }
+          },
+          {
+            "id": "3099fd4989444650",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "报表多语言/QC_Report_DatasetManagement.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "QC_Report_DatasetManagement"
+            }
+          },
+          {
+            "id": "7d4bb58c7bfc9930",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "报表多语言/PrintSetV2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PrintSetV2"
+            }
+          },
+          {
+            "id": "dea11817cd652a5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "报表多语言/QC_Report_SimpleReportDesign.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "QC_Report_SimpleReportDesign"
+            }
+          },
+          {
+            "id": "f93eb4b8cda2f3ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "报表多语言/common.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "common"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -242,16 +298,21 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "064ff62d2ef6b3c6",
+  "active": "f93eb4b8cda2f3ea",
   "lastOpenFiles": [
-    "xzd/2026-09-14-QC_Report_SimpleReportDesign-多语言缺失清单.md",
+    "专业考题.md",
+    "报表多语言/common.md",
+    "报表多语言/QC_Report_SimpleReportDesign.md",
+    "报表多语言/PrintSetV2.md",
+    "报表多语言/QC_Report_DatasetManagement.md",
+    "报表多语言/QC_Report_DataSourceManagement.md",
     "报表多语言/QC_Report_ReportManagement.md",
+    "xzd/2026-09-14-QC_Report_SimpleReportDesign-多语言缺失清单.md",
     "报表多语言",
     "xzd/00-多语言总览.md",
     "xzd/2026-09-14-PrintSetV2-多语言缺失清单.md",
     "xzd/2026-09-14-QC_Report_ReportManagement-多语言缺失清单.md",
     "工作清单/9.15.md",
-    "专业考题.md",
     "工作清单",
     "xzd/版本管理/部署记录/清单/6_5_2_20260911-183034_91348.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_2_20260911-183034_91348.md",
@@ -273,13 +334,8 @@
     "xzd/PrintManager-中文清单.md",
     "xzd/TableManager-中文清单.md",
     "xzd/SimpleTableManager-中文清单.md",
-    "xzd/DataSourceManager-中文清单.md",
-    "xzd/DataSetManager-中文清单.md",
-    "xzd/版本管理/research/2026-09-01-ng-config-web-Datamigration后端多语言注册清单.md",
     "xzd/i18n/TableManager.json",
     "xzd/i18n/SimpleTableManager.json",
-    "xzd/版本管理/research/2026-09-01-ng-config-web-Databaseinitconfig后端多语言注册清单.md",
-    "xzd/版本管理/research/2026-09-01-ng-config-web-FilePreview后端多语言注册清单.md",
     "Pasted image 20260701093053.png",
     "Pasted image 20260701093209.png",
     "未命名.canvas",
