@@ -3,9 +3,9 @@ tags:
   - project/deepseek-harness
   - work-item
   - stocks
-status: blocked
+status: ready
 date: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-17
 ---
 
 # 06 — 风险汇总与集中度
@@ -16,7 +16,7 @@ updated: 2026-09-09
 
 **Blocked by:** 02, 05
 
-**Status:** blocked — 依赖票据05；其真实行情 Adapter 受阶段0数据源决策阻塞。
+**Status:** ready — 票据05已提供东方财富公开 Adapter 与 `fxQuote`。
 
 - [ ] 资产总览按市场、币种、行业、单标的显示集中度
 - [ ] 同一市场+代码的跨账户持仓合并计算单标的集中度
@@ -30,4 +30,4 @@ updated: 2026-09-09
 ## Comments
 
 - 2026-09-09：票据05在阶段0完成前不可实施；因此本票据不能进入实现。
-
+- 2026-09-17：阶段0完成；票据05已实现。本票据不再被阶段0阻塞。

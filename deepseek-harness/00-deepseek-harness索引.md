@@ -2,7 +2,7 @@
 tags:
   - project/deepseek-harness
 status: active
-updated: 2026-09-09
+updated: 2026-09-17
 ---
 
 # DeepSeek Harness 索引
@@ -10,6 +10,7 @@ updated: 2026-09-09
 ## 调研
 
 - [[research/2026-09-08-现有股票DSH插件功能调研]]
+- [[research/2026-09-17-国内行情供应商]]
 
 ## 工作项
 
