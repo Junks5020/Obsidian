@@ -14,7 +14,7 @@ updated: 2026-09-23
 ## 已确认范围
 
 - 在 `DesignReportTableAPI` 顶层提供同步 `getValue()`，返回当前尚未保存设计对应的保存请求结构；表格设计使用 `SaveReportDesignPayload`，打印设计使用 `PrintDesignSavePayload`。
-- 设计详情、当前工作表或 Handsontable 尚未就绪时，以及处于计算模式时，`getValue()` 返回 `null`。快照从当前内存状态生成，不提交保存请求。
+- 已有设计 ID 对应详情、当前工作表或 Handsontable 尚未就绪时，以及处于计算模式时，`getValue()` 返回 `null`。空 `id` 创建的空白设计可在工作表和 HOT 就绪后读取。快照从当前内存状态生成，不提交保存请求。
 - 表格设计默认自动调用 `findReportDesignDetail`。宿主传入 `autoLoad={false}` 可关闭自动读取，并在合适时机调用 `ref.current.load()`。
 - `load()` 读取当前 `id` 对应的设计详情，返回 `Promise<boolean>`：当前请求收到并应用 `Code === 200` 响应时为 `true`；无标识、非 200 或已过期请求为 `false`；网络异常向调用方 reject。
 - 打印设计继续自动读取打印详情；`autoLoad` 不控制打印详情加载。
