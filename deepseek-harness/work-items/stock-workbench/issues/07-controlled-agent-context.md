@@ -3,9 +3,9 @@ tags:
   - project/deepseek-harness
   - work-item
   - stocks
-status: blocked
+status: in-progress
 date: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-28
 ---
 
 # 07 — 受控 Agent 上下文
@@ -16,7 +16,7 @@ updated: 2026-09-09
 
 **Blocked by:** 02, 06
 
-**Status:** blocked — 依赖票据06。
+**Status:** in-progress — 依赖 02、06 均已 implemented（2026-09-28 解除阻塞）。
 
 - [ ] 发送前预览将发送的字段与模型服务商，用户审阅后才发送
 - [ ] 用户可只发送所选标的，或主动选择发送全局摘要
@@ -29,4 +29,5 @@ updated: 2026-09-09
 
 - 2026-09-09：需先完成票据06；其行情依赖仍等待阶段0数据源决策。
 - 2026-09-17：阶段0完成；仍等待票据06。
+- 2026-09-28：票据06已合入 master（4af0132863 + 修复 455b2fbee5），开始实现。方案：新增浏览器包 client-ui-stock-context-composer，纯函数 compose 出匿名草稿，经 shell.overlay 预览，由 conversation.send 进入会话输入；不注册任何模型侧账本工具。
 
