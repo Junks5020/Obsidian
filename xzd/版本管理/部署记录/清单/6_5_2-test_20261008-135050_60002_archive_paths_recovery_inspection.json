@@ -1,0 +1,2159 @@
+{
+  "created_at": "2026-10-08T14:32:42.217984+08:00",
+  "host": "47.96.237.137",
+  "connection": "via 101.37.16.1",
+  "directories": {
+    "React": {
+      "exists": true,
+      "is_dir": true,
+      "symlink": false,
+      "files": {
+        "1469.872f67ca.async.js": {
+          "size": 5250,
+          "symlink": false
+        },
+        "1561.70728187.async.js": {
+          "size": 11679,
+          "symlink": false
+        },
+        "1626.d7903042.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "1906.0410918c.async.js": {
+          "size": 9100,
+          "symlink": false
+        },
+        "2257.9a8d9abb.async.js": {
+          "size": 1698,
+          "symlink": false
+        },
+        "2644.655ea671.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "288.5beff4df.async.js": {
+          "size": 2233,
+          "symlink": false
+        },
+        "2906.b9128ba9.async.js": {
+          "size": 6903,
+          "symlink": false
+        },
+        "3114.027b9a1c.async.js": {
+          "size": 2517,
+          "symlink": false
+        },
+        "3245.080f418f.async.js": {
+          "size": 1698,
+          "symlink": false
+        },
+        "3281.aebfbdc8.async.js": {
+          "size": 414,
+          "symlink": false
+        },
+        "3300.3da52355.async.js": {
+          "size": 6448,
+          "symlink": false
+        },
+        "3300.f7768d2e.chunk.css": {
+          "size": 809,
+          "symlink": false
+        },
+        "343.6cba89dd.async.js": {
+          "size": 418,
+          "symlink": false
+        },
+        "3615.729aeb92.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "3684.e3b6764b.async.js": {
+          "size": 3045,
+          "symlink": false
+        },
+        "3761.7f0cf78b.async.js": {
+          "size": 3107,
+          "symlink": false
+        },
+        "3778.ad780fea.async.js": {
+          "size": 22443,
+          "symlink": false
+        },
+        "3931.5923c72a.async.js": {
+          "size": 30264,
+          "symlink": false
+        },
+        "3996.3c4dd528.async.js": {
+          "size": 2841,
+          "symlink": false
+        },
+        "4215.c8422664.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "4385.3d1715ad.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "4543.a46a10ad.async.js": {
+          "size": 6074,
+          "symlink": false
+        },
+        "4597.5063a7fe.async.js": {
+          "size": 2377,
+          "symlink": false
+        },
+        "4662.f7768d2e.chunk.css": {
+          "size": 809,
+          "symlink": false
+        },
+        "4662.ffc8c16d.async.js": {
+          "size": 2607,
+          "symlink": false
+        },
+        "4876.b37cbb5d.async.js": {
+          "size": 9601,
+          "symlink": false
+        },
+        "4919.57242367.async.js": {
+          "size": 1439,
+          "symlink": false
+        },
+        "4e3782c605a2381fce4b8c2ef7f7d3e0.svg": {
+          "size": 14139,
+          "symlink": false
+        },
+        "514781319b6c8dd50af5eaa1c4fb7271.svg": {
+          "size": 15283,
+          "symlink": false
+        },
+        "5197.b3078876.async.js": {
+          "size": 2846,
+          "symlink": false
+        },
+        "555.c170823c.async.js": {
+          "size": 6674,
+          "symlink": false
+        },
+        "5774.a5137128.async.js": {
+          "size": 10007,
+          "symlink": false
+        },
+        "5993.75d8e237.async.js": {
+          "size": 1697,
+          "symlink": false
+        },
+        "6325.d4ede675.async.js": {
+          "size": 1797,
+          "symlink": false
+        },
+        "6581.3e4f4dc4.async.js": {
+          "size": 1697,
+          "symlink": false
+        },
+        "6696.dae4c3c5.async.js": {
+          "size": 800080,
+          "symlink": false
+        },
+        "7002.848481c7.async.js": {
+          "size": 7036,
+          "symlink": false
+        },
+        "7069.35a49873.async.js": {
+          "size": 3392,
+          "symlink": false
+        },
+        "805.3b76df9f.async.js": {
+          "size": 2936,
+          "symlink": false
+        },
+        "8090.c0331be3.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "8207.f7ad5945.async.js": {
+          "size": 10385,
+          "symlink": false
+        },
+        "829d70c608e5e94010b1aca8088f330f.svg": {
+          "size": 14203,
+          "symlink": false
+        },
+        "8560.d9757ce9.async.js": {
+          "size": 377,
+          "symlink": false
+        },
+        "8606.34bd1596.async.js": {
+          "size": 81261,
+          "symlink": false
+        },
+        "8843.f74c5563.async.js": {
+          "size": 445,
+          "symlink": false
+        },
+        "9030.dbd974d6.async.js": {
+          "size": 445,
+          "symlink": false
+        },
+        "9071.803d8bab.async.js": {
+          "size": 2799,
+          "symlink": false
+        },
+        "9539.c709c512.async.js": {
+          "size": 2198,
+          "symlink": false
+        },
+        "@extend-ai-react-xlsx-lib.6be50db0.async.js": {
+          "size": 2097454,
+          "symlink": false
+        },
+        "apps.js": {
+          "size": 6445,
+          "symlink": false
+        },
+        "cfg.js": {
+          "size": 1637,
+          "symlink": false
+        },
+        "framework.3270d1f0.js": {
+          "size": 155778,
+          "symlink": false
+        },
+        "index.html": {
+          "size": 1022,
+          "symlink": false
+        },
+        "p__404__index.32ac95cb.chunk.css": {
+          "size": 44,
+          "symlink": false
+        },
+        "p__404__index.f98f41fe.async.js": {
+          "size": 753,
+          "symlink": false
+        },
+        "p__appFlow__batchList__index.5312c211.async.js": {
+          "size": 13127,
+          "symlink": false
+        },
+        "p__appFlow__batchList__index.ad9bdd3a.chunk.css": {
+          "size": 3788,
+          "symlink": false
+        },
+        "p__appFlow__detail__index.1ec49c3e.chunk.css": {
+          "size": 42925,
+          "symlink": false
+        },
+        "p__appFlow__detail__index.d9660f3c.async.js": {
+          "size": 269916,
+          "symlink": false
+        },
+        "p__appFlow__index.89ac5fc1.async.js": {
+          "size": 725,
+          "symlink": false
+        },
+        "p__appFlow__list__index.6a03ffdd.async.js": {
+          "size": 21267,
+          "symlink": false
+        },
+        "p__appFlow__list__index.a0d28688.chunk.css": {
+          "size": 15925,
+          "symlink": false
+        },
+        "p__home__index.654c1dbb.chunk.css": {
+          "size": 349,
+          "symlink": false
+        },
+        "p__home__index.fd47a806.async.js": {
+          "size": 3016,
+          "symlink": false
+        },
+        "p__portalDesign__index.43dfa806.async.js": {
+          "size": 1450,
+          "symlink": false
+        },
+        "p__workbench__appCenter__index.d4173237.async.js": {
+          "size": 9953,
+          "symlink": false
+        },
+        "p__workbench__appCenter__index.ed611bd3.chunk.css": {
+          "size": 4599,
+          "symlink": false
+        },
+        "p__workbench__cardConfig__index.933df4ce.async.js": {
+          "size": 6421,
+          "symlink": false
+        },
+        "p__workbench__cardConfig__index.f1d58957.chunk.css": {
+          "size": 3767,
+          "symlink": false
+        },
+        "p__workbench__home__index.4efe396c.chunk.css": {
+          "size": 9085,
+          "symlink": false
+        },
+        "p__workbench__home__index.5abcb809.async.js": {
+          "size": 11926,
+          "symlink": false
+        },
+        "regl-lib.9a36b550.async.js": {
+          "size": 122591,
+          "symlink": false
+        },
+        "shared-262o6c2w7i826Qk5DsWTi5MlFJY_.2d07e3f8.async.js": {
+          "size": 128738,
+          "symlink": false
+        },
+        "shared-4CnFBzNl5fyu-eexNj6CuoWMGPk_.1fd96d70.async.js": {
+          "size": 53975,
+          "symlink": false
+        },
+        "shared-9UtCmEv-TRFEYfzqJxCvQUrBnQ_.fed60598.async.js": {
+          "size": 312856,
+          "symlink": false
+        },
+        "shared-ea1O0j5p2zsPE6qA7zp9z07E7MQ_.773174f9.async.js": {
+          "size": 64562,
+          "symlink": false
+        },
+        "shared-JgKEWEin66gz6DGOjvq0wAKfvs_.2c673169.chunk.css": {
+          "size": 19799,
+          "symlink": false
+        },
+        "shared-JgKEWEin66gz6DGOjvq0wAKfvs_.57411266.async.js": {
+          "size": 165153,
+          "symlink": false
+        },
+        "shared-lB8Lg7SrV9Q47gIEpqzdUvx9wI_.31fbea77.async.js": {
+          "size": 20725,
+          "symlink": false
+        },
+        "shared-yRWbzK6sIcI2orGPTrhj9JnEKb8_.e6408750.async.js": {
+          "size": 147255,
+          "symlink": false
+        },
+        "umi.aa7858d8.css": {
+          "size": 212989,
+          "symlink": false
+        },
+        "umi.c0c00794.js": {
+          "size": 6833024,
+          "symlink": false
+        },
+        "_-xlsx-worker_js-lib.1295f8b9.async.js": {
+          "size": 111413,
+          "symlink": false
+        },
+        "adapter/api/feishu.js": {
+          "size": 15766,
+          "symlink": false
+        },
+        "adapter/api/h5Native.js": {
+          "size": 2401,
+          "symlink": false
+        },
+        "adapter/api/h5Test.js": {
+          "size": 5175,
+          "symlink": false
+        },
+        "adapter/api/hlsnspq.js": {
+          "size": 5755,
+          "symlink": false
+        },
+        "adapter/api/lanlingOA.js": {
+          "size": 6625,
+          "symlink": false
+        },
+        "adapter/extra-js/kk-1.3.19.min.js": {
+          "size": 42506,
+          "symlink": false
+        },
+        "adapter/login/feishu.js": {
+          "size": 3916,
+          "symlink": false
+        },
+        "adapter/login/h5Native.js": {
+          "size": 962,
+          "symlink": false
+        },
+        "adapter/login/h5Test.js": {
+          "size": 788,
+          "symlink": false
+        },
+        "adapter/login/hlsnspq.js": {
+          "size": 3065,
+          "symlink": false
+        },
+        "adapter/login/lanlingOA.js": {
+          "size": 3961,
+          "symlink": false
+        },
+        "static/avatarBG.5fc92a40.svg": {
+          "size": 1259,
+          "symlink": false
+        },
+        "static/duke_sheets_wasm_bg.5c620306.wasm": {
+          "size": 4412299,
+          "symlink": false
+        }
+      },
+      "index_sha256": "39ee75e8e0a43073c45df1791a729d6331fd037d0dd0d79e052fe396b080d269"
+    },
+    "platform_react": {
+      "exists": true,
+      "is_dir": true,
+      "symlink": false,
+      "files": {
+        "1203.81a11c46.async.js": {
+          "size": 2736,
+          "symlink": false
+        },
+        "1469.c53ccbb7.async.js": {
+          "size": 9359,
+          "symlink": false
+        },
+        "1626.b857b455.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "164b340fe6bb918f0ba6861532f81be6.svg": {
+          "size": 13621,
+          "symlink": false
+        },
+        "171b5366253ef425c083b9469c51f73c.svg": {
+          "size": 13621,
+          "symlink": false
+        },
+        "1906.cec482eb.async.js": {
+          "size": 9128,
+          "symlink": false
+        },
+        "2257.7605f39c.async.js": {
+          "size": 4966,
+          "symlink": false
+        },
+        "2644.c82725dd.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "2906.f0cf89e5.async.js": {
+          "size": 6931,
+          "symlink": false
+        },
+        "3114.125513fd.async.js": {
+          "size": 2545,
+          "symlink": false
+        },
+        "3245.af404c4f.async.js": {
+          "size": 4966,
+          "symlink": false
+        },
+        "3259.a2a0b9e2.async.js": {
+          "size": 2231,
+          "symlink": false
+        },
+        "3281.18fc0777.async.js": {
+          "size": 442,
+          "symlink": false
+        },
+        "343.40b472ff.async.js": {
+          "size": 446,
+          "symlink": false
+        },
+        "353a8f8bd7755ba3ad08a9979991ee77.svg": {
+          "size": 13621,
+          "symlink": false
+        },
+        "3615.57de063e.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "3684.a21ab523.async.js": {
+          "size": 6313,
+          "symlink": false
+        },
+        "3996.538cf433.async.js": {
+          "size": 4733,
+          "symlink": false
+        },
+        "4132.69f6fb07.async.js": {
+          "size": 801402,
+          "symlink": false
+        },
+        "4215.058361b4.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "42e7ad50469589c8136b9522e26ae8e7.svg": {
+          "size": 13547,
+          "symlink": false
+        },
+        "4369.4d784128.async.js": {
+          "size": 2746,
+          "symlink": false
+        },
+        "4385.1dd6787a.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "4543.649e1764.async.js": {
+          "size": 6102,
+          "symlink": false
+        },
+        "4597.7dc21da4.async.js": {
+          "size": 4965,
+          "symlink": false
+        },
+        "4876.ebb3a6ce.async.js": {
+          "size": 9379,
+          "symlink": false
+        },
+        "4919.7b63ad73.async.js": {
+          "size": 4707,
+          "symlink": false
+        },
+        "4a60ae4782b5b703250b85860569a6e9.svg": {
+          "size": 13484,
+          "symlink": false
+        },
+        "4e3782c605a2381fce4b8c2ef7f7d3e0.svg": {
+          "size": 14139,
+          "symlink": false
+        },
+        "514781319b6c8dd50af5eaa1c4fb7271.svg": {
+          "size": 15283,
+          "symlink": false
+        },
+        "5197.4bb07d09.async.js": {
+          "size": 3046,
+          "symlink": false
+        },
+        "5493.df8f1590.async.js": {
+          "size": 9376,
+          "symlink": false
+        },
+        "555.e045f3db.async.js": {
+          "size": 6702,
+          "symlink": false
+        },
+        "5774.ca8243e1.async.js": {
+          "size": 9800,
+          "symlink": false
+        },
+        "5984.c5a90d26.async.js": {
+          "size": 6345,
+          "symlink": false
+        },
+        "5993.5b3362a5.async.js": {
+          "size": 4965,
+          "symlink": false
+        },
+        "6325.69567d0f.async.js": {
+          "size": 5065,
+          "symlink": false
+        },
+        "6390.68ab706b.async.js": {
+          "size": 289,
+          "symlink": false
+        },
+        "6403.1d4a6622.async.js": {
+          "size": 5274,
+          "symlink": false
+        },
+        "6581.a3d5e23b.async.js": {
+          "size": 4965,
+          "symlink": false
+        },
+        "664a092201ff73f98e157866612e5009.svg": {
+          "size": 15677,
+          "symlink": false
+        },
+        "7069.ab98748d.async.js": {
+          "size": 6288,
+          "symlink": false
+        },
+        "7123.8802ecfa.async.js": {
+          "size": 4982,
+          "symlink": false
+        },
+        "7b5aaf7bccfe086358bbd071d6a32180.svg": {
+          "size": 13476,
+          "symlink": false
+        },
+        "805.4fe8d1a0.async.js": {
+          "size": 6066,
+          "symlink": false
+        },
+        "8090.38b04158.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "8207.ad1a36bb.async.js": {
+          "size": 10336,
+          "symlink": false
+        },
+        "829d70c608e5e94010b1aca8088f330f.svg": {
+          "size": 14203,
+          "symlink": false
+        },
+        "8303.3015c5b8.async.js": {
+          "size": 2778,
+          "symlink": false
+        },
+        "8560.35489c3b.async.js": {
+          "size": 405,
+          "symlink": false
+        },
+        "8606.9e04cf6d.async.js": {
+          "size": 81289,
+          "symlink": false
+        },
+        "8843.34d6fdd5.async.js": {
+          "size": 473,
+          "symlink": false
+        },
+        "8853.ce8ee793.async.js": {
+          "size": 4852,
+          "symlink": false
+        },
+        "9030.a045c58a.async.js": {
+          "size": 473,
+          "symlink": false
+        },
+        "9071.fe527c60.async.js": {
+          "size": 6067,
+          "symlink": false
+        },
+        "9539.97c07b00.async.js": {
+          "size": 5079,
+          "symlink": false
+        },
+        "9598.1f5bfe0e.async.js": {
+          "size": 2762,
+          "symlink": false
+        },
+        "9963.d38241b3.async.js": {
+          "size": 1799,
+          "symlink": false
+        },
+        "b07ea637449bd2c848cf37e10ffedea8.svg": {
+          "size": 13552,
+          "symlink": false
+        },
+        "b1f4596d51899a758db7a362d42bb2e4.svg": {
+          "size": 13484,
+          "symlink": false
+        },
+        "c0f4451bc4e6a3d5eb640aed9cc80b0d.svg": {
+          "size": 14150,
+          "symlink": false
+        },
+        "e84b363ca7fce7e7ccfc94c0428f3cc0.svg": {
+          "size": 13521,
+          "symlink": false
+        },
+        "framework.3507638d.js": {
+          "size": 155831,
+          "symlink": false
+        },
+        "index.html": {
+          "size": 690,
+          "symlink": false
+        },
+        "layouts__index.6a0fb62e.chunk.css": {
+          "size": 788,
+          "symlink": false
+        },
+        "preload_helper.484be968.js": {
+          "size": 31652,
+          "symlink": false
+        },
+        "p__appFlow__batchList__index.a7117702.async.js": {
+          "size": 13228,
+          "symlink": false
+        },
+        "p__appFlow__batchList__index.ad9bdd3a.chunk.css": {
+          "size": 3788,
+          "symlink": false
+        },
+        "p__appFlow__detail__index.a6201e6f.async.js": {
+          "size": 226707,
+          "symlink": false
+        },
+        "p__appFlow__detail__index.fb5d4be2.chunk.css": {
+          "size": 32884,
+          "symlink": false
+        },
+        "p__appFlow__index.6a0fb62e.chunk.css": {
+          "size": 788,
+          "symlink": false
+        },
+        "p__appFlow__index.bb0809a7.async.js": {
+          "size": 758,
+          "symlink": false
+        },
+        "p__appFlow__list__index.629c184b.async.js": {
+          "size": 23976,
+          "symlink": false
+        },
+        "p__appFlow__list__index.715f1320.chunk.css": {
+          "size": 17460,
+          "symlink": false
+        },
+        "p__apply__goOut__form__index.0d4a61d3.chunk.css": {
+          "size": 10396,
+          "symlink": false
+        },
+        "p__apply__goOut__form__index.25e5a57d.async.js": {
+          "size": 24160,
+          "symlink": false
+        },
+        "p__apply__goOut__list__index.1c8eca95.async.js": {
+          "size": 21818,
+          "symlink": false
+        },
+        "p__apply__goOut__list__index.7f78f01b.chunk.css": {
+          "size": 7120,
+          "symlink": false
+        },
+        "p__apply__holiday__form__index.06153b97.chunk.css": {
+          "size": 6212,
+          "symlink": false
+        },
+        "p__apply__holiday__form__index.67504ac1.async.js": {
+          "size": 36766,
+          "symlink": false
+        },
+        "p__apply__holiday__list__index.07c59ebe.chunk.css": {
+          "size": 7173,
+          "symlink": false
+        },
+        "p__apply__holiday__list__index.fe7056de.async.js": {
+          "size": 66894,
+          "symlink": false
+        },
+        "p__apply__makeUpAttendance__form__index.654419c8.async.js": {
+          "size": 40299,
+          "symlink": false
+        },
+        "p__apply__makeUpAttendance__form__index.802958ef.chunk.css": {
+          "size": 7642,
+          "symlink": false
+        },
+        "p__apply__makeUpAttendance__list__index.1f5c39bb.chunk.css": {
+          "size": 7092,
+          "symlink": false
+        },
+        "p__apply__makeUpAttendance__list__index.37727d0d.async.js": {
+          "size": 26257,
+          "symlink": false
+        },
+        "p__apply__workOvertime__form__index.e7cff913.chunk.css": {
+          "size": 5968,
+          "symlink": false
+        },
+        "p__apply__workOvertime__form__index.f0184ff7.async.js": {
+          "size": 25122,
+          "symlink": false
+        },
+        "p__apply__workOvertime__list__index.1954462b.async.js": {
+          "size": 67949,
+          "symlink": false
+        },
+        "p__apply__workOvertime__list__index.7647a320.chunk.css": {
+          "size": 7092,
+          "symlink": false
+        },
+        "p__attend__application__index.68ca96aa.async.js": {
+          "size": 22630,
+          "symlink": false
+        },
+        "p__attend__application__index.ff3e9753.chunk.css": {
+          "size": 2582,
+          "symlink": false
+        },
+        "p__attend__clockIn__field-attendance__index.6c097b2b.async.js": {
+          "size": 42419,
+          "symlink": false
+        },
+        "p__attend__clockIn__field-attendance__index.8ef246a8.chunk.css": {
+          "size": 9412,
+          "symlink": false
+        },
+        "p__attend__clockIn__index.2c9cd6b3.async.js": {
+          "size": 76784,
+          "symlink": false
+        },
+        "p__attend__clockIn__index.3d025d43.chunk.css": {
+          "size": 29971,
+          "symlink": false
+        },
+        "p__attend__statistics__departmentStatistics__index.8b40df2a.async.js": {
+          "size": 7402,
+          "symlink": false
+        },
+        "p__attend__statistics__departmentStatistics__index.e61c70be.chunk.css": {
+          "size": 14494,
+          "symlink": false
+        },
+        "p__attend__statistics__employeeStatistics__index.95117d7d.async.js": {
+          "size": 3662,
+          "symlink": false
+        },
+        "p__attend__statistics__employeeStatistics__index.caeb9820.chunk.css": {
+          "size": 14572,
+          "symlink": false
+        },
+        "p__attend__statistics__groupStatistics__index.8d63c18b.chunk.css": {
+          "size": 14494,
+          "symlink": false
+        },
+        "p__attend__statistics__groupStatistics__index.b513deac.async.js": {
+          "size": 7420,
+          "symlink": false
+        },
+        "p__attend__statistics__index.6325d4e4.chunk.css": {
+          "size": 14008,
+          "symlink": false
+        },
+        "p__attend__statistics__index.af23ce74.async.js": {
+          "size": 945,
+          "symlink": false
+        },
+        "p__attend__statistics__multipleAttendance__index.9b98d8da.async.js": {
+          "size": 3086,
+          "symlink": false
+        },
+        "p__attend__statistics__multipleAttendance__index.da0d60ea.chunk.css": {
+          "size": 1947,
+          "symlink": false
+        },
+        "p__attend__statistics__organizationalStatistics__index.6a88999b.chunk.css": {
+          "size": 14494,
+          "symlink": false
+        },
+        "p__attend__statistics__organizationalStatistics__index.c7bbf94e.async.js": {
+          "size": 7368,
+          "symlink": false
+        },
+        "p__attend__statistics__personalStatistics__index.4d4678b7.async.js": {
+          "size": 6931,
+          "symlink": false
+        },
+        "p__attend__statistics__personalStatistics__index.e10d90a7.chunk.css": {
+          "size": 14492,
+          "symlink": false
+        },
+        "p__attend__statistics__subordinateStatistics__index.04575d80.chunk.css": {
+          "size": 14572,
+          "symlink": false
+        },
+        "p__attend__statistics__subordinateStatistics__index.66091808.async.js": {
+          "size": 7266,
+          "symlink": false
+        },
+        "p__attend__statistics___layout.6325d4e4.chunk.css": {
+          "size": 14008,
+          "symlink": false
+        },
+        "p__attend__statistics___layout.88403f6b.async.js": {
+          "size": 849,
+          "symlink": false
+        },
+        "p__attend___layout.5cbdc490.async.js": {
+          "size": 2877,
+          "symlink": false
+        },
+        "p__attend___layout.da0df4f2.chunk.css": {
+          "size": 6403,
+          "symlink": false
+        },
+        "p__bying__detail__index.3e971f4f.chunk.css": {
+          "size": 2824,
+          "symlink": false
+        },
+        "p__bying__detail__index.f5784b32.async.js": {
+          "size": 19062,
+          "symlink": false
+        },
+        "p__bying__index.6fcb6e5b.chunk.css": {
+          "size": 2302,
+          "symlink": false
+        },
+        "p__bying__index.b68241b1.async.js": {
+          "size": 8765,
+          "symlink": false
+        },
+        "p__certificationM__certHelp__index.0b46cf70.async.js": {
+          "size": 19879,
+          "symlink": false
+        },
+        "p__certificationM__certHelp__index.cf5ceff1.chunk.css": {
+          "size": 8360,
+          "symlink": false
+        },
+        "p__certificationM__certificationAdd__index.4959d031.chunk.css": {
+          "size": 10092,
+          "symlink": false
+        },
+        "p__certificationM__certificationAdd__index.ea7d8e44.async.js": {
+          "size": 30364,
+          "symlink": false
+        },
+        "p__certificationM__index.0fae6098.chunk.css": {
+          "size": 5219,
+          "symlink": false
+        },
+        "p__certificationM__index.53b60fd0.async.js": {
+          "size": 19127,
+          "symlink": false
+        },
+        "p__certificationM__scanResult__index.67aa30eb.async.js": {
+          "size": 49135,
+          "symlink": false
+        },
+        "p__certificationM__scanResult__index.fdbcb03e.chunk.css": {
+          "size": 1013,
+          "symlink": false
+        },
+        "p__clue__detail__index.971dbd71.async.js": {
+          "size": 73423,
+          "symlink": false
+        },
+        "p__clue__detail__index.f80c627e.chunk.css": {
+          "size": 9463,
+          "symlink": false
+        },
+        "p__clue__index.2ae0bb23.async.js": {
+          "size": 17692,
+          "symlink": false
+        },
+        "p__clue__index.7d3a9fd7.chunk.css": {
+          "size": 5432,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__detail__index.32315fa6.async.js": {
+          "size": 32626,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__detail__index.a242c7d4.chunk.css": {
+          "size": 3984,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__index.a5d7522a.async.js": {
+          "size": 256,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__list__index.ca53d5e3.async.js": {
+          "size": 46286,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__list__index.f01a2984.chunk.css": {
+          "size": 8739,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__rectify-sheet__index.27d9915c.async.js": {
+          "size": 38123,
+          "symlink": false
+        },
+        "p__comprehensive-inspection__rectify-sheet__index.d7e2e95e.chunk.css": {
+          "size": 4158,
+          "symlink": false
+        },
+        "p__contractManage__add__index.94ce66ef.async.js": {
+          "size": 34776,
+          "symlink": false
+        },
+        "p__contractManage__add__index.d9685596.chunk.css": {
+          "size": 2766,
+          "symlink": false
+        },
+        "p__contractManage__detail__index.c16d3130.chunk.css": {
+          "size": 42807,
+          "symlink": false
+        },
+        "p__contractManage__detail__index.e0e58263.async.js": {
+          "size": 37499,
+          "symlink": false
+        },
+        "p__contractManage__list__index.6478e7d3.chunk.css": {
+          "size": 12587,
+          "symlink": false
+        },
+        "p__contractManage__list__index.71498bdb.async.js": {
+          "size": 36416,
+          "symlink": false
+        },
+        "p__customFormNew__detail.59c45561.async.js": {
+          "size": 378,
+          "symlink": false
+        },
+        "p__customFormNew__list.425d17a8.async.js": {
+          "size": 382,
+          "symlink": false
+        },
+        "p__customFrom__detail.efa07df4.async.js": {
+          "size": 243,
+          "symlink": false
+        },
+        "p__customFrom__list.81cefec5.async.js": {
+          "size": 247,
+          "symlink": false
+        },
+        "p__enterpriseInspection__index.b976b079.async.js": {
+          "size": 5023,
+          "symlink": false
+        },
+        "p__enterpriseInspection__index.bd5ab4b1.chunk.css": {
+          "size": 69350,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__CheckSheetTab__add__index.685936ce.async.js": {
+          "size": 53567,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__CheckSheetTab__add__index.83d1c924.chunk.css": {
+          "size": 3091,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__CheckSheetTab__index.04ca78ed.chunk.css": {
+          "size": 15330,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__CheckSheetTab__index.31dc1b38.async.js": {
+          "size": 4509,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__CheckSummaryTab__index.f7cc44da.chunk.css": {
+          "size": 15213,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__PlanTab__add__index.0f2e0468.chunk.css": {
+          "size": 3042,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__PlanTab__add__index.31b206e4.async.js": {
+          "size": 12894,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__PlanTab__index.7e8f2f88.async.js": {
+          "size": 12521,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__PlanTab__index.8b2e5dea.chunk.css": {
+          "size": 10608,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__RectificationTab__add__index.7fb77900.chunk.css": {
+          "size": 2868,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__RectificationTab__add__index.9023eebc.async.js": {
+          "size": 21217,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__RectificationTab__index.b419faff.chunk.css": {
+          "size": 14472,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__ReviewTab__add__index.67180963.async.js": {
+          "size": 23169,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__ReviewTab__add__index.a1185180.chunk.css": {
+          "size": 2869,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__ReviewTab__index.1b2b66ff.async.js": {
+          "size": 1615,
+          "symlink": false
+        },
+        "p__enterpriseInspection__Tabs__ReviewTab__index.db389c10.chunk.css": {
+          "size": 14668,
+          "symlink": false
+        },
+        "p__evaluate__detail__index.9bfc0bb6.async.js": {
+          "size": 20358,
+          "symlink": false
+        },
+        "p__evaluate__detail__index.c15ff7bd.chunk.css": {
+          "size": 5416,
+          "symlink": false
+        },
+        "p__evaluate__index.26c2eab3.chunk.css": {
+          "size": 4573,
+          "symlink": false
+        },
+        "p__evaluate__index.62e794b2.async.js": {
+          "size": 8336,
+          "symlink": false
+        },
+        "p__fill-in-output__add__index.606b06c5.chunk.css": {
+          "size": 2871,
+          "symlink": false
+        },
+        "p__fill-in-output__add__index.8be8b824.async.js": {
+          "size": 20630,
+          "symlink": false
+        },
+        "p__fill-in-output__list__index.0d61cf56.async.js": {
+          "size": 34650,
+          "symlink": false
+        },
+        "p__fill-in-output__list__index.2e33ec66.chunk.css": {
+          "size": 11721,
+          "symlink": false
+        },
+        "p__fundingManage__InnerAccTab__detail__index.291c600a.chunk.css": {
+          "size": 6776,
+          "symlink": false
+        },
+        "p__fundingManage__InnerAccTab__detail__index.6a49ea82.async.js": {
+          "size": 18371,
+          "symlink": false
+        },
+        "p__fundingManage__InnerAccTab__detail__RecBillDetail__index.2b5a3cf8.chunk.css": {
+          "size": 3573,
+          "symlink": false
+        },
+        "p__fundingManage__InnerAccTab__detail__RecBillDetail__index.32dc181b.async.js": {
+          "size": 15047,
+          "symlink": false
+        },
+        "p__fundingManage__InnerAccTab__index.710fb9a4.async.js": {
+          "size": 3319,
+          "symlink": false
+        },
+        "p__fundingManage__InnerAccTab__index.aa0060c5.chunk.css": {
+          "size": 13270,
+          "symlink": false
+        },
+        "p__fundingManage__list__index.67d14ec4.chunk.css": {
+          "size": 28284,
+          "symlink": false
+        },
+        "p__fundingManage__list__index.f47b0f38.async.js": {
+          "size": 5677,
+          "symlink": false
+        },
+        "p__fundingManage__OtherExpenseTab__detail__index.5cad8be8.async.js": {
+          "size": 24437,
+          "symlink": false
+        },
+        "p__fundingManage__OtherExpenseTab__detail__index.97a86cec.chunk.css": {
+          "size": 6769,
+          "symlink": false
+        },
+        "p__fundingManage__OtherExpenseTab__index.b184b3ca.chunk.css": {
+          "size": 5114,
+          "symlink": false
+        },
+        "p__fundingManage__PayApply__detail__index.d76a9a7f.async.js": {
+          "size": 24036,
+          "symlink": false
+        },
+        "p__fundingManage__PayApply__detail__index.e7d549b5.chunk.css": {
+          "size": 6769,
+          "symlink": false
+        },
+        "p__fundingManage__PayApply__index.48b6cca7.chunk.css": {
+          "size": 5114,
+          "symlink": false
+        },
+        "p__fundingManage__RecBillTab__detail__index.4f900283.chunk.css": {
+          "size": 6769,
+          "symlink": false
+        },
+        "p__fundingManage__RecBillTab__detail__index.f9201ab6.async.js": {
+          "size": 26016,
+          "symlink": false
+        },
+        "p__fundingManage__RecBillTab__index.67d76e39.chunk.css": {
+          "size": 5114,
+          "symlink": false
+        },
+        "p__invoiceManage__InputInvoiceTab__detail__index.18ebdc8d.async.js": {
+          "size": 51894,
+          "symlink": false
+        },
+        "p__invoiceManage__InputInvoiceTab__detail__index.ad50e3f1.chunk.css": {
+          "size": 7861,
+          "symlink": false
+        },
+        "p__invoiceManage__InputInvoiceTab__index.d2638a0c.async.js": {
+          "size": 8970,
+          "symlink": false
+        },
+        "p__invoiceManage__InputInvoiceTab__index.f0cf8689.chunk.css": {
+          "size": 4637,
+          "symlink": false
+        },
+        "p__invoiceManage__list__index.07afa2a4.chunk.css": {
+          "size": 23201,
+          "symlink": false
+        },
+        "p__invoiceManage__list__index.ddfac337.async.js": {
+          "size": 16872,
+          "symlink": false
+        },
+        "p__invoiceManage__OpenInvoiceTab__detail__index.45be3cdf.async.js": {
+          "size": 30026,
+          "symlink": false
+        },
+        "p__invoiceManage__OpenInvoiceTab__detail__index.a8f03c7e.chunk.css": {
+          "size": 7861,
+          "symlink": false
+        },
+        "p__invoiceManage__OpenInvoiceTab__index.03f605de.chunk.css": {
+          "size": 4637,
+          "symlink": false
+        },
+        "p__invoiceManage__OpenInvoiceTab__index.47476dfb.async.js": {
+          "size": 8970,
+          "symlink": false
+        },
+        "p__invoiceManage__OutputInvoiceTab__detail__index.2f61a323.async.js": {
+          "size": 16677,
+          "symlink": false
+        },
+        "p__invoiceManage__OutputInvoiceTab__detail__index.7cfaf8ad.chunk.css": {
+          "size": 2766,
+          "symlink": false
+        },
+        "p__invoiceManage__OutputInvoiceTab__index.05360e7c.chunk.css": {
+          "size": 4637,
+          "symlink": false
+        },
+        "p__invoiceManage__scan__index.f3624ffe.async.js": {
+          "size": 5360,
+          "symlink": false
+        },
+        "p__materialManagement__index.380f3570.async.js": {
+          "size": 49950,
+          "symlink": false
+        },
+        "p__materialManagement__index.c9042d2b.chunk.css": {
+          "size": 24208,
+          "symlink": false
+        },
+        "p__materialManagement__Tabs__InBoundTab__add__index.c7861ef0.async.js": {
+          "size": 31532,
+          "symlink": false
+        },
+        "p__materialManagement__Tabs__InBoundTab__add__index.cbb2ed3e.chunk.css": {
+          "size": 12697,
+          "symlink": false
+        },
+        "p__materialManagement__Tabs__OutBoundTab__add__index.2eba26fa.chunk.css": {
+          "size": 12697,
+          "symlink": false
+        },
+        "p__materialManagement__Tabs__OutBoundTab__add__index.6d2a2e98.async.js": {
+          "size": 30478,
+          "symlink": false
+        },
+        "p__meteringSettlement__add__index.301bef95.chunk.css": {
+          "size": 9912,
+          "symlink": false
+        },
+        "p__meteringSettlement__add__index.b857135e.async.js": {
+          "size": 45555,
+          "symlink": false
+        },
+        "p__meteringSettlement__list__index.0e465db8.chunk.css": {
+          "size": 11666,
+          "symlink": false
+        },
+        "p__meteringSettlement__list__index.33a56632.async.js": {
+          "size": 30301,
+          "symlink": false
+        },
+        "p__my-attend__index.71674f06.async.js": {
+          "size": 5547,
+          "symlink": false
+        },
+        "p__my-attend__index.729358a5.chunk.css": {
+          "size": 714,
+          "symlink": false
+        },
+        "p__my-know__ask-question__index.454b25ed.async.js": {
+          "size": 3319,
+          "symlink": false
+        },
+        "p__my-know__ask-question__index.a36e4dc5.chunk.css": {
+          "size": 34,
+          "symlink": false
+        },
+        "p__my-know__comment__index.6e005483.chunk.css": {
+          "size": 3990,
+          "symlink": false
+        },
+        "p__my-know__comment__index.913f3292.async.js": {
+          "size": 6181,
+          "symlink": false
+        },
+        "p__my-know__detail__index.28918733.async.js": {
+          "size": 20185,
+          "symlink": false
+        },
+        "p__my-know__detail__index.7b13904f.chunk.css": {
+          "size": 10249,
+          "symlink": false
+        },
+        "p__my-know__expert__index.52cf8702.async.js": {
+          "size": 18818,
+          "symlink": false
+        },
+        "p__my-know__expert__index.fc8dde97.chunk.css": {
+          "size": 6065,
+          "symlink": false
+        },
+        "p__my-know__index.372164f6.chunk.css": {
+          "size": 6910,
+          "symlink": false
+        },
+        "p__my-know__index.656de06f.async.js": {
+          "size": 22978,
+          "symlink": false
+        },
+        "p__my-know__reply__index.0752a7a0.chunk.css": {
+          "size": 645,
+          "symlink": false
+        },
+        "p__my-know__reply__index.8eb85eb9.async.js": {
+          "size": 1714,
+          "symlink": false
+        },
+        "p__my-salary__detail__index.0111e9a1.async.js": {
+          "size": 16861,
+          "symlink": false
+        },
+        "p__my-salary__detail__index.c22dc65e.chunk.css": {
+          "size": 4021,
+          "symlink": false
+        },
+        "p__my-salary__index.09d4043d.async.js": {
+          "size": 20297,
+          "symlink": false
+        },
+        "p__my-salary__index.763f5a06.chunk.css": {
+          "size": 2416,
+          "symlink": false
+        },
+        "p__ncrm__contactManage__add__index.55b3acaa.async.js": {
+          "size": 4327,
+          "symlink": false
+        },
+        "p__ncrm__contactManage__add__index.b380182a.chunk.css": {
+          "size": 652,
+          "symlink": false
+        },
+        "p__ncrm__contactManage__detail__index.0d3913c1.async.js": {
+          "size": 29758,
+          "symlink": false
+        },
+        "p__ncrm__contactManage__detail__index.1f805b3c.chunk.css": {
+          "size": 7721,
+          "symlink": false
+        },
+        "p__ncrm__contactManage__list__index.29e2ac27.chunk.css": {
+          "size": 3673,
+          "symlink": false
+        },
+        "p__ncrm__contactManage__list__index.9a194dfa.async.js": {
+          "size": 15057,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__add__index.d23adee9.async.js": {
+          "size": 29539,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__add__index.e3f18b89.chunk.css": {
+          "size": 1448,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__detail__index.b0ccc054.chunk.css": {
+          "size": 20465,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__detail__index.c3f562ff.async.js": {
+          "size": 41453,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__list__index.36c4a839.async.js": {
+          "size": 15149,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__list__index.81a260a3.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__publicList__index.3d6c1ced.async.js": {
+          "size": 22013,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__publicList__index.6e00d13a.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__queryList__index.66f8012e.async.js": {
+          "size": 14803,
+          "symlink": false
+        },
+        "p__ncrm__customerManage__queryList__index.6de660c4.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__errorManage__showError__index.595d6e58.chunk.css": {
+          "size": 84,
+          "symlink": false
+        },
+        "p__ncrm__errorManage__showError__index.952d2b44.async.js": {
+          "size": 581,
+          "symlink": false
+        },
+        "p__ncrm__exceptionManage__processorTask__index.4f9a72a6.chunk.css": {
+          "size": 652,
+          "symlink": false
+        },
+        "p__ncrm__exceptionManage__processorTask__index.64c3cc49.async.js": {
+          "size": 3315,
+          "symlink": false
+        },
+        "p__ncrm__home__index.36823fb6.chunk.css": {
+          "size": 1311,
+          "symlink": false
+        },
+        "p__ncrm__home__index.b597f980.async.js": {
+          "size": 38425,
+          "symlink": false
+        },
+        "p__ncrm__index.ed7bdc78.async.js": {
+          "size": 235,
+          "symlink": false
+        },
+        "umi.7760e8f1.css": {
+          "size": 220996,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__add__index.1b603893.chunk.css": {
+          "size": 1437,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__add__index.a674d214.async.js": {
+          "size": 22510,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__detail__index.4c18917c.chunk.css": {
+          "size": 13367,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__detail__index.5fb9314a.async.js": {
+          "size": 17538,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__list__index.4b66ed8f.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__list__index.5949c171.async.js": {
+          "size": 28331,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__publicList__index.5efbab06.async.js": {
+          "size": 23399,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__publicList__index.b9657080.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__transfer__index.546d2dea.chunk.css": {
+          "size": 1437,
+          "symlink": false
+        },
+        "p__ncrm__leadManage__transfer__index.60ccfcd6.async.js": {
+          "size": 32151,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__add__index.17da0f92.chunk.css": {
+          "size": 1448,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__add__index.2c520ff8.async.js": {
+          "size": 41337,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__detail__index.85f978dc.async.js": {
+          "size": 29253,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__detail__index.9ad407f3.chunk.css": {
+          "size": 13940,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__list__index.b465802c.async.js": {
+          "size": 13723,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__list__index.b6f84e46.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__publicList__index.9750b690.async.js": {
+          "size": 10894,
+          "symlink": false
+        },
+        "p__ncrm__opptyManage__publicList__index.f7926d64.chunk.css": {
+          "size": 3658,
+          "symlink": false
+        },
+        "p__ncrm__recordManage__add__index.b5624791.chunk.css": {
+          "size": 652,
+          "symlink": false
+        },
+        "p__ncrm__recordManage__add__index.dccd595a.async.js": {
+          "size": 12492,
+          "symlink": false
+        },
+        "p__ncrm__recordManage__detail__index.b343f42b.chunk.css": {
+          "size": 694,
+          "symlink": false
+        },
+        "p__ncrm__recordManage__detail__index.cbd42bff.async.js": {
+          "size": 4418,
+          "symlink": false
+        },
+        "p__ncrm__recordManage__list__index.b112a892.async.js": {
+          "size": 16362,
+          "symlink": false
+        },
+        "p__ncrm__recordManage__list__index.f2dc1e73.chunk.css": {
+          "size": 3694,
+          "symlink": false
+        },
+        "p__ncrm__reportManage__detail__index.6665ebc0.async.js": {
+          "size": 31815,
+          "symlink": false
+        },
+        "p__ncrm__reportManage__detail__index.b14e4657.chunk.css": {
+          "size": 8187,
+          "symlink": false
+        },
+        "p__ncrm__reportManage__list__index.acc053c2.chunk.css": {
+          "size": 4460,
+          "symlink": false
+        },
+        "p__ncrm__reportManage__list__index.f37f90be.async.js": {
+          "size": 15095,
+          "symlink": false
+        },
+        "p__PCM_PAY1__detail__index.e50ac56f.async.js": {
+          "size": 33666,
+          "symlink": false
+        },
+        "p__PCM_PAY1__detail__index.eb657b9e.chunk.css": {
+          "size": 431,
+          "symlink": false
+        },
+        "p__PCM_PAY1__list__index.4ac990f3.async.js": {
+          "size": 25070,
+          "symlink": false
+        },
+        "p__PCM_PAY1__list__index.bba9f761.chunk.css": {
+          "size": 3645,
+          "symlink": false
+        },
+        "p__projectBoard__index.2694b5c8.async.js": {
+          "size": 13473,
+          "symlink": false
+        },
+        "p__projectBoard__index.707068f2.chunk.css": {
+          "size": 1954,
+          "symlink": false
+        },
+        "p__projectItemBoard__detail__index.0a3116d9.async.js": {
+          "size": 65891,
+          "symlink": false
+        },
+        "p__projectItemBoard__detail__index.d334116e.chunk.css": {
+          "size": 4545,
+          "symlink": false
+        },
+        "p__projectItemBoard__list__index.1593b671.chunk.css": {
+          "size": 10487,
+          "symlink": false
+        },
+        "p__projectItemBoard__list__index.5d34228c.async.js": {
+          "size": 63298,
+          "symlink": false
+        },
+        "p__projectManage__add__index.31e4f3a6.chunk.css": {
+          "size": 6299,
+          "symlink": false
+        },
+        "p__projectManage__add__index.5fe6b132.async.js": {
+          "size": 24398,
+          "symlink": false
+        },
+        "p__projectManage__detail__index.4faa8b3e.async.js": {
+          "size": 97496,
+          "symlink": false
+        },
+        "p__projectManage__detail__index.ab9b7324.chunk.css": {
+          "size": 88418,
+          "symlink": false
+        },
+        "p__projectManage__list__index.c4a80ebc.async.js": {
+          "size": 34428,
+          "symlink": false
+        },
+        "p__projectManage__list__index.f356f910.chunk.css": {
+          "size": 12470,
+          "symlink": false
+        },
+        "p__Proj_Visa__detail__index.5dfbd7b1.async.js": {
+          "size": 30357,
+          "symlink": false
+        },
+        "p__Proj_Visa__detail__index.eb657b9e.chunk.css": {
+          "size": 431,
+          "symlink": false
+        },
+        "p__Proj_Visa__list__index.4e3f8d54.async.js": {
+          "size": 22544,
+          "symlink": false
+        },
+        "p__Proj_Visa__list__index.5063e835.chunk.css": {
+          "size": 2087,
+          "symlink": false
+        },
+        "p__punishSheet__add__index.4c3ec28d.chunk.css": {
+          "size": 2767,
+          "symlink": false
+        },
+        "p__punishSheet__add__index.6f6e7909.async.js": {
+          "size": 8263,
+          "symlink": false
+        },
+        "p__punishSheet__list__index.d171f87a.chunk.css": {
+          "size": 11223,
+          "symlink": false
+        },
+        "p__punishSheet__list__index.fc59b461.async.js": {
+          "size": 25168,
+          "symlink": false
+        },
+        "p__purchaseManage__index.6f59770d.async.js": {
+          "size": 58431,
+          "symlink": false
+        },
+        "p__purchaseManage__index.b47ec624.chunk.css": {
+          "size": 18910,
+          "symlink": false
+        },
+        "p__purchaseManage__Tabs__InBoundTab__add__index.6180d67e.chunk.css": {
+          "size": 8444,
+          "symlink": false
+        },
+        "p__purchaseManage__Tabs__InBoundTab__add__index.6b00ef04.async.js": {
+          "size": 30507,
+          "symlink": false
+        },
+        "p__purchaseManage__Tabs__PurchaseTab__add__index.4b24e540.chunk.css": {
+          "size": 8541,
+          "symlink": false
+        },
+        "p__purchaseManage__Tabs__PurchaseTab__add__index.6f9f3d52.async.js": {
+          "size": 29444,
+          "symlink": false
+        },
+        "p__purchase__detail__index.5201d42e.async.js": {
+          "size": 21057,
+          "symlink": false
+        },
+        "p__purchase__detail__index.9dd0f0a8.chunk.css": {
+          "size": 10712,
+          "symlink": false
+        },
+        "p__purchase__index.039710f1.async.js": {
+          "size": 10490,
+          "symlink": false
+        },
+        "umi.8094acb8.js": {
+          "size": 7352679,
+          "symlink": false
+        },
+        "p__purchase__index.492076e1.chunk.css": {
+          "size": 6315,
+          "symlink": false
+        },
+        "p__report__detail__index.352c8e27.async.js": {
+          "size": 12655,
+          "symlink": false
+        },
+        "p__report__detail__index.d0a93e2a.chunk.css": {
+          "size": 3787,
+          "symlink": false
+        },
+        "p__report__index.551ca1b1.chunk.css": {
+          "size": 7889,
+          "symlink": false
+        },
+        "p__report__index.6bbe943f.async.js": {
+          "size": 18400,
+          "symlink": false
+        },
+        "p__securityLogs__add__index.424a4f9e.async.js": {
+          "size": 13503,
+          "symlink": false
+        },
+        "p__securityLogs__add__index.598aab99.chunk.css": {
+          "size": 2766,
+          "symlink": false
+        },
+        "p__securityLogs__list__index.37b0b92e.async.js": {
+          "size": 5324,
+          "symlink": false
+        },
+        "p__securityLogs__list__index.f15f0450.chunk.css": {
+          "size": 1533,
+          "symlink": false
+        },
+        "p__supplierManage__add__index.39c285d0.async.js": {
+          "size": 20883,
+          "symlink": false
+        },
+        "p__supplierManage__add__index.82bf6cec.chunk.css": {
+          "size": 4934,
+          "symlink": false
+        },
+        "p__supplierManage__detail__index.b6100b6b.async.js": {
+          "size": 96309,
+          "symlink": false
+        },
+        "p__supplierManage__detail__index.d587d7e3.chunk.css": {
+          "size": 81902,
+          "symlink": false
+        },
+        "p__supplierManage__list__index.45ebac90.chunk.css": {
+          "size": 7037,
+          "symlink": false
+        },
+        "p__supplierManage__list__index.d6a9062f.async.js": {
+          "size": 13984,
+          "symlink": false
+        },
+        "p__task__detail__index.2150e4c1.async.js": {
+          "size": 34606,
+          "symlink": false
+        },
+        "p__task__detail__index.376dd68e.chunk.css": {
+          "size": 19881,
+          "symlink": false
+        },
+        "p__task__index.11564446.chunk.css": {
+          "size": 17938,
+          "symlink": false
+        },
+        "p__task__index.1e02c492.async.js": {
+          "size": 44213,
+          "symlink": false
+        },
+        "p__task__okrDetail__index.12138647.async.js": {
+          "size": 30752,
+          "symlink": false
+        },
+        "p__task__okrDetail__index.369a32ba.chunk.css": {
+          "size": 8423,
+          "symlink": false
+        },
+        "p__task__taskResponse__index.bc332eeb.chunk.css": {
+          "size": 5702,
+          "symlink": false
+        },
+        "p__task__taskResponse__index.e354f020.async.js": {
+          "size": 10128,
+          "symlink": false
+        },
+        "shared--5ClJO5js2O1e738bNVb3XEYuao_.b93dc2c9.async.js": {
+          "size": 14811,
+          "symlink": false
+        },
+        "shared--GkX9hOxYl9hsv7oJ8TDImLnCoQ_.78a1642a.async.js": {
+          "size": 19093,
+          "symlink": false
+        },
+        "shared-0DskQufRR-daD6hgcZBzyN-F8zs_.294f2d4f.async.js": {
+          "size": 3699,
+          "symlink": false
+        },
+        "shared-1F9pq0Bh1-SU0o7rhbA0XFFapE_.f26c6029.async.js": {
+          "size": 10249,
+          "symlink": false
+        },
+        "shared-1UuZVfToFtwUnQLTlaIRFYldQa0_.0dfe48bd.async.js": {
+          "size": 8852,
+          "symlink": false
+        },
+        "shared-2dyPxvcs2fBnkRZTHZpBTOBC-iA_.b95084c8.async.js": {
+          "size": 20220,
+          "symlink": false
+        },
+        "shared-2fQ2Yu5PHtWVmpwB0-TnmO1hQDs_.89ba2140.async.js": {
+          "size": 26537,
+          "symlink": false
+        },
+        "shared-2MaYH8Oqi4xEZqcN0USLDtnxuk_.767197bb.async.js": {
+          "size": 13390,
+          "symlink": false
+        },
+        "shared-37wUFAL27WGafE746vFM-MWXdI8_.53e53994.async.js": {
+          "size": 33166,
+          "symlink": false
+        },
+        "shared-4tpdvlcPOieBnEUpDHo568h7gxo_.078b601e.async.js": {
+          "size": 14940,
+          "symlink": false
+        },
+        "shared-4wj7vo2b1yUdRO3fDcJol0SPVDs_.9acd5a1c.async.js": {
+          "size": 17545,
+          "symlink": false
+        },
+        "shared-5eVbZypbrWMv7auds9jp0gJgvWs_.8d9335b5.async.js": {
+          "size": 34326,
+          "symlink": false
+        },
+        "shared-5LmJwJm2OoPTE7ug9IiAzFkLnj0_.11ea2198.async.js": {
+          "size": 7802,
+          "symlink": false
+        },
+        "shared-6gsmqUqbB6rYpe4x0Nk4cczZpNc_.c55d2cb7.async.js": {
+          "size": 12095,
+          "symlink": false
+        },
+        "shared-7D8Qtj27MOgJ2BNPBLx7XCs4oE_.cb056d0c.async.js": {
+          "size": 21535,
+          "symlink": false
+        },
+        "shared-8jKoKu8pCXynFMmVLXIQ2Pu8NDY_.a219c15a.async.js": {
+          "size": 42909,
+          "symlink": false
+        },
+        "shared-9dc8ZHQLTzaZWmk1yWj59rqLLaQ_.d90b2e37.async.js": {
+          "size": 7287,
+          "symlink": false
+        },
+        "shared-9UtCmEv-TRFEYfzqJxCvQUrBnQ_.087964e9.async.js": {
+          "size": 310466,
+          "symlink": false
+        },
+        "shared-9yP-7FcLJxocDylyjojNJ7Roav0_.f85808df.async.js": {
+          "size": 23554,
+          "symlink": false
+        },
+        "shared-acDfNtARirWH7SNXlGff9m4G2w8_.9ab438c3.async.js": {
+          "size": 18525,
+          "symlink": false
+        },
+        "shared-AK1qpT7RU9D19Nr27qWVx3Go4_.02044952.async.js": {
+          "size": 96745,
+          "symlink": false
+        },
+        "shared-AtbLuWokM6ApZ4tRpDLRoxJPt0_.7344ed6d.async.js": {
+          "size": 18630,
+          "symlink": false
+        },
+        "shared-BGsGidzqYlqFSUY0Y7iSSGQFZas_.7803e3c5.async.js": {
+          "size": 29294,
+          "symlink": false
+        },
+        "shared-C4Iw1nYF8p0uOIaX2b466VB0Y0_.5e0001ee.async.js": {
+          "size": 17333,
+          "symlink": false
+        },
+        "shared-DbLQuIiwZkOufwJ2Us9ldf-yuTM_.d13bcad6.async.js": {
+          "size": 14756,
+          "symlink": false
+        },
+        "shared-DrpnrUtZbKuEoYBg5nuToAu47dc_.ec2e8473.async.js": {
+          "size": 6511,
+          "symlink": false
+        },
+        "shared-dVIWtf5CclDLHqypbFYRbjuZ260_.b199e4cc.async.js": {
+          "size": 12389,
+          "symlink": false
+        },
+        "shared-DwVy6V1SFd1AIknvJ9vemXnM-mM_.7e3afa0f.async.js": {
+          "size": 19515,
+          "symlink": false
+        },
+        "shared-ea1O0j5p2zsPE6qA7zp9z07E7MQ_.20e49193.async.js": {
+          "size": 41960,
+          "symlink": false
+        },
+        "shared-EAztCbTps88dJtsl940qhTdUw_.e85def70.async.js": {
+          "size": 17041,
+          "symlink": false
+        },
+        "shared-F7QbyLGTzNVOid0frhFFrdo680_.72445408.async.js": {
+          "size": 1069975,
+          "symlink": false
+        },
+        "shared-fglpODbh1e451xJC7wZb2wXpTE_.5a19f763.async.js": {
+          "size": 13693,
+          "symlink": false
+        },
+        "shared-FGvk9VTq3DrF76VnjECuXZG8YLk_.0130f416.async.js": {
+          "size": 14068,
+          "symlink": false
+        },
+        "shared-fjzTAZ4IFSS-PrLVwNCrsuxVCA_.2f12a660.async.js": {
+          "size": 18970,
+          "symlink": false
+        },
+        "shared-hLxnHG2JaayBFT97yQlSKYVowM4_.1c6cf1e2.async.js": {
+          "size": 9405,
+          "symlink": false
+        },
+        "shared-HTie9GIhoFA200Pz9xBC3oRyAY_.b853232c.async.js": {
+          "size": 21717,
+          "symlink": false
+        },
+        "shared-i8po9lhVcbkoxhMPYJU9A4JLSE0_.4eb469de.async.js": {
+          "size": 54248,
+          "symlink": false
+        },
+        "shared-JgKEWEin66gz6DGOjvq0wAKfvs_.4b7a0533.chunk.css": {
+          "size": 28600,
+          "symlink": false
+        },
+        "shared-JgKEWEin66gz6DGOjvq0wAKfvs_.f2934dee.async.js": {
+          "size": 161315,
+          "symlink": false
+        },
+        "shared-kryPQ7iG9d3UfTaIXTagqpj2oPI_.767610ac.async.js": {
+          "size": 9655,
+          "symlink": false
+        },
+        "shared-Lc2iHtD7FphyfnDJ76RzaNle9Y_.0c6c9d69.async.js": {
+          "size": 15453,
+          "symlink": false
+        },
+        "shared-LFdjN9yZccaGzYgWsCMCCcHfA_.9600649f.async.js": {
+          "size": 12166,
+          "symlink": false
+        },
+        "shared-LwLA3qlaKjuNVBITVqDveC-Rh10_.3b7b054e.async.js": {
+          "size": 15805,
+          "symlink": false
+        },
+        "shared-m6AL1yhLtUqVPRzTBohKbK0Fco_.fdaae30f.async.js": {
+          "size": 30161,
+          "symlink": false
+        },
+        "shared-mMqr7jclLTVnayCsyoy33lhwV3g_.8035711e.async.js": {
+          "size": 23513,
+          "symlink": false
+        },
+        "shared-mVvQuo02-5nIYlA3yEwqJ1UPc4_.cead17ce.async.js": {
+          "size": 46176,
+          "symlink": false
+        },
+        "shared-ngGNM9sVtomj-xTRsfxfI8Zq9d8_.677b7525.async.js": {
+          "size": 62403,
+          "symlink": false
+        },
+        "shared-nxA58kM2GVli1vsaezAjjz6FwqQ_.e53838b3.async.js": {
+          "size": 14263,
+          "symlink": false
+        },
+        "shared-OsFDcRRahqs3TKhKujYj0nMmwYI_.b62653a7.async.js": {
+          "size": 30426,
+          "symlink": false
+        },
+        "shared-piDHpU5dFMp6enAZv0tz3y-ViPk_.38ab8bdb.async.js": {
+          "size": 35754,
+          "symlink": false
+        },
+        "shared-qFqw4lJRFbJXb4AdQqD9AVzovFQ_.8c1dc693.async.js": {
+          "size": 36903,
+          "symlink": false
+        },
+        "shared-QjGPbajSsRpIiKSAK5B2nFlRw_.a9e42328.async.js": {
+          "size": 8986,
+          "symlink": false
+        },
+        "shared-QS0SxzPmveczcssGzxVWA0x8TQA_.e7bf22df.async.js": {
+          "size": 9543,
+          "symlink": false
+        },
+        "shared-RLxpNMDLcl4eS8wKuUGLq2-RkQ8_.e2658395.async.js": {
+          "size": 27102,
+          "symlink": false
+        },
+        "shared-RSfzqQVo3cBHXpcNG7AsTOeOvpo_.c67e7775.async.js": {
+          "size": 18605,
+          "symlink": false
+        },
+        "shared-s0oAy0XVr3s4Sfq8OES6umHdpfw_.afeffbaa.async.js": {
+          "size": 59277,
+          "symlink": false
+        },
+        "shared-soK-VA4hJk0E6lKvoxZFu5rpJAE_.9e942e44.async.js": {
+          "size": 11820,
+          "symlink": false
+        },
+        "shared-SouszvOC9TG3L73QbXNnnNcAgs_.a95190ca.async.js": {
+          "size": 20259,
+          "symlink": false
+        },
+        "shared-SzL6Q7p33lwWjQT4NBOhJLueOc_.47dc2904.async.js": {
+          "size": 17995,
+          "symlink": false
+        },
+        "shared-UfFlh71yYHliiP6YevAHE2f41ts_.15770b31.async.js": {
+          "size": 19885,
+          "symlink": false
+        },
+        "shared-UGB5Td1TuHihPlaHxBG-XmDrSSs_.78765479.async.js": {
+          "size": 7705,
+          "symlink": false
+        },
+        "shared-us6UWD49Hz0p8OALeI9Vu6af8M_.cbffc7e5.async.js": {
+          "size": 11204,
+          "symlink": false
+        },
+        "shared-v7Q2I6OTIyGTvmqTvdbApvh8GY_.bbdfb847.async.js": {
+          "size": 11210,
+          "symlink": false
+        },
+        "shared-VO41KExYzusm8owEJ7Qz7kOY75A_.ff1d1dbd.async.js": {
+          "size": 20780,
+          "symlink": false
+        },
+        "shared-W6cxcSuLowHc9a-Ds3PNGR1WYQE_.1980fdca.async.js": {
+          "size": 12460,
+          "symlink": false
+        },
+        "shared-wcVO-K7990IZ5awpqD2jX7HiIQ_.d6ad7c68.async.js": {
+          "size": 23459,
+          "symlink": false
+        },
+        "shared-wjpZ3Z-fPTyI4DTN7U-ut1RVc_.b8f76407.async.js": {
+          "size": 23717,
+          "symlink": false
+        },
+        "shared-WvgRQ56ivslmGfjhqVqzyJAhbQ_.631d862a.async.js": {
+          "size": 16722,
+          "symlink": false
+        },
+        "shared-wxuAWFxKo5m8HH2B1ZvkKfO98Cg_.edd5eeef.async.js": {
+          "size": 10866,
+          "symlink": false
+        },
+        "shared-X7uLT5-dUWQJqH-09vFA1CTUYeQ_.1e07dd7b.async.js": {
+          "size": 22025,
+          "symlink": false
+        },
+        "shared-xTjoQLKzldmoSsZSnRp5-aNUU_.3a921323.async.js": {
+          "size": 13272,
+          "symlink": false
+        },
+        "shared-yihHfxncPLVUyPLmgg33GPM3YDU_.203375d9.async.js": {
+          "size": 16013,
+          "symlink": false
+        },
+        "shared-YRHM4S3sQ2vSWYowM3mI3vLxcg_.fdb3595f.async.js": {
+          "size": 14091,
+          "symlink": false
+        },
+        "shared-yRWbzK6sIcI2orGPTrhj9JnEKb8_.47b5d918.async.js": {
+          "size": 164134,
+          "symlink": false
+        },
+        "shared-yV-Vkow0sav-KJgGOzQNfvXAlMo_.e73d5e3a.async.js": {
+          "size": 7895,
+          "symlink": false
+        },
+        "shared-YZq18hne3XgrJAftseS6ei3CHQ_.3679d262.async.js": {
+          "size": 107395,
+          "symlink": false
+        },
+        "shared-YZq18hne3XgrJAftseS6ei3CHQ_.7e893636.chunk.css": {
+          "size": 20971,
+          "symlink": false
+        },
+        "shared-z4gFJh06pAETH07IiE32yXA95xA_.30b738c8.async.js": {
+          "size": 16223,
+          "symlink": false
+        },
+        "shared-zgilqEyrHQNe5H9n9R-LC1d2pck_.b0c0202c.async.js": {
+          "size": 2688,
+          "symlink": false
+        },
+        "shared-ZSs6V6W6HlM935Ze8KaMdqx95jw_.b7a40ffe.async.js": {
+          "size": 18032,
+          "symlink": false
+        },
+        "static/appflowTab.559c9072.svg": {
+          "size": 1028,
+          "symlink": false
+        },
+        "static/avatarBG.5fc92a40.svg": {
+          "size": 1259,
+          "symlink": false
+        },
+        "static/closeBtn.a9116769.svg": {
+          "size": 443,
+          "symlink": false
+        },
+        "static/head-img.973f18d0.svg": {
+          "size": 1372,
+          "symlink": false
+        },
+        "static/name.f8e0da32.svg": {
+          "size": 1279,
+          "symlink": false
+        },
+        "static/toVoid.d48f0e08.png": {
+          "size": 42088,
+          "symlink": false
+        }
+      },
+      "index_sha256": "bc04b320725f93c102d4a765e99f07e0d6ea51fc861c2b186c9178617f10ea6c"
+    },
+    "React_bak_20261008_62094": {
+      "exists": false,
+      "is_dir": false,
+      "symlink": false
+    },
+    "platform_react_bak_20261008_62094": {
+      "exists": false,
+      "is_dir": false,
+      "symlink": false
+    },
+    ".ngh5_stage_20261008-134915_62094_React": {
+      "exists": true,
+      "is_dir": true,
+      "symlink": false,
+      "files": {
+        ".ngh5_archive_upload.zip": {
+          "size": 4952858,
+          "symlink": false,
+          "sha256": "962b7e5d7c3a4b3dc1d8c1cf8eef1ad9db0ae9a39a7c1b3e4a7d1ff07cf73a7a"
+        }
+      }
+    },
+    ".ngh5_stage_20261008-134915_62094_platform_react": {
+      "exists": false,
+      "is_dir": false,
+      "symlink": false
+    },
+    ".ngh5_atomic_switch_20261008-134915_62094.py": {
+      "exists": false,
+      "is_dir": false,
+      "symlink": false
+    }
+  }
+}

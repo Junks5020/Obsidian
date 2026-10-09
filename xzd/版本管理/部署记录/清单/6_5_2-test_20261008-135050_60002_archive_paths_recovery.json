@@ -1,0 +1,178 @@
+{
+  "type": "ngh5-react-deploy",
+  "deployment_id": "6_5_2-test_20261008-135050_60002_archive_paths_recovery",
+  "created_at": "2026-10-08T14:32:41.378806+08:00",
+  "status": "success",
+  "version": "6.5.2-test",
+  "hosts": [
+    "47.96.237.137",
+    "101.37.16.1"
+  ],
+  "port": 10022,
+  "user": "root",
+  "remote_root": "/usr/NGH5/wechat/pages",
+  "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2-test",
+  "backup_suffix": "_bak_20261008_62094",
+  "switch_method": "renameat2(RENAME_EXCHANGE)",
+  "stage_token": "20261008-134915_62094",
+  "staging_paths": {
+    "React": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_React",
+    "platform_react": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_platform_react"
+  },
+  "prebuilt_bundles_confirmed": true,
+  "repo_root": "C:\\Users\\jinxu\\workspace\\xzd\\nova",
+  "mapping": {
+    "C:\\Users\\jinxu\\workspace\\xzd\\nova\\mobile-web\\dist": "React",
+    "C:\\Users\\jinxu\\workspace\\xzd\\nova\\react\\dist": "platform_react"
+  },
+  "mobile_source_dir": "mobile-web",
+  "host_results": [
+    {
+      "host": "47.96.237.137",
+      "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2-test",
+      "backups": {
+        "React": {
+          "current": "/usr/NGH5/wechat/pages/6.5.2-test/React",
+          "backup": "/usr/NGH5/wechat/pages/6.5.2-test/React_bak_20261008_62094",
+          "backup_name": "React_bak_20261008_62094",
+          "existed": true
+        },
+        "platform_react": {
+          "current": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react",
+          "backup": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_bak_20261008_62094",
+          "backup_name": "platform_react_bak_20261008_62094",
+          "existed": true
+        }
+      },
+      "uploaded": [
+        {
+          "local": "C:\\Users\\jinxu\\workspace\\xzd\\nova\\mobile-web\\dist",
+          "remote_stage": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_React"
+        },
+        {
+          "local": "C:\\Users\\jinxu\\workspace\\xzd\\nova\\react\\dist",
+          "remote_stage": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_platform_react"
+        }
+      ],
+      "switch_method": "renameat2(RENAME_EXCHANGE)",
+      "remote_switch_script": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_atomic_switch_20261008-134915_62094.py",
+      "atomic_switch": {
+        "action": "deploy",
+        "backups": {
+          "React": "/usr/NGH5/wechat/pages/6.5.2-test/React_bak_20261008_62094",
+          "platform_react": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_bak_20261008_62094"
+        },
+        "status": "success",
+        "version_path": "/usr/NGH5/wechat/pages/6.5.2-test"
+      },
+      "status": "success"
+    },
+    {
+      "host": "101.37.16.1",
+      "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2-test",
+      "backups": {
+        "React": {
+          "current": "/usr/NGH5/wechat/pages/6.5.2-test/React",
+          "backup": "/usr/NGH5/wechat/pages/6.5.2-test/React_bak_20261008_62094",
+          "backup_name": "React_bak_20261008_62094",
+          "existed": true
+        },
+        "platform_react": {
+          "current": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react",
+          "backup": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_bak_20261008_62094",
+          "backup_name": "platform_react_bak_20261008_62094",
+          "existed": true
+        }
+      },
+      "uploaded": [
+        {
+          "local": "C:\\Users\\jinxu\\workspace\\xzd\\nova\\mobile-web\\dist",
+          "remote_stage": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_React"
+        },
+        {
+          "local": "C:\\Users\\jinxu\\workspace\\xzd\\nova\\react\\dist",
+          "remote_stage": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_platform_react"
+        }
+      ],
+      "switch_method": "renameat2(RENAME_EXCHANGE)",
+      "remote_switch_script": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_atomic_switch_20261008-134915_62094.py",
+      "atomic_switch": {
+        "action": "deploy",
+        "backups": {
+          "React": "/usr/NGH5/wechat/pages/6.5.2-test/React_bak_20261008_62094",
+          "platform_react": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_bak_20261008_62094"
+        },
+        "status": "success",
+        "version_path": "/usr/NGH5/wechat/pages/6.5.2-test"
+      },
+      "status": "success"
+    }
+  ],
+  "archive_upload": {
+    "React": {
+      "local": "C:\\Users\\jinxu\\workspace\\xzd\\nova\\scripts\\out\\js\\build-20261008-120146\\mobile-web.zip",
+      "sha256": "962b7e5d7c3a4b3dc1d8c1cf8eef1ad9db0ae9a39a7c1b3e4a7d1ff07cf73a7a"
+    },
+    "platform_react": {
+      "local": "C:\\Users\\jinxu\\workspace\\xzd\\nova\\scripts\\out\\js\\build-20261008-120146\\React.zip",
+      "sha256": "9b629443b91f947e250a1684d628b5c30a959874bafb8e22e33c4414f27b9496"
+    }
+  },
+  "source_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2-test_20261008-135050_60002.json",
+  "previous_recovery_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2-test_20261008-135050_60002_archive_recovery.json",
+  "previous_relay_recovery_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2-test_20261008-135050_60002_relay_recovery.json",
+  "previous_direct_recovery_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2-test_20261008-135050_60002_recovery.json",
+  "inspection_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2-test_20261008-135050_60002_archive_paths_recovery_inspection.json",
+  "recovery_mode": "ssh-relay-normalized-archive-staging-before-atomic-switch",
+  "ssh_relay": "101.37.16.1",
+  "verification": {
+    "47.96.237.137": {
+      "React": {
+        "files": 97,
+        "sha256_verified": true,
+        "backup_exists": true,
+        "backup_index_sha256": "39ee75e8e0a43073c45df1791a729d6331fd037d0dd0d79e052fe396b080d269"
+      },
+      "platform_react": {
+        "files": 429,
+        "sha256_verified": true,
+        "backup_exists": true,
+        "backup_index_sha256": "bc04b320725f93c102d4a765e99f07e0d6ea51fc861c2b186c9178617f10ea6c"
+      }
+    },
+    "101.37.16.1": {
+      "React": {
+        "files": 97,
+        "sha256_verified": true,
+        "backup_exists": true,
+        "backup_index_sha256": "39ee75e8e0a43073c45df1791a729d6331fd037d0dd0d79e052fe396b080d269"
+      },
+      "platform_react": {
+        "files": 429,
+        "sha256_verified": true,
+        "backup_exists": true,
+        "backup_index_sha256": "bc04b320725f93c102d4a765e99f07e0d6ea51fc861c2b186c9178617f10ea6c"
+      }
+    }
+  },
+  "aborted_staging": {
+    "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_React": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_aborted_stage_20261008-134915_62094_React_relay_143242_57816"
+  },
+  "atomic_switch_started": true,
+  "stage_verification": {
+    "React": {
+      "files": 97,
+      "archive_sha256_verified": true,
+      "all_file_sha256_verified": true,
+      "stage": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_React"
+    },
+    "platform_react": {
+      "files": 429,
+      "archive_sha256_verified": true,
+      "all_file_sha256_verified": true,
+      "stage": "/usr/NGH5/wechat/pages/6.5.2-test/.ngh5_stage_20261008-134915_62094_platform_react"
+    }
+  },
+  "completed_at": "2026-10-08T14:32:47.623264+08:00",
+  "obsidian_note": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\DEPLOY-6_5_2-test_20261008-135050_60002_archive_paths_recovery.md"
+}

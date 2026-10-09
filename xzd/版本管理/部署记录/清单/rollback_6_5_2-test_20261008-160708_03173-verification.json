@@ -1,0 +1,91 @@
+{
+  "type": "ngh5-rollback-verify-verification",
+  "created_at": "2026-10-08T16:08:07.479451+08:00",
+  "source_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2-test_20261008-155549_38317.json",
+  "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2-test",
+  "backup_suffix": "_bak_20261008_67382",
+  "method": "Read-only SSH SHA256 fingerprint of every file path, size and content",
+  "status": "success",
+  "host_results": [
+    {
+      "host": "101.37.16.1",
+      "status": "success",
+      "bundles": {
+        "live:React": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/React",
+          "files": 97,
+          "bytes": 16515691,
+          "index_sha256": "b7dea0680ced7c3692d393fc32f25f1c0625eb5e018db36ce068d237cd1494da",
+          "file_manifest_sha256": "16ea685861de6f3c3e30701ce6388152800d72bb3c2579bce18eff6acd0666eb",
+          "matches_preflight": true
+        },
+        "live:platform_react": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react",
+          "files": 429,
+          "bytes": 17222673,
+          "index_sha256": "2f02f4ea93a397732e77cc52f80f2706219b2e10741ddd7413e49f0c647ecc07",
+          "file_manifest_sha256": "9a84c2b1e71caf74f57775953ce1f60895a9eceda46aff0d97a93b1371cb91eb",
+          "matches_preflight": true
+        },
+        "replaced:React": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/React_rollback_replaced_20261008_03173",
+          "files": 69,
+          "bytes": 8466276,
+          "index_sha256": "67ba623fcb83ec411d5387fb06438eb071f028a8347ef102b8fdbc68611d6681",
+          "file_manifest_sha256": "52bc0f606cc1d4737428ae5c4f69b3a6a33571e940d5a14c9691607ffe578dbc",
+          "matches_preflight": true
+        },
+        "replaced:platform_react": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_rollback_replaced_20261008_03173",
+          "files": 430,
+          "bytes": 16820281,
+          "index_sha256": "cd2b239500808fb8ed6bac77071672ea83d97f8ddbbf9520660fa704b1e1481d",
+          "file_manifest_sha256": "d1a38b4955feadac238fd96d40f86a3c43c52e9edfdf3c762482012904c5a0be",
+          "matches_preflight": true
+        }
+      },
+      "source_backups_remaining": []
+    },
+    {
+      "host": "47.96.237.137",
+      "status": "success",
+      "bundles": {
+        "live:React": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/React",
+          "files": 97,
+          "bytes": 16515691,
+          "index_sha256": "b7dea0680ced7c3692d393fc32f25f1c0625eb5e018db36ce068d237cd1494da",
+          "file_manifest_sha256": "16ea685861de6f3c3e30701ce6388152800d72bb3c2579bce18eff6acd0666eb",
+          "matches_preflight": true
+        },
+        "live:platform_react": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react",
+          "files": 429,
+          "bytes": 17222673,
+          "index_sha256": "2f02f4ea93a397732e77cc52f80f2706219b2e10741ddd7413e49f0c647ecc07",
+          "file_manifest_sha256": "9a84c2b1e71caf74f57775953ce1f60895a9eceda46aff0d97a93b1371cb91eb",
+          "matches_preflight": true
+        },
+        "replaced:React": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/React_rollback_replaced_20261008_03173",
+          "files": 69,
+          "bytes": 8466276,
+          "index_sha256": "67ba623fcb83ec411d5387fb06438eb071f028a8347ef102b8fdbc68611d6681",
+          "file_manifest_sha256": "52bc0f606cc1d4737428ae5c4f69b3a6a33571e940d5a14c9691607ffe578dbc",
+          "matches_preflight": true
+        },
+        "replaced:platform_react": {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_rollback_replaced_20261008_03173",
+          "files": 430,
+          "bytes": 16820281,
+          "index_sha256": "cd2b239500808fb8ed6bac77071672ea83d97f8ddbbf9520660fa704b1e1481d",
+          "file_manifest_sha256": "d1a38b4955feadac238fd96d40f86a3c43c52e9edfdf3c762482012904c5a0be",
+          "matches_preflight": true
+        }
+      },
+      "source_backups_remaining": []
+    }
+  ],
+  "rollback_id": "rollback_6_5_2-test_20261008-160708_03173",
+  "rollback_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\rollback_6_5_2-test_20261008-160708_03173.json"
+}

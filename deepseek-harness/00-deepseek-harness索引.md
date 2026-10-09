@@ -2,7 +2,7 @@
 tags:
   - project/deepseek-harness
 status: active
-updated: 2026-09-17
+updated: 2026-09-28
 ---
 
 # DeepSeek Harness 索引
@@ -29,3 +29,7 @@ updated: 2026-09-17
 ## 工作流
 
 - [[deepseek-harness-Agent工作流配置]]
+
+## 交接
+
+- [[handoffs/2026-09-28-1101-stock-controlled-agent-provenance]]

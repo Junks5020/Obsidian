@@ -1,0 +1,79 @@
+{
+  "deployment_id": "6_5_2-test_20261008-155549_38317",
+  "verified_at": "2026-10-08T16:02:49.0216574+08:00",
+  "method": "Read-only SSH verification of the exact relative file set, byte sizes and SHA256 of every live file against local dist",
+  "status": "success",
+  "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2-test",
+  "host_results": [
+    {
+      "host": "47.96.237.137",
+      "status": "success",
+      "bundles": {
+        "React": {
+          "files": 69,
+          "bytes": 8466276,
+          "index_sha256": "67ba623fcb83ec411d5387fb06438eb071f028a8347ef102b8fdbc68611d6681",
+          "file_manifest_sha256": "52bc0f606cc1d4737428ae5c4f69b3a6a33571e940d5a14c9691607ffe578dbc",
+          "matches_local": true
+        },
+        "platform_react": {
+          "files": 430,
+          "bytes": 16820281,
+          "index_sha256": "cd2b239500808fb8ed6bac77071672ea83d97f8ddbbf9520660fa704b1e1481d",
+          "file_manifest_sha256": "d1a38b4955feadac238fd96d40f86a3c43c52e9edfdf3c762482012904c5a0be",
+          "matches_local": true
+        }
+      },
+      "backups": [
+        {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/React_bak_20261008_67382",
+          "exists": true,
+          "symlink": false,
+          "index_exists": true
+        },
+        {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_bak_20261008_67382",
+          "exists": true,
+          "symlink": false,
+          "index_exists": true
+        }
+      ],
+      "stages_remaining": []
+    },
+    {
+      "host": "101.37.16.1",
+      "status": "success",
+      "bundles": {
+        "React": {
+          "files": 69,
+          "bytes": 8466276,
+          "index_sha256": "67ba623fcb83ec411d5387fb06438eb071f028a8347ef102b8fdbc68611d6681",
+          "file_manifest_sha256": "52bc0f606cc1d4737428ae5c4f69b3a6a33571e940d5a14c9691607ffe578dbc",
+          "matches_local": true
+        },
+        "platform_react": {
+          "files": 430,
+          "bytes": 16820281,
+          "index_sha256": "cd2b239500808fb8ed6bac77071672ea83d97f8ddbbf9520660fa704b1e1481d",
+          "file_manifest_sha256": "d1a38b4955feadac238fd96d40f86a3c43c52e9edfdf3c762482012904c5a0be",
+          "matches_local": true
+        }
+      },
+      "backups": [
+        {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/React_bak_20261008_67382",
+          "exists": true,
+          "symlink": false,
+          "index_exists": true
+        },
+        {
+          "path": "/usr/NGH5/wechat/pages/6.5.2-test/platform_react_bak_20261008_67382",
+          "exists": true,
+          "symlink": false,
+          "index_exists": true
+        }
+      ],
+      "stages_remaining": []
+    }
+  ]
+}
