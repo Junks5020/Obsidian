@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "需求/N-work/第一版.md",
+                "file": "xzd/版本管理/research/2026-10-09-新版报表计算选区与数值能力答复.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "第一版"
+              "title": "2026-10-09-新版报表计算选区与数值能力答复"
             }
           }
         ],
@@ -300,10 +300,10 @@
   },
   "active": "f93eb4b8cda2f3ea",
   "lastOpenFiles": [
+    "需求/N-work/第一版.md",
     "代码提交记录/ng-design/变更记录/REQ-20260923-002-report-design-api-executor.md",
     "代码提交记录/ng-design/变更记录/REQ-20260923-001-report-design-current-value-load.md",
     "需求/运维平台/未命名.md",
-    "需求/N-work/第一版.md",
     "xzd/版本管理/work-items/report-design-current-value-load/issues/01-当前设计快照与详情手动加载.md",
     "xzd/版本管理/work-items/report-design-current-value-load/spec.md",
     "xzd/版本管理/work-items/report-design-current-value-load/issues",
