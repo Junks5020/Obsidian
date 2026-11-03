@@ -1,0 +1,93 @@
+{
+  "type": "ngh5-react-rollback",
+  "rollback_id": "rollback_6_5_2_20261022-222700_93663",
+  "created_at": "2026-10-22T22:27:00.223857+08:00",
+  "status": "success",
+  "version": "6.5.2",
+  "hosts": [
+    "47.96.237.137",
+    "101.37.16.1"
+  ],
+  "port": 10022,
+  "user": "root",
+  "remote_root": "/usr/NGH5/wechat/pages",
+  "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2",
+  "backup_suffix": "_bak_20261022_99369",
+  "switch_method": "renameat2(RENAME_EXCHANGE)",
+  "source_manifest": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\清单\\6_5_2_20261022-222233_24312.json",
+  "host_results": [
+    {
+      "host": "47.96.237.137",
+      "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2",
+      "restored": [
+        {
+          "backup": "/usr/NGH5/wechat/pages/6.5.2/React_bak_20261022_99369",
+          "target": "/usr/NGH5/wechat/pages/6.5.2/React"
+        },
+        {
+          "backup": "/usr/NGH5/wechat/pages/6.5.2/platform_react_bak_20261022_99369",
+          "target": "/usr/NGH5/wechat/pages/6.5.2/platform_react"
+        }
+      ],
+      "moved_current": [
+        {
+          "from": "/usr/NGH5/wechat/pages/6.5.2/React",
+          "to": "/usr/NGH5/wechat/pages/6.5.2/React_rollback_replaced_20261022_93663"
+        },
+        {
+          "from": "/usr/NGH5/wechat/pages/6.5.2/platform_react",
+          "to": "/usr/NGH5/wechat/pages/6.5.2/platform_react_rollback_replaced_20261022_93663"
+        }
+      ],
+      "switch_method": "renameat2(RENAME_EXCHANGE)",
+      "atomic_switch": {
+        "action": "rollback",
+        "replaced": {
+          "React": "/usr/NGH5/wechat/pages/6.5.2/React_rollback_replaced_20261022_93663",
+          "platform_react": "/usr/NGH5/wechat/pages/6.5.2/platform_react_rollback_replaced_20261022_93663"
+        },
+        "restored_backup_suffix": "_bak_20261022_99369",
+        "status": "success",
+        "version_path": "/usr/NGH5/wechat/pages/6.5.2"
+      },
+      "status": "success"
+    },
+    {
+      "host": "101.37.16.1",
+      "remote_version_path": "/usr/NGH5/wechat/pages/6.5.2",
+      "restored": [
+        {
+          "backup": "/usr/NGH5/wechat/pages/6.5.2/React_bak_20261022_99369",
+          "target": "/usr/NGH5/wechat/pages/6.5.2/React"
+        },
+        {
+          "backup": "/usr/NGH5/wechat/pages/6.5.2/platform_react_bak_20261022_99369",
+          "target": "/usr/NGH5/wechat/pages/6.5.2/platform_react"
+        }
+      ],
+      "moved_current": [
+        {
+          "from": "/usr/NGH5/wechat/pages/6.5.2/React",
+          "to": "/usr/NGH5/wechat/pages/6.5.2/React_rollback_replaced_20261022_93663"
+        },
+        {
+          "from": "/usr/NGH5/wechat/pages/6.5.2/platform_react",
+          "to": "/usr/NGH5/wechat/pages/6.5.2/platform_react_rollback_replaced_20261022_93663"
+        }
+      ],
+      "switch_method": "renameat2(RENAME_EXCHANGE)",
+      "atomic_switch": {
+        "action": "rollback",
+        "replaced": {
+          "React": "/usr/NGH5/wechat/pages/6.5.2/React_rollback_replaced_20261022_93663",
+          "platform_react": "/usr/NGH5/wechat/pages/6.5.2/platform_react_rollback_replaced_20261022_93663"
+        },
+        "restored_backup_suffix": "_bak_20261022_99369",
+        "status": "success",
+        "version_path": "/usr/NGH5/wechat/pages/6.5.2"
+      },
+      "status": "success"
+    }
+  ],
+  "obsidian_note": "C:\\Users\\jinxu\\workspace\\obsidian\\xzd\\版本管理\\部署记录\\ROLLBACK-rollback_6_5_2_20261022-222700_93663.md"
+}

@@ -11,6 +11,7 @@ updated: 2026-09-28
 
 - [[research/2026-09-08-现有股票DSH插件功能调研]]
 - [[research/2026-09-17-国内行情供应商]]
+- [[research/2026-10-28-permissionPresets-catalog-403]]
 
 ## 工作项
 

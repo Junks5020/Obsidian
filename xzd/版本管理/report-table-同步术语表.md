@@ -3,14 +3,14 @@ tags:
   - report-table
   - 术语表
   - 领域模型
-updated: 2026-09-22
+updated: 2026-10-29
 ---
 
 # udp-report-table 术语表
 
 基于 Handsontable 封装的报表组件包（7.0），由 report-web 的报表组件抽离而来，与上游保持功能型同步。
 
-相关：[[report-table-6.5.2-7.0-功能同步计划]] · [[report-table-文档同步计划-20260813]] · [[report-table-第二阶段打印API规划-20260819]] · [[report-table-ADR-0001-跟随上游功能型同步]] · [[report-table-ADR-0002-报表字体字段兼容双写]] · [[report-table-ADR-0003-字体清单与静态资源契约]] · [[report-table-ADR-0004-第一阶段复用现有服务适配层]] · [[report-table-ADR-0010-样式边界与自动加载]] · [[report-table-ADR-0011-报表设计流程宿主执行器接管]] · [[work-items/report-design-api-executor/spec]] · [[research/2026-08-18-硕正报表第一阶段对接范围]] · [[work-items/report-table-phase1/spec]] · [[work-items/report-font-integration/spec]] · [[work-items/report-table-style-boundary/spec]] · [[work-items/report-table-sync-20260902/spec]]
+相关：[[report-table-6.5.2-7.0-功能同步计划]] · [[report-table-文档同步计划-20260813]] · [[report-table-第二阶段打印API规划-20260819]] · [[report-table-ADR-0001-跟随上游功能型同步]] · [[report-table-ADR-0002-报表字体字段兼容双写]] · [[report-table-ADR-0003-字体清单与静态资源契约]] · [[report-table-ADR-0004-第一阶段复用现有服务适配层]] · [[report-table-ADR-0010-样式边界与自动加载]] · [[report-table-ADR-0011-报表设计流程宿主执行器接管]] · [[report-table-ADR-0012-逐接口配置与流程执行器并存]] · [[work-items/report-table-api-config/spec|接口可配置化需求基线]] · [[work-items/report-design-api-executor/spec]] · [[research/2026-08-18-硕正报表第一阶段对接范围]] · [[work-items/report-table-phase1/spec]] · [[work-items/report-font-integration/spec]] · [[work-items/report-table-style-boundary/spec]] · [[work-items/report-table-sync-20260902/spec]]
 
 ## Language
 

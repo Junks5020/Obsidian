@@ -2,7 +2,7 @@
 tags:
   - ng-design
   - udp-report-table
-status: active
+status: completed
 date: 2026-10-09
 updated: 2026-10-09
 ---
@@ -22,3 +22,7 @@ updated: 2026-10-09
 - 补充公共类型导出、API 文档和现有设计器演示；完成针对性测试和组件构建。
 
 实施：[[issues/01-公开选区读取接口]]。
+
+## 实施结果
+
+当前工作树已完成 API、公开类型导出、组件文档和设计器演示，API 行为及组件边界 48 项测试通过，组件 ESM/CommonJS 构建与类型声明生成通过。未进行浏览器实机验收；尚未提交、发布。
