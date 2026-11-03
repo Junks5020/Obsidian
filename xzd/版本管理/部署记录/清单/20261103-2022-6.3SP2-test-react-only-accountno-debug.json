@@ -1,0 +1,45 @@
+{
+  "operation": "deploy",
+  "operation_id": "20261103-2022-6.3SP2-test-react-only-accountno-debug",
+  "tool": "ngh5-react-deploy single-bundle variant (React only)",
+  "date": "2026-11-03T20:22:00+08:00",
+  "version": "6.3SP2-test",
+  "version_path": "/usr/NGH5/wechat/pages/6.3SP2-test",
+  "hosts": ["47.96.237.137", "101.37.16.1"],
+  "port": 10022,
+  "user": "root",
+  "mapping": {
+    "local": "C:/Users/jinxu/orca/workspaces/nova/frogfish/react/dist",
+    "remote": "/usr/NGH5/wechat/pages/6.3SP2-test/React"
+  },
+  "untouched": "/usr/NGH5/wechat/pages/6.3SP2-test/platform_react (absent)",
+  "backup_suffix": "_bak_20261103_84371",
+  "stage_token": "j5t8r2m6",
+  "switch_method": "renameat2(RENAME_EXCHANGE) via remote_atomic_switch single-name variant",
+  "local_bundle": { "files": 417, "bytes": 17169041 },
+  "fingerprints_before": {
+    "index.html": "203118a30f5b104e56fa742b87743263",
+    "umi.513e818c.js": "966465d604d09a02a674f9186bf23f88"
+  },
+  "fingerprints_after": {
+    "index.html": "fabc5834ba4a21210a59d8351742ec66",
+    "umi.eb9c8582.js": "ac42be74bb7c3d2eb341307a4a28c78b",
+    "6581.5d8297cb.async.js": "f3e881a90b8ca71c9fe77cb8fd576af3"
+  },
+  "results": [
+    { "host": "47.96.237.137", "status": "success", "backup": "/usr/NGH5/wechat/pages/6.3SP2-test/React_bak_20261103_84371", "md5_match": true },
+    { "host": "101.37.16.1", "status": "success", "backup": "/usr/NGH5/wechat/pages/6.3SP2-test/React_bak_20261103_84371", "md5_match": true }
+  ],
+  "live_verification": {
+    "url": "https://eims.ecepdi.com:9443/EnterpriseInfoService/wechat/pages/6.3SP2-test/React/index.html",
+    "index_http": 200,
+    "index_md5": "fabc5834ba4a21210a59d8351742ec66",
+    "main_chunk": "umi.eb9c8582.js",
+    "old_chunk_umi.513e818c.js": 404,
+    "weaverE9_chunk_6581": { "http": 200, "bytes": 3015, "has_debug_weaverE9": true }
+  },
+  "changes": "泛微 weaverE9 登录 accountNo 兜底：accountNo=getQueryString('accountNo') || userid.split('_')[1] || ''，userName 同源兜底；新增排查埋点 localStorage['debug_weaverE9_accountNo']（module:load / login:params / validateuser-ok / done / 三类失败分支）。包内同时包含 wechat.ts 旧的 debug_getUserId_response 调试代码。",
+  "debug_code_present": true,
+  "debug_keys": ["debug_weaverE9_accountNo", "debug_getUserId_response"],
+  "rollback": "python remote_atomic_switch_single.py rollback --version-path /usr/NGH5/wechat/pages/6.3SP2-test --backup-suffix _bak_20261103_84371 --replaced-suffix _rollback_replaced_<YYYYMMDD>_<5digits> --name React"
+}
