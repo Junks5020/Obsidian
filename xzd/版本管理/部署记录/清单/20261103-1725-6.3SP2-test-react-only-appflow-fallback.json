@@ -1,0 +1,28 @@
+{
+  "operation": "deploy",
+  "operation_id": "20261103-1725-6.3SP2-test-react-only-appflow-fallback",
+  "tool": "ngh5-react-deploy single-bundle variant (React only)",
+  "date": "2026-11-03T17:25:00+08:00",
+  "version": "6.3SP2-test",
+  "version_path": "/usr/NGH5/wechat/pages/6.3SP2-test",
+  "hosts": ["47.96.237.137", "101.37.16.1"],
+  "mapping": {
+    "local": "C:/Users/jinxu/orca/workspaces/nova/frogfish/react/dist",
+    "remote": "/usr/NGH5/wechat/pages/6.3SP2-test/React"
+  },
+  "untouched": "/usr/NGH5/wechat/pages/6.3SP2-test/platform_react (absent)",
+  "backup_suffix": "_bak_20261103_59193",
+  "stage_token": "pl4nn8o4",
+  "switch_method": "renameat2(RENAME_EXCHANGE) via remote_atomic_switch single-name variant",
+  "local_bundle": { "files": 417, "bytes": 17167723 },
+  "fingerprints": {
+    "index.html": "203118a30f5b104e56fa742b87743263",
+    "umi.513e818c.js": "966465d604d09a02a674f9186bf23f88"
+  },
+  "results": [
+    { "host": "47.96.237.137", "status": "success", "backup": "/usr/NGH5/wechat/pages/6.3SP2-test/React_bak_20261103_59193", "md5_match": true },
+    { "host": "101.37.16.1", "status": "success", "backup": "/usr/NGH5/wechat/pages/6.3SP2-test/React_bak_20261103_59193", "md5_match": true }
+  ],
+  "changes": "方案1：appFlow 流程详情页附件增加下载地址回退链 attachPhid→asrFid→文件名预览→正式附件列表，不再发送 asrFids:['']；新增 getDownloadUrlByPhid 接口；BizAttachment 增加 attachPhid；detail 映射补 attachPhid。",
+  "rollback": "python remote_atomic_switch_single.py rollback --version-path /usr/NGH5/wechat/pages/6.3SP2-test --backup-suffix _bak_20261103_59193 --replaced-suffix _rollback_replaced_<YYYYMMDD>_<5digits> --name React"
+}
