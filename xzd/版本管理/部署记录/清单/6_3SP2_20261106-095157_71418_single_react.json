@@ -1,0 +1,49 @@
+{
+  "type": "ngh5-react-deploy-single",
+  "deployment_id": "6_3SP2_20261106-095157_71418_single_react",
+  "created_at": "2026-11-06T09:51:57.447180+08:00",
+  "status": "success",
+  "version": "6.3SP2",
+  "hosts": [
+    "47.96.237.137",
+    "101.37.16.1"
+  ],
+  "port": 10022,
+  "user": "root",
+  "remote_root": "/usr/NGH5/wechat/pages",
+  "remote_version_path": "/usr/NGH5/wechat/pages/6.3SP2",
+  "backup_suffix": "_bak_20261106_71418",
+  "stage_token": "20261106-095157_71418",
+  "staging_dir": "/usr/NGH5/wechat/pages/6.3SP2/.ngh5_stage_20261106-095157_71418_React",
+  "switch_method": "renameat2(RENAME_EXCHANGE) single-dir React",
+  "mapping": {
+    "C:\\Users\\jinxu\\orca\\workspaces\\nova\\frogfish\\react\\dist": "React"
+  },
+  "note": "User-requested deviation: only remote React replaced with react/dist; platform_react untouched.",
+  "host_results": [
+    {
+      "host": "47.96.237.137",
+      "remote_version_path": "/usr/NGH5/wechat/pages/6.3SP2",
+      "switch_method": "renameat2(RENAME_EXCHANGE) single-dir React",
+      "switch": {
+        "action": "deploy",
+        "backup": "/usr/NGH5/wechat/pages/6.3SP2/React_bak_20261106_71418",
+        "status": "success",
+        "target": "React"
+      },
+      "status": "success"
+    },
+    {
+      "host": "101.37.16.1",
+      "remote_version_path": "/usr/NGH5/wechat/pages/6.3SP2",
+      "switch_method": "renameat2(RENAME_EXCHANGE) single-dir React",
+      "switch": {
+        "action": "deploy",
+        "backup": "/usr/NGH5/wechat/pages/6.3SP2/React_bak_20261106_71418",
+        "status": "success",
+        "target": "React"
+      },
+      "status": "success"
+    }
+  ]
+}

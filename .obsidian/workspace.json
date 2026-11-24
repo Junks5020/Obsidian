@@ -132,9 +132,23 @@
               "icon": "lucide-file",
               "title": "1103"
             }
+          },
+          {
+            "id": "f610a02651e46de2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "raw/NotePadQuestionBankFE-项目亮点.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NotePadQuestionBankFE-项目亮点"
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -286,8 +300,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           }
         ],
@@ -312,8 +326,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f575f1ecab971b07",
+  "active": "471971ee1dae6833",
   "lastOpenFiles": [
+    "raw/GSD手册.md",
+    "raw/google广告接入流程.md",
+    "工作清单/1103.md",
     "xzd/版本管理/report-web-打印按宽度自动适配需求澄清.md",
     "xzd/版本管理/部署记录/清单/6_5_1-test_20261103-204958_13073.json",
     "xzd/版本管理/部署记录/DEPLOY-6_5_1-test_20261103-204958_13073.md",
@@ -328,7 +345,6 @@
     "xzd/版本管理/部署记录/20261103-1610-6.3SP2-test-react-only.md",
     "xzd/版本管理/部署记录/清单/20261103-1610-6.3SP2-test-react-only.json",
     "工作清单/9.15.md",
-    "工作清单/1103.md",
     "xzd/版本管理/research/2026-10-09-新版报表计算选区与数值能力答复.md",
     "未命名.md",
     "xzd/版本管理/work-items/report-selection-range-api/issues/01-公开选区读取接口.md",
@@ -348,8 +364,6 @@
     "需求/报表需求.md",
     "专业考题.md",
     "xzd/版本管理/ng-design-ADR-0001-附件权限分类块透传.md",
-    "xzd/版本管理/00-版本总览.md",
-    "report-web多语言.md",
     "Pasted image 20260701093053.png",
     "Pasted image 20260701093209.png",
     "未命名.canvas",
